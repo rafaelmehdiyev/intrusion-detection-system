@@ -1,4 +1,5 @@
 scapy==2.5.0
+colorama==0.4.6
 flask==3.0.0
 wmi==1.5.1
 werkzeug==3.0.1

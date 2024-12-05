@@ -150,3 +150,215 @@ Interface Details:
 2024-12-06 01:00:56,314 - INFO - DNS Query: windsurf-telemetry.codeium.com
 2024-12-06 01:01:13,218 - INFO - DNS Query: unleash.codeium.com
 2024-12-06 01:01:24,396 - INFO - DNS Query: server.codeium.com
+2024-12-06 01:01:36,488 - INFO - DNS Query: github.com
+2024-12-06 01:01:51,900 - INFO - DNS Query: github.com
+2024-12-06 01:01:55,034 - INFO - DNS Query: inference.codeium.com
+2024-12-06 01:01:57,736 - INFO - DNS Query: windsurf-telemetry.codeium.com
+2024-12-06 01:01:57,741 - INFO - DNS Query: windsurf-telemetry.codeium.com
+2024-12-06 01:02:02,549 - INFO - DNS Query: storeedgefd.dsx.mp.microsoft.com
+2024-12-06 01:02:05,271 - INFO - DNS Query: server.codeium.com
+2024-12-06 01:02:13,826 - INFO - DNS Query: unleash.codeium.com
+2024-12-06 01:02:21,659 - INFO - DNS Query: assets.msn.com
+2024-12-06 01:02:28,649 - INFO - DNS Query: inference.codeium.com
+2024-12-06 01:02:43,253 - INFO - DNS Query: unleash.codeium.com
+2024-12-06 01:02:47,928 - INFO - DNS Query: catalog.gamepass.com
+2024-12-06 01:03:14,496 - INFO - DNS Query: unleash.codeium.com
+2024-12-06 01:03:24,365 - INFO - DNS Query: server.codeium.com
+2024-12-06 01:04:43,878 - INFO - Started packet capture on interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:04:43,882 - INFO - Network Security Monitor started
+2024-12-06 01:04:43,888 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:04:43,888 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 01:04:43,890 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 01:05:15,745 - INFO - DNS Query: unleash.codeium.com
+2024-12-06 01:06:02,565 - INFO - Capture stopped by user
+2024-12-06 01:08:26,559 - INFO - Started packet capture on interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:08:26,564 - INFO - Network Security Monitor started
+2024-12-06 01:08:26,565 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:08:26,566 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 01:08:26,566 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 01:09:59,280 - INFO - Started packet capture on interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:09:59,284 - INFO - Network Security Monitor started
+2024-12-06 01:09:59,285 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:09:59,286 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 01:09:59,290 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 01:10:59,432 - INFO - Started packet capture on interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:10:59,437 - INFO - Network Security Monitor started
+2024-12-06 01:10:59,438 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:10:59,443 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 01:10:59,443 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 01:11:19,439 - INFO - DNS Query: unleash.codeium.com
+2024-12-06 01:12:56,167 - INFO - Started packet capture on interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:12:56,172 - INFO - Network Security Monitor started
+2024-12-06 01:12:56,174 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:12:56,178 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 01:12:56,179 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 01:13:21,625 - INFO - DNS Query: unleash.codeium.com
+2024-12-06 01:13:23,925 - INFO - DNS Query: windsurf-telemetry.codeium.com
+2024-12-06 01:13:23,930 - INFO - DNS Query: windsurf-telemetry.codeium.com
+2024-12-06 01:13:24,365 - INFO - DNS Query: server.codeium.com
+2024-12-06 01:14:31,999 - INFO - Started packet capture on interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:14:32,003 - INFO - Network Security Monitor started
+2024-12-06 01:14:32,004 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:14:32,004 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 01:14:32,005 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 01:14:47,676 - INFO - DNS Query: unleash.codeium.com
+2024-12-06 01:14:47,678 - INFO - [+] DNS Query: unleash.codeium.com
+2024-12-06 01:14:47,700 - INFO - DNS Query: unleash.codeium.com
+2024-12-06 01:14:47,700 - INFO - [+] DNS Query: unleash.codeium.com
+2024-12-06 01:14:49,805 - INFO - DNS Query: chatgpt.com
+2024-12-06 01:14:49,805 - INFO - [+] DNS Query: chatgpt.com
+2024-12-06 01:14:49,813 - INFO - DNS Query: chatgpt.com
+2024-12-06 01:14:49,813 - INFO - [+] DNS Query: chatgpt.com
+2024-12-06 01:15:00,924 - INFO - DNS Query: v10.events.data.microsoft.com
+2024-12-06 01:15:00,924 - INFO - [+] DNS Query: v10.events.data.microsoft.com
+2024-12-06 01:15:02,497 - INFO - DNS Query: v20.events.data.microsoft.com
+2024-12-06 01:15:02,498 - INFO - [+] DNS Query: v20.events.data.microsoft.com
+2024-12-06 01:16:29,478 - INFO - Started packet capture on interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:16:29,482 - INFO - Network Security Monitor started
+2024-12-06 01:16:29,483 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:16:29,484 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 01:16:29,484 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 01:16:32,504 - INFO - DNS Query: windsurf-telemetry.codeium.com
+2024-12-06 01:16:32,507 - INFO - DNS Query: windsurf-telemetry.codeium.com
+2024-12-06 01:18:14,237 - INFO - Started packet capture on interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:18:14,241 - INFO - Network Security Monitor started
+2024-12-06 01:18:14,241 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:18:14,241 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 01:18:14,241 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 01:18:24,393 - INFO - DNS Query: server.codeium.com
+2024-12-06 01:18:24,670 - INFO - DNS Query: unleash.codeium.com
+2024-12-06 01:20:15,540 - INFO - Started packet capture on interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:20:15,544 - INFO - Network Security Monitor started
+2024-12-06 01:20:15,544 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:20:15,544 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 01:20:15,545 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 01:20:18,024 - INFO - DNS Query: windsurf-telemetry.codeium.com
+2024-12-06 01:20:18,027 - INFO - DNS Query: windsurf-telemetry.codeium.com
+2024-12-06 01:23:14,556 - INFO - Started packet capture on interface: {6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:23:14,560 - INFO - Network Security Monitor started
+2024-12-06 01:23:14,560 - INFO - Monitoring interface: {6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:23:14,561 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 01:23:14,561 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 01:23:14,563 - ERROR - Failed to start packet capture on interface: {6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+Error Type: OSError
+Error Details: Error opening adapter: The filename, directory name, or volume label syntax is incorrect.  (123)
+Possible causes:
+1. Interface name format is incorrect
+2. Insufficient permissions (Try running as Administrator)
+3. Npcap/WinPcap is not properly installed
+4. Interface is disabled or not properly configured
+Interface Details:
+- Name: {6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+- Available interfaces: {4722FD04-16D2-4823-A7BB-7A4660B360A3}, {72E12438-E3FF-4B68-9999-B463A96443CE}, {3CF7B871-036D-44F8-A40A-CF41024AD5EE}, {46767551-6E65-4D83-8AE4-1E467FD51645}, {52587539-55C9-4B32-98A3-9A7F33822CC9}, {6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}, {071417B6-38E4-4EED-A2B0-C64FC6E053B6}, {4B99EB1C-3335-412E-93E4-8F3849F13698}, {12320D8D-E7DD-4EF2-A8AA-EC9F19EFCF69}, {B2D0B90F-CBC9-4DFF-9B7A-8041EC258939}, \Device\NPF_Loopback, {C3EBE992-92CE-4556-8FEA-9C13A06B8EBE}
+- Interface in IFACES: True
+- Scapy conf.iface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:26:09,029 - INFO - Started packet capture on interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:26:09,032 - INFO - Network Security Monitor started
+2024-12-06 01:26:09,032 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:26:09,033 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 01:26:09,033 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 01:26:18,119 - INFO - DNS Query: settings-win.data.microsoft.com
+2024-12-06 01:26:20,613 - INFO - DNS Query: default.exp-tas.com
+2024-12-06 01:26:22,836 - INFO - DNS Query: windsurf-telemetry.codeium.com
+2024-12-06 01:26:22,879 - INFO - DNS Query: windsurf-telemetry.codeium.com
+2024-12-06 01:26:29,165 - INFO - DNS Query: inference.codeium.com
+2024-12-06 01:26:29,506 - INFO - DNS Query: unleash.codeium.com
+2024-12-06 01:27:13,431 - INFO - DNS Query: server.codeium.com
+2024-12-06 01:27:13,433 - INFO - DNS Query: server.codeium.com
+2024-12-06 01:27:30,101 - INFO - DNS Query: unleash.codeium.com
+2024-12-06 01:27:35,936 - INFO - DNS Query: windsurf-telemetry.codeium.com
+2024-12-06 01:27:35,938 - INFO - DNS Query: windsurf-telemetry.codeium.com
+2024-12-06 01:27:43,716 - INFO - DNS Query: server.codeium.com
+2024-12-06 01:27:43,738 - INFO - DNS Query: server.codeium.com
+2024-12-06 01:27:43,921 - INFO - DNS Query: inference.codeium.com
+2024-12-06 01:28:04,868 - INFO - Network Security Monitor started
+2024-12-06 01:28:04,869 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:28:04,869 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 01:28:04,869 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 01:28:22,127 - INFO - DNS Query: github.com
+2024-12-06 01:28:22,331 - INFO - DNS Query: inference.codeium.com
+2024-12-06 01:28:24,433 - INFO - DNS Query: server.codeium.com
+2024-12-06 01:28:30,730 - INFO - DNS Query: unleash.codeium.com
+2024-12-06 01:28:33,202 - INFO - DNS Query: windsurf-telemetry.codeium.com
+2024-12-06 01:28:33,206 - INFO - DNS Query: windsurf-telemetry.codeium.com
+2024-12-06 01:28:46,794 - INFO - Network Security Monitor started
+2024-12-06 01:28:46,794 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:28:46,794 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 01:28:46,794 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 01:29:06,974 - INFO - Network Security Monitor started
+2024-12-06 01:29:06,974 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:29:06,974 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 01:29:06,974 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 01:33:13,110 - INFO - Network Security Monitor started
+2024-12-06 01:33:13,110 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:33:13,110 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 01:33:13,110 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 01:33:33,801 - INFO - DNS Query: unleash.codeium.com
+2024-12-06 01:34:52,807 - INFO - Network Security Monitor started
+2024-12-06 01:34:52,807 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:34:52,807 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 01:34:52,807 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 01:34:59,398 - INFO - DNS Query: unleash.codeium.com
+2024-12-06 01:38:15,039 - INFO - Network Security Monitor started
+2024-12-06 01:38:15,039 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:38:15,039 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 01:38:15,039 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 01:38:17,746 - INFO - Alert: DNS Query: windsurf-telemetry.codeium.com
+2024-12-06 01:38:17,746 - INFO - DNS Query: windsurf-telemetry.codeium.com
+2024-12-06 01:38:17,747 - INFO - Alert: DNS Query: windsurf-telemetry.codeium.com
+2024-12-06 01:38:17,747 - INFO - DNS Query: windsurf-telemetry.codeium.com
+2024-12-06 01:38:24,366 - INFO - Alert: DNS Query: server.codeium.com
+2024-12-06 01:38:24,366 - INFO - DNS Query: server.codeium.com
+2024-12-06 01:38:34,718 - INFO - Alert: DNS Query: assets.msn.com
+2024-12-06 01:38:34,718 - INFO - DNS Query: assets.msn.com
+2024-12-06 01:38:40,058 - INFO - Alert: DNS Query: unleash.codeium.com
+2024-12-06 01:38:40,059 - INFO - DNS Query: unleash.codeium.com
+2024-12-06 01:40:57,954 - INFO - Network Security Monitor started
+2024-12-06 01:40:57,955 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:40:57,955 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 01:40:57,956 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 01:41:24,366 - INFO - DNS Query: server.codeium.com
+2024-12-06 01:41:24,369 - INFO - DNS Query: server.codeium.com
+2024-12-06 01:41:27,589 - INFO - DNS Query: windsurf-telemetry.codeium.com
+2024-12-06 01:41:27,723 - INFO - DNS Query: windsurf-telemetry.codeium.com
+2024-12-06 01:41:27,733 - INFO - DNS Query: windsurf-telemetry.codeium.com
+2024-12-06 01:41:27,737 - INFO - DNS Query: windsurf-telemetry.codeium.com
+2024-12-06 01:41:39,104 - INFO - DNS Query: inference.codeium.com
+2024-12-06 01:41:39,112 - INFO - DNS Query: inference.codeium.com
+2024-12-06 01:41:41,950 - INFO - DNS Query: unleash.codeium.com
+2024-12-06 01:41:41,955 - INFO - DNS Query: unleash.codeium.com
+2024-12-06 01:42:55,288 - INFO - Network Security Monitor started
+2024-12-06 01:42:55,289 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:42:55,289 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 01:42:55,289 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 01:43:11,420 - INFO - DNS Query: ecs.office.com
+2024-12-06 01:43:24,509 - INFO - DNS Query: server.codeium.com
+2024-12-06 01:44:28,531 - INFO - Network Security Monitor started
+2024-12-06 01:44:28,532 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:44:28,532 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 01:44:28,533 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 01:45:02,937 - INFO - Network Security Monitor started
+2024-12-06 01:45:02,937 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:45:02,938 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 01:45:02,938 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 01:45:32,092 - INFO - Network Security Monitor started
+2024-12-06 01:45:32,093 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:45:32,094 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 01:45:32,094 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 01:45:45,663 - INFO - DNS Query: unleash.codeium.com
+2024-12-06 01:46:26,872 - INFO - Network Security Monitor started
+2024-12-06 01:46:26,873 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:46:26,873 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 01:46:26,873 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 01:47:28,280 - INFO - Network Security Monitor started
+2024-12-06 01:47:28,281 - INFO - Monitoring interface: \Device\NPF_{C3EBE992-92CE-4556-8FEA-9C13A06B8EBE}
+2024-12-06 01:47:28,281 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 01:47:28,282 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 01:50:28,192 - INFO - Packet capture stopped by user
+2024-12-06 01:50:49,752 - INFO - Network Security Monitor started
+2024-12-06 01:50:49,753 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 01:50:49,753 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 01:50:49,753 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 01:51:03,954 - INFO - DNS Query: inference.codeium.com
+2024-12-06 01:51:06,761 - INFO - DNS Query: windsurf-telemetry.codeium.com
+2024-12-06 01:51:22,387 - INFO - Packet capture stopped by user

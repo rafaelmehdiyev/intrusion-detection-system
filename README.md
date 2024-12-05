@@ -1,192 +1,160 @@
-# Network Security Monitor
+# Windsurf Network Security Monitor
 
-A real-time network intrusion detection system (NIDS) that monitors network traffic, detects potential security threats, and provides a web-based monitoring interface.
-
-## In Progress Improvements
-1. Improved Threat Detection  
-   - Basic Anomaly Detection: Introduce simple anomaly detection based on traffic patterns, such as detecting large spikes in traffic, unusual packet sizes, or changes in traffic flow (e.g., sudden flood of SYN packets for SYN flood detection).  
-   - Rate Limiting for Suspicious Traffic: Implement rate-limiting rules (e.g., multiple requests to the same port/IP in a short period) to detect potential brute force attacks or scans.  
-   - GeoIP Lookup: Integrate lightweight IP geolocation to track the source of suspicious traffic. This can help detect unusual activity from foreign countries or regions where you don’t expect traffic.  
-
+A comprehensive Network Intrusion Detection System (NIDS) with real-time packet monitoring and threat detection capabilities.
 
 ## Features
 
-### Core Components
+- Real-time network traffic monitoring
+- Advanced packet capture and analysis
+- Dynamic, color-coded CLI interface
+- Thread-safe logging and display
+- Intelligent DNS query caching
+- Robust signal handling and clean shutdown
 
-1. **Network Sensor (sensor.py)**
-   - Real-time packet capture using Scapy
-   - Network interface detection and selection
-   - Packet analysis and threat detection
-   - Traffic statistics monitoring
-   - Configurable detection rules
+### Threat Detection
 
-2. **Monitoring Server (server.py)**
-   - Web-based monitoring interface
-   - Real-time event streaming
-   - Basic authentication system
-   - Event filtering and display
-   - Secure communication
+- Blacklisted IP detection
+- Suspicious port monitoring
+- DNS query tracking
+- Unusual domain name detection (DGA)
+- Real-time alert system
 
-3. **Web Interface (templates/index.html)**
-   - Real-time event updates
-   - Interactive event filtering
-   - Visual status indicators
-   - Event categorization (Info/Warning/Error)
-   - Clean, modern UI design
+## Requirements
 
-### Security Features
-
-- **Threat Detection**
-  - Blacklisted IP monitoring
-  - Suspicious port detection
-  - DNS query analysis
-  - Unusual domain detection
-  - Real-time alerts
-
-- **Logging System**
-  - Detailed event logging
-  - Timestamp-based organization
-  - Log rotation support
-  - Event categorization
-  - Searchable logs
-
-- **Authentication**
-  - Basic HTTP authentication
-  - Secure password hashing
-  - Session management
-  - Default credentials:
-    - Username: admin
-    - Password: changeme!
-
-## Technical Details
-
-### Requirements
-
-- Python 3.x
-- Windows OS (currently Windows-specific)
-- Administrator privileges (for packet capture)
+- Python 3.11 or higher
+- Windows OS (cross-platform support in development)
+- Administrator privileges
+- Npcap with WinPcap API compatibility
 
 ### Dependencies
 
 ```
 scapy==2.5.0
-flask==2.0.1
-wmi==1.5.1
-werkzeug==2.0.1
-requests==2.26.0
-python-whois==0.7.3
+colorama==0.4.6
 ```
-
-### Configuration
-
-The system is configured through `config.json`:
-- Log directory path
-- Blacklisted IP addresses
-- Suspicious port numbers
-- DNS blacklist entries
 
 ## Installation
 
-1. Clone the repository
-2. Install dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
-3. Ensure you have administrator privileges
-4. Configure `config.json` as needed
+1. Clone the repository:
+```bash
+git clone https://github.com/rafaelmehdiyev/intrusion-detection-system.git
+cd intrusion-detection-system
+```
+
+2. Install required packages:
+```bash
+pip install -r requirements.txt
+```
+
+3. Install Npcap from the [official website](https://npcap.com/#download)
+   - Ensure "WinPcap API compatibility" is selected during installation
 
 ## Usage
 
-1. Start the sensor:
-   ```
-   python sensor.py
-   ```
-   - Select a network interface when prompted
-   - Monitor packet capture statistics
+Run the monitor with administrator privileges:
 
-2. Start the web server:
-   ```
-   python server.py
-   ```
-   - Server runs on http://localhost:8338
-   - Log in with default credentials
+```bash
+python sensor.py
+```
 
-3. Access the web interface:
-   - Open http://localhost:8338 in your browser
-   - Monitor real-time events
-   - Filter and search through events
-   - View security alerts
+### Command Line Options
 
-## Recent Updates
+- `--debug`: Enable debug output for troubleshooting
 
-### Interface Detection Fix
-- Fixed Windows network interface detection issues
-- Now properly using Scapy's IFACES for interface discovery
-- Correctly formatting interface names with `\Device\NPF_{GUID}` pattern
-- Improved error handling and debugging information
-- Resolved the "Error opening adapter" issue on Windows
+## Configuration
 
-### Known Issues
-- Must run as Administrator for packet capture
-- Requires Npcap installation with WinPcap compatibility mode
+Edit `config.json` to customize:
+- Blacklisted IPs
+- Suspicious ports
+- DNS blacklist
+- Logging preferences
 
-### Troubleshooting
-If you encounter interface detection issues:
-1. Ensure you're running as Administrator
-2. Verify Npcap is properly installed
-3. Make sure the selected network interface is enabled
-4. Check if the interface name follows the correct format: `\Device\NPF_{GUID}`
+Example configuration:
+```json
+{
+    "BLACKLISTED_IPS": ["192.168.1.100", "10.0.0.5"],
+    "SUSPICIOUS_PORTS": [22, 23, 3389],
+    "DNS_BLACKLIST": ["malware.com", "suspicious.net"]
+}
+```
+
+## Display Interface
+
+```
+┌─ Monitoring Statistics ────────────┐
+│ Packets: 1180     Rate: 34.52/s   │
+│ Alerts: 5      DNS Queries: 10    │
+└────────────────────────────────────┘
+
+Recent Events:
+──────────────────────────────────────
+[01:38:17] DNS Query: example.com
+[01:38:24] Alert: Suspicious port access
+```
+
+## Features in Development
+
+- Enhanced cross-platform support
+- Advanced threat detection algorithms
+- Configurable alert history
+- Enhanced filtering mechanisms
+- External threat intelligence integration
+
+## Known Limitations
+
+- Windows-focused implementation
+- Requires administrator privileges
+- Depends on Npcap for packet capture
+
+## Troubleshooting
+
+1. **Permission Denied**
+   - Run the program with administrator privileges
+   - Verify user permissions
+
+2. **Interface Not Found**
+   - Ensure Npcap is properly installed
+   - Check network interface availability
+   - Verify WinPcap API compatibility
+
+3. **Display Issues**
+   - Ensure terminal supports ANSI colors
+   - Check console window size
+   - Verify colorama installation
+
+## Logging
+
+Logs are stored in the `logs` directory with the format `YYYY-MM-DD.log`. Each log entry includes:
+- Timestamp
+- Event type (INFO/WARNING/ERROR)
+- Detailed event description
 
 ## Security Considerations
 
-1. **Authentication**
-   - Change default credentials immediately
-   - Use strong passwords
-   - Implement proper session management
+- Run with minimal required privileges
+- Monitor only authorized networks
+- Review logs regularly
+- Keep configuration files secure
+- Update dependencies regularly
 
-2. **Network Access**
-   - Restrict server access to trusted networks
-   - Use firewall rules as needed
-   - Monitor server logs
+## Developer
 
-3. **Privileges**
-   - Run with minimum required privileges
-   - Secure configuration files
-   - Protect log files
+Rafael Mehdiyev
 
-## Current Limitations
+## License
 
-- Windows-specific implementation
-- Basic threat detection rules
-- Manual configuration required
-- Limited to IP-based detection
-
-## Future Improvements
-
-1. Cross-platform compatibility
-2. Machine learning-based detection
-3. Advanced threat detection rules
-4. Automated response capabilities
-5. Enhanced authentication system
-6. API integration capabilities
-7. Custom rule creation interface
-8. Performance optimizations
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Contributing
 
-Contributions are welcome! Please follow these steps:
 1. Fork the repository
 2. Create a feature branch
 3. Commit your changes
 4. Push to the branch
 5. Create a Pull Request
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ## Acknowledgments
 
-- Scapy project for packet capture capabilities
-- Flask framework for web interface
-- Python community for various dependencies
+- Scapy development team
+- Npcap project contributors
+- Python networking community
