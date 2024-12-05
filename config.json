@@ -12,5 +12,22 @@
         "malware.com",
         "suspicious.net",
         "evil.org"
-    ]
+    ],
+    "THREAT_DETECTION": {
+        "TRAFFIC_ANALYSIS": {
+            "MAX_PACKETS_PER_SEC": 1000,
+            "UNUSUAL_PACKET_SIZE": 9000,
+            "SYN_FLOOD_THRESHOLD": 100
+        },
+        "RATE_LIMITING": {
+            "MAX_CONNECTIONS_PER_IP": 50,
+            "TIME_WINDOW_SECONDS": 60,
+            "PORT_SCAN_THRESHOLD": 20
+        },
+        "GEOLOCATION": {
+            "SUSPICIOUS_COUNTRIES": ["NK", "IR", "CU"],
+            "ALLOWED_COUNTRIES": [],
+            "ENABLE_GEOLOCATION": true
+        }
+    }
 }

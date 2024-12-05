@@ -1,11 +1,10 @@
-from scapy.all import sniff, IP, TCP, UDP, DNS, conf, get_if_list
+from scapy.all import sniff, IP, TCP, UDP, DNS, conf, IFACES
 import socket
 import threading
 import logging
 import json
 import os
 from datetime import datetime
-import wmi
 import time
 
 class Sensor:
@@ -53,41 +52,35 @@ class Sensor:
         root_logger.addHandler(console_handler)
 
     def get_network_adapters(self):
-        w = wmi.WMI()
         adapters = []
-        scapy_interfaces = get_if_list()
-        
-        for adapter in w.Win32_NetworkAdapter(PhysicalAdapter=True):
-            if adapter.NetConnectionID:  # Only get adapters with network connection
-                for iface in scapy_interfaces:
-                    if adapter.GUID in iface:
-                        adapters.append({
-                            'name': adapter.NetConnectionID,
-                            'description': adapter.Name,
-                            'interface': iface
-                        })
-                        break
-        
-        # Add loopback interface
-        for iface in scapy_interfaces:
-            if 'Loopback' in iface:
+        print("\nDebug - All Scapy interfaces:")
+        for iface_name, iface in IFACES.items():
+            print(f"Interface: {iface_name}")
+            print(f"  Description: {getattr(iface, 'description', 'No description')}")
+            print(f"  Name: {getattr(iface, 'name', 'No name')}")
+            print(f"  Network name: {getattr(iface, 'network_name', 'No network name')}")
+            print(f"  GUID: {getattr(iface, 'guid', 'No GUID')}\n")
+            
+            if isinstance(iface_name, str):  # Skip numeric indices
+                name = getattr(iface, 'description', iface_name)
+                description = getattr(iface, 'network_name', getattr(iface, 'name', 'No description'))
                 adapters.append({
-                    'name': 'Loopback',
-                    'description': 'Loopback Interface',
-                    'interface': iface
+                    'name': name,
+                    'description': description,
+                    'interface': iface_name,  # Store the actual interface name
+                    'guid': getattr(iface, 'guid', None)
                 })
-        
         return adapters
 
     def list_interfaces(self):
         adapters = self.get_network_adapters()
         print("\nAvailable Network Interfaces:")
         print("-" * 100)
-        print(f"{'Index':<6} {'Name':<20} {'Description':<50}")
+        print(f"{'Index':<6} {'Name':<30} {'Description':<50}")
         print("-" * 100)
         
         for idx, adapter in enumerate(adapters):
-            print(f"{idx:<6} {adapter['name']:<20} {adapter['description']:<50}")
+            print(f"{idx:<6} {adapter['name'][:27]:<30} {adapter['description'][:47]:<50}")
         
         return adapters
 
@@ -100,11 +93,24 @@ class Sensor:
                     return None
                 idx = int(choice)
                 if 0 <= idx < len(adapters):
-                    return adapters[idx]['interface']
+                    # Get the interface object from IFACES
+                    selected_interface = adapters[idx]['interface']
+                    if selected_interface in IFACES:
+                        # Use the actual interface object's network_name
+                        iface_obj = IFACES[selected_interface]
+                        selected_interface = iface_obj.network_name
+                        print(f"\nSelected interface: {adapters[idx]['name']}")
+                        print(f"Interface ID: {selected_interface}")
+                        return selected_interface
+                    else:
+                        print("Interface not found in Scapy's interface list")
                 else:
                     print("Invalid index number. Please try again.")
             except ValueError:
                 print("Please enter a valid number.")
+            except AttributeError as e:
+                print(f"Error accessing interface properties: {e}")
+                print("Please make sure Npcap is properly installed")
 
     def print_stats(self):
         while True:
@@ -122,7 +128,18 @@ class Sensor:
                     print("No interface selected. Exiting...")
                     return
 
-            print(f"Starting packet capture on interface: {self.interface}")
+            # Debug information
+            print("\nDebug - Selected interface details:")
+            print(f"Interface name: {self.interface}")
+            if self.interface in IFACES:
+                iface = IFACES[self.interface]
+                print(f"Interface object: {iface}")
+                print(f"Interface description: {getattr(iface, 'description', 'No description')}")
+                print(f"Interface name: {getattr(iface, 'name', 'No name')}")
+                print(f"Network name: {getattr(iface, 'network_name', 'No network name')}")
+                print(f"GUID: {getattr(iface, 'guid', 'No GUID')}")
+
+            print(f"\nStarting packet capture on interface: {self.interface}")
             logging.info(f"Started packet capture on interface: {self.interface}")
             
             # Start statistics printing thread
@@ -137,20 +154,47 @@ class Sensor:
             logging.info(f"Blacklisted IPs: {', '.join(self.config['BLACKLISTED_IPS'])}")
             logging.info(f"Suspicious ports: {', '.join(map(str, self.config['SUSPICIOUS_PORTS']))}")
             
-            # Add basic filter to reduce noise
-            sniff(iface=self.interface, 
-                  prn=self.packet_callback, 
-                  store=0,
-                  filter="ip",  # Only capture IP packets
-                  )
+            try:
+                # Add basic filter to reduce noise
+                sniff(iface=self.interface, 
+                      prn=self.packet_callback, 
+                      store=0,
+                      filter="ip"  # Only capture IP packets
+                      )
+            except Exception as sniff_error:
+                error_msg = (
+                    f"Failed to start packet capture on interface: {self.interface}\n"
+                    f"Error Type: {type(sniff_error).__name__}\n"
+                    f"Error Details: {str(sniff_error)}\n"
+                    "Possible causes:\n"
+                    "1. Interface name format is incorrect\n"
+                    "2. Insufficient permissions (Try running as Administrator)\n"
+                    "3. Npcap/WinPcap is not properly installed\n"
+                    "4. Interface is disabled or not properly configured\n"
+                    f"Interface Details:\n"
+                    f"- Name: {self.interface}\n"
+                    f"- Available interfaces: {', '.join(str(k) for k in IFACES.keys())}\n"
+                    f"- Interface in IFACES: {self.interface in IFACES}\n"
+                    f"- Scapy conf.iface: {conf.iface}"
+                )
+                logging.error(error_msg)
+                print("\nError Details:")
+                print(error_msg)
+                return
             
         except KeyboardInterrupt:
             print("\nCapture stopped by user")
             logging.info("Capture stopped by user")
         except Exception as e:
-            logging.error(f"Failed to start capture: {str(e)}")
-            print(f"Error: {str(e)}")
-
+            error_msg = (
+                f"Unexpected error during capture:\n"
+                f"Error Type: {type(e).__name__}\n"
+                f"Error Details: {str(e)}\n"
+                f"Interface: {self.interface}"
+            )
+            logging.error(error_msg)
+            print(f"\nError: {error_msg}")
+            
     def packet_callback(self, packet):
         try:
             self.packet_count += 1

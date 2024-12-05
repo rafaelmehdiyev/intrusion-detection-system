@@ -2,6 +2,13 @@
 
 A real-time network intrusion detection system (NIDS) that monitors network traffic, detects potential security threats, and provides a web-based monitoring interface.
 
+## In Progress Improvements
+1. Improved Threat Detection  
+   - Basic Anomaly Detection: Introduce simple anomaly detection based on traffic patterns, such as detecting large spikes in traffic, unusual packet sizes, or changes in traffic flow (e.g., sudden flood of SYN packets for SYN flood detection).  
+   - Rate Limiting for Suspicious Traffic: Implement rate-limiting rules (e.g., multiple requests to the same port/IP in a short period) to detect potential brute force attacks or scans.  
+   - GeoIP Lookup: Integrate lightweight IP geolocation to track the source of suspicious traffic. This can help detect unusual activity from foreign countries or regions where you don’t expect traffic.  
+
+
 ## Features
 
 ### Core Components
@@ -110,6 +117,26 @@ The system is configured through `config.json`:
    - Filter and search through events
    - View security alerts
 
+## Recent Updates
+
+### Interface Detection Fix
+- Fixed Windows network interface detection issues
+- Now properly using Scapy's IFACES for interface discovery
+- Correctly formatting interface names with `\Device\NPF_{GUID}` pattern
+- Improved error handling and debugging information
+- Resolved the "Error opening adapter" issue on Windows
+
+### Known Issues
+- Must run as Administrator for packet capture
+- Requires Npcap installation with WinPcap compatibility mode
+
+### Troubleshooting
+If you encounter interface detection issues:
+1. Ensure you're running as Administrator
+2. Verify Npcap is properly installed
+3. Make sure the selected network interface is enabled
+4. Check if the interface name follows the correct format: `\Device\NPF_{GUID}`
+
 ## Security Considerations
 
 1. **Authentication**
@@ -144,23 +171,6 @@ The system is configured through `config.json`:
 6. API integration capabilities
 7. Custom rule creation interface
 8. Performance optimizations
-
-## Troubleshooting
-
-1. **Packet Capture Issues**
-   - Verify administrator privileges
-   - Check network interface selection
-   - Confirm Scapy installation
-
-2. **Web Interface Issues**
-   - Verify server is running
-   - Check port availability
-   - Confirm authentication credentials
-
-3. **Performance Issues**
-   - Monitor system resources
-   - Adjust packet capture filters
-   - Check log file sizes
 
 ## Contributing
 
