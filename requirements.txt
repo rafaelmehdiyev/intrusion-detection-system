@@ -1,0 +1,7 @@
+scapy>=2.5.0
+requests>=2.31.0
+flask>=3.0.0
+werkzeug>=3.0.1
+whois>=0.9.27
+maxminddb-geolite2>=2018.703
+wmi>=1.5.1

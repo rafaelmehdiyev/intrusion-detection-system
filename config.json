@@ -1,0 +1,16 @@
+{
+    "LOG_DIR": "logs",
+    "BLACKLISTED_IPS": [
+        "192.168.1.100",
+        "10.0.0.100",
+        "8.8.8.8"
+    ],
+    "SUSPICIOUS_PORTS": [
+        22, 23, 445, 1433, 3389, 4444, 5554
+    ],
+    "DNS_BLACKLIST": [
+        "malware.com",
+        "suspicious.net",
+        "evil.org"
+    ]
+}

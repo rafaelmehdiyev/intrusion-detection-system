@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Security Monitor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { padding: 20px; background-color: #f8f9fa; }
+        .event-card {
+            margin-bottom: 10px;
+            border-left: 4px solid #007bff;
+            transition: all 0.3s ease;
+        }
+        .event-card:hover {
+            transform: translateX(5px);
+        }
+        .event-warning {
+            border-left-color: #ffc107;
+            background-color: #fff3cd;
+        }
+        .event-error {
+            border-left-color: #dc3545;
+            background-color: #f8d7da;
+        }
+        #status-indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+        }
+        .status-connected { background-color: #28a745; }
+        .status-disconnected { background-color: #dc3545; }
+        #events-container {
+            max-height: 600px;
+            overflow-y: auto;
+        }
+        .toolbar {
+            position: sticky;
+            top: 0;
+            background-color: #f8f9fa;
+            padding: 10px 0;
+            z-index: 1000;
+            border-bottom: 1px solid #dee2e6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col">
+                <h1 class="display-4">Network Security Monitor</h1>
+                <div class="d-flex align-items-center">
+                    <div id="status-indicator" class="status-disconnected"></div>
+                    <span id="connection-status">Disconnected</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="toolbar mb-3">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="text" id="filter-input" class="form-control" placeholder="Filter events...">
+                        <button class="btn btn-outline-secondary" type="button" onclick="clearFilter()">Clear</button>
+                    </div>
+                </div>
+                <div class="col-md-6 text-end">
+                    <button class="btn btn-danger" onclick="clearEvents()">Clear Events</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="events-container" class="mb-4">
+            <!-- Events will be inserted here -->
+        </div>
+    </div>
+
+    <script>
+        let eventsContainer = document.getElementById('events-container');
+        let statusIndicator = document.getElementById('status-indicator');
+        let connectionStatus = document.getElementById('connection-status');
+        let filterInput = document.getElementById('filter-input');
+        let eventSource = null;
+
+        function connectEventSource() {
+            eventSource = new EventSource('/events');
+            
+            eventSource.onopen = function() {
+                statusIndicator.className = 'status-connected';
+                connectionStatus.textContent = 'Connected';
+            };
+
+            eventSource.onmessage = function(event) {
+                const data = JSON.parse(event.data);
+                addEvent(data.message);
+            };
+
+            eventSource.onerror = function() {
+                statusIndicator.className = 'status-disconnected';
+                connectionStatus.textContent = 'Disconnected - Reconnecting...';
+                eventSource.close();
+                setTimeout(connectEventSource, 5000);
+            };
+        }
+
+        function addEvent(message) {
+            const card = document.createElement('div');
+            card.className = 'card event-card shadow-sm';
+            
+            // Determine event type from message
+            if (message.includes('WARNING')) {
+                card.classList.add('event-warning');
+            } else if (message.includes('ERROR')) {
+                card.classList.add('event-error');
+            }
+
+            const cardBody = document.createElement('div');
+            cardBody.className = 'card-body py-2';
+            cardBody.textContent = message;
+            
+            card.appendChild(cardBody);
+
+            // Apply filter
+            if (filterInput.value && !message.toLowerCase().includes(filterInput.value.toLowerCase())) {
+                card.style.display = 'none';
+            }
+
+            eventsContainer.insertBefore(card, eventsContainer.firstChild);
+        }
+
+        function clearEvents() {
+            eventsContainer.innerHTML = '';
+        }
+
+        function clearFilter() {
+            filterInput.value = '';
+            Array.from(eventsContainer.children).forEach(card => {
+                card.style.display = 'block';
+            });
+        }
+
+        filterInput.addEventListener('input', function() {
+            const filterText = this.value.toLowerCase();
+            Array.from(eventsContainer.children).forEach(card => {
+                const cardText = card.textContent.toLowerCase();
+                card.style.display = cardText.includes(filterText) ? 'block' : 'none';
+            });
+        });
+
+        // Start connection
+        connectEventSource();
+    </script>
+</body>
+</html>
