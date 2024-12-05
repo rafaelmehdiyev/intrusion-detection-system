@@ -16,13 +16,46 @@
         .event-card:hover {
             transform: translateX(5px);
         }
-        .event-warning {
-            border-left-color: #ffc107;
-            background-color: #fff3cd;
+        /* Event Categories */
+        .event-info { border-left-color: #007bff; background-color: #cfe2ff; }
+        .event-warning { border-left-color: #ffc107; background-color: #fff3cd; }
+        .event-error { border-left-color: #dc3545; background-color: #f8d7da; }
+        .event-ip { border-left-color: #0dcaf0; background-color: #cff4fc; }
+        .event-port { border-left-color: #198754; background-color: #d1e7dd; }
+        .event-dns { border-left-color: #6f42c1; background-color: #e2d9f3; }
+
+        .category-badge {
+            font-size: 0.8em;
+            padding: 0.25em 0.5em;
+            border-radius: 0.25rem;
+            margin-right: 0.5em;
         }
-        .event-error {
-            border-left-color: #dc3545;
-            background-color: #f8d7da;
+        
+        .filter-tag {
+            display: inline-block;
+            padding: 0.25em 0.75em;
+            margin: 0.25em;
+            border-radius: 1rem;
+            background-color: #e9ecef;
+            cursor: pointer;
+        }
+        .filter-tag.active {
+            background-color: #0d6efd;
+            color: white;
+        }
+        
+        .search-container {
+            position: relative;
+        }
+        .search-container i {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6c757d;
+        }
+        .search-input {
+            padding-left: 30px;
         }
         #status-indicator {
             width: 10px;
@@ -103,15 +136,32 @@
         </div>
 
         <div class="toolbar mb-3">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="input-group">
-                        <input type="text" id="filter-input" class="form-control" placeholder="Filter events...">
-                        <button class="btn btn-outline-secondary" type="button" onclick="clearFilter()">Clear</button>
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="search-container">
+                        <i class="bi bi-search"></i>
+                        <input type="text" id="filterInput" class="form-control search-input" placeholder="Search events...">
                     </div>
                 </div>
-                <div class="col-md-6 text-end">
-                    <button class="btn btn-danger" onclick="clearEvents()">Clear Events</button>
+                <div class="col-md-6">
+                    <div class="filter-tags">
+                        <span class="filter-tag active" data-category="all">All</span>
+                        <span class="filter-tag" data-category="ip">IP Events</span>
+                        <span class="filter-tag" data-category="port">Port Scans</span>
+                        <span class="filter-tag" data-category="dns">DNS Queries</span>
+                        <span class="filter-tag" data-category="error">Errors</span>
+                        <span class="filter-tag" data-category="warning">Warnings</span>
+                    </div>
+                </div>
+                <div class="col-md-2 text-end">
+                    <div class="btn-group">
+                        <button class="btn btn-outline-secondary" id="clearEvents">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                        <button class="btn btn-outline-primary" id="exportEvents">
+                            <i class="bi bi-download"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -125,8 +175,9 @@
         let eventsContainer = document.getElementById('events-container');
         let statusIndicator = document.getElementById('status-indicator');
         let connectionStatus = document.getElementById('connection-status');
-        let filterInput = document.getElementById('filter-input');
+        let filterInput = document.getElementById('filterInput');
         let eventSource = null;
+        let maxEvents = 100;
 
         function connectEventSource() {
             eventSource = new EventSource('/events');
@@ -151,47 +202,127 @@
 
         function addEvent(message) {
             const card = document.createElement('div');
-            card.className = 'card event-card shadow-sm';
+            card.className = 'card event-card';
             
-            // Determine event type from message
-            if (message.includes('WARNING')) {
+            // Determine event category and add appropriate class
+            if (message.includes('IP')) {
+                card.classList.add('event-ip');
+            } else if (message.includes('Port')) {
+                card.classList.add('event-port');
+            } else if (message.includes('DNS')) {
+                card.classList.add('event-dns');
+            } else if (message.toLowerCase().includes('warning')) {
                 card.classList.add('event-warning');
-            } else if (message.includes('ERROR')) {
+            } else if (message.toLowerCase().includes('error')) {
                 card.classList.add('event-error');
+            } else {
+                card.classList.add('event-info');
             }
 
-            const cardBody = document.createElement('div');
-            cardBody.className = 'card-body py-2';
-            cardBody.textContent = message;
-            
-            card.appendChild(cardBody);
+            // Extract timestamp and category
+            const timestamp = new Date().toLocaleTimeString();
+            let category = 'INFO';
+            if (card.classList.contains('event-ip')) category = 'IP';
+            if (card.classList.contains('event-port')) category = 'PORT';
+            if (card.classList.contains('event-dns')) category = 'DNS';
+            if (card.classList.contains('event-warning')) category = 'WARNING';
+            if (card.classList.contains('event-error')) category = 'ERROR';
 
-            // Apply filter
-            if (filterInput.value && !message.toLowerCase().includes(filterInput.value.toLowerCase())) {
-                card.style.display = 'none';
-            }
+            card.innerHTML = `
+                <div class="card-body">
+                    <span class="category-badge badge bg-secondary">${category}</span>
+                    <small class="text-muted">${timestamp}</small>
+                    <p class="card-text mb-0">${message}</p>
+                </div>
+            `;
 
             eventsContainer.insertBefore(card, eventsContainer.firstChild);
+            if (eventsContainer.children.length > maxEvents) {
+                eventsContainer.removeChild(eventsContainer.lastChild);
+            }
         }
 
-        function clearEvents() {
-            eventsContainer.innerHTML = '';
-        }
+        // Enhanced filtering system
+        const filterTags = document.querySelectorAll('.filter-tag');
+        let activeFilters = ['all'];
 
-        function clearFilter() {
-            filterInput.value = '';
-            Array.from(eventsContainer.children).forEach(card => {
-                card.style.display = 'block';
-            });
-        }
-
-        filterInput.addEventListener('input', function() {
-            const filterText = this.value.toLowerCase();
-            Array.from(eventsContainer.children).forEach(card => {
-                const cardText = card.textContent.toLowerCase();
-                card.style.display = cardText.includes(filterText) ? 'block' : 'none';
+        filterTags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                const category = tag.dataset.category;
+                
+                if (category === 'all') {
+                    activeFilters = ['all'];
+                    filterTags.forEach(t => t.classList.remove('active'));
+                    tag.classList.add('active');
+                } else {
+                    const allTag = document.querySelector('.filter-tag[data-category="all"]');
+                    allTag.classList.remove('active');
+                    
+                    tag.classList.toggle('active');
+                    if (tag.classList.contains('active')) {
+                        activeFilters = activeFilters.filter(f => f !== 'all');
+                        activeFilters.push(category);
+                    } else {
+                        activeFilters = activeFilters.filter(f => f !== category);
+                    }
+                    
+                    if (activeFilters.length === 0) {
+                        activeFilters = ['all'];
+                        allTag.classList.add('active');
+                    }
+                }
+                
+                applyFilters();
             });
         });
+
+        function applyFilters() {
+            const searchText = filterInput.value.toLowerCase();
+            Array.from(eventsContainer.children).forEach(card => {
+                const cardText = card.textContent.toLowerCase();
+                const cardCategory = getCardCategory(card);
+                
+                const matchesSearch = cardText.includes(searchText);
+                const matchesCategory = activeFilters.includes('all') || 
+                                     activeFilters.some(filter => cardCategory.includes(filter.toLowerCase()));
+                
+                card.style.display = matchesSearch && matchesCategory ? '' : 'none';
+            });
+        }
+
+        function getCardCategory(card) {
+            if (card.classList.contains('event-ip')) return 'ip';
+            if (card.classList.contains('event-port')) return 'port';
+            if (card.classList.contains('event-dns')) return 'dns';
+            if (card.classList.contains('event-warning')) return 'warning';
+            if (card.classList.contains('event-error')) return 'error';
+            return 'info';
+        }
+
+        // Export functionality
+        document.getElementById('exportEvents').addEventListener('click', () => {
+            const events = Array.from(eventsContainer.children)
+                .filter(card => card.style.display !== 'none')
+                .map(card => {
+                    const timestamp = card.querySelector('small').textContent;
+                    const category = card.querySelector('.category-badge').textContent;
+                    const message = card.querySelector('.card-text').textContent;
+                    return `${timestamp},${category},"${message}"`;
+                });
+            
+            const csv = ['Timestamp,Category,Message', ...events].join('\n');
+            const blob = new Blob([csv], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.setAttribute('hidden', '');
+            a.setAttribute('href', url);
+            a.setAttribute('download', `network_events_${new Date().toISOString().slice(0,10)}.csv`);
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        });
+
+        filterInput.addEventListener('input', applyFilters);
 
         // Start connection
         connectEventSource();
