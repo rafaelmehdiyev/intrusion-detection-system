@@ -1,149 +1,168 @@
-# Windsurf Network Security Monitor
+# Network Security Monitor
 
-A comprehensive Network Intrusion Detection System (NIDS) with real-time packet monitoring and threat detection capabilities.
+A comprehensive web-based network security monitoring and configuration system.
 
 ## Features
 
-- Real-time network traffic monitoring
-- Advanced packet capture and analysis
-- Dynamic, color-coded CLI interface
-- Thread-safe logging and display
-- Intelligent DNS query caching
-- Robust signal handling and clean shutdown
+### Dashboard
+- Real-time network status monitoring
+- Threat detection statistics
+- Blocked IP tracking
+- System health monitoring
+- Recent activity log
 
-### Threat Detection
+### Configuration Interface
+- Section-based configuration management
+- Detailed help text for each setting
+- Real-time validation
+- Automatic configuration persistence
 
-- Blacklisted IP detection
-- Suspicious port monitoring
-- DNS query tracking
-- Unusual domain name detection (DGA)
-- Real-time alert system
+## Configuration Sections
 
-## Requirements
+### General Settings
+- Log Directory: Specify where log files are stored
+- Log Level: Set logging detail (DEBUG/INFO/WARNING/ERROR)
+- Network Interface: Select interface to monitor
+- Capture Timeout: Set packet capture duration
 
-- Python 3.11 or higher
-- Windows OS (cross-platform support in development)
-- Administrator privileges
-- Npcap with WinPcap API compatibility
+### IP Rules
+- Blacklisted IPs: Block specific IP addresses
+- Whitelisted IPs: Allow trusted IP addresses
+- IP Ranges: Monitor specific network ranges (CIDR notation)
+- Connection Limits: Control per-IP connection count
+- Timeout Settings: Manage connection timeouts
 
-### Dependencies
+### Port Rules
+- Suspicious Ports: Define potentially malicious ports
+- Allowed Ports: Specify permitted service ports
+- Port Scan Detection:
+  * Enable/disable detection
+  * Set detection threshold
+  * Configure time window
 
-```
-scapy==2.5.0
-colorama==0.4.6
-```
+### DNS Rules
+- Domain Blacklist: Block specific domains
+- DGA Detection:
+  * Enable/disable detection
+  * Set entropy threshold
+  * Configure length requirements
+  * Adjust consonant ratio detection
+- DNS Monitoring:
+  * Set cache timeout
+  * Limit queries per domain
+  * Track suspicious TLDs
+
+## Recent Updates
+
+### Version 1.1.0
+- Added consistent navigation across all pages
+- Implemented section-based configuration saving
+- Added detailed configuration explanations
+- Fixed configuration persistence issues
+- Enhanced error handling
+- Improved mobile responsiveness
+
+### Version 1.0.0
+- Initial release with basic monitoring
+- Configuration management system
+- Dashboard implementation
+- Security rule management
+
+## Technical Stack
+- Python 3.11
+- Flask web framework
+- Bootstrap 5 UI framework
+- JSON-based configuration
 
 ## Installation
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/rafaelmehdiyev/intrusion-detection-system.git
-cd intrusion-detection-system
+git clone [repository-url]
 ```
 
-2. Install required packages:
+2. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Install Npcap from the [official website](https://npcap.com/#download)
-   - Ensure "WinPcap API compatibility" is selected during installation
-
-## Usage
-
-Run the monitor with administrator privileges:
-
+3. Run the application:
 ```bash
-python sensor.py
+python server.py
 ```
 
-### Command Line Options
+4. Access the interface:
+```
+http://localhost:5000
+```
 
-- `--debug`: Enable debug output for troubleshooting
+Default credentials:
+- Username: admin
+- Password: 123
 
-## Configuration
+## Configuration Structure
 
-Edit `config.json` to customize:
-- Blacklisted IPs
-- Suspicious ports
-- DNS blacklist
-- Logging preferences
+The system uses a JSON-based configuration file (`config.json`) with the following structure:
 
-Example configuration:
 ```json
 {
-    "BLACKLISTED_IPS": ["192.168.1.100", "10.0.0.5"],
-    "SUSPICIOUS_PORTS": [22, 23, 3389],
-    "DNS_BLACKLIST": ["malware.com", "suspicious.net"]
+    "GENERAL_SETTINGS": {
+        "LOG_DIR": "logs",
+        "LOG_LEVEL": "INFO",
+        "INTERFACE": "auto",
+        "CAPTURE_TIMEOUT": 0
+    },
+    "IP_RULES": {
+        "BLACKLISTED_IPS": [],
+        "WHITELISTED_IPS": [],
+        "IP_RANGES_TO_MONITOR": ["192.168.0.0/16"],
+        "MAX_CONNECTIONS_PER_IP": 50,
+        "CONNECTION_TIMEOUT": 300
+    },
+    "PORT_RULES": {
+        "SUSPICIOUS_PORTS": [22, 23, 445, 1433, 3389, 4444, 5554],
+        "ALLOWED_PORTS": [80, 443, 53],
+        "PORT_SCAN_DETECTION": {
+            "ENABLED": true,
+            "THRESHOLD": 20,
+            "TIME_WINDOW": 60
+        }
+    },
+    "DNS_RULES": {
+        "DNS_BLACKLIST": [],
+        "DGA_DETECTION": {
+            "ENABLED": true,
+            "MIN_ENTROPY": 3.5,
+            "MIN_LENGTH": 10,
+            "CONSONANT_THRESHOLD": 0.7
+        },
+        "DNS_MONITORING": {
+            "CACHE_TIMEOUT": 300,
+            "MAX_QUERIES_PER_DOMAIN": 100,
+            "SUSPICIOUS_TLD": [".xyz", ".top"]
+        }
+    }
 }
 ```
 
-## Display Interface
-
-```
-┌─ Monitoring Statistics ────────────┐
-│ Packets: 1180     Rate: 34.52/s   │
-│ Alerts: 5      DNS Queries: 10    │
-└────────────────────────────────────┘
-
-Recent Events:
-──────────────────────────────────────
-[01:38:17] DNS Query: example.com
-[01:38:24] Alert: Suspicious port access
-```
-
-## Features in Development
-
-- Enhanced cross-platform support
-- Advanced threat detection algorithms
-- Configurable alert history
-- Enhanced filtering mechanisms
-- External threat intelligence integration
-
-## Known Limitations
-
-- Windows-focused implementation
-- Requires administrator privileges
-- Depends on Npcap for packet capture
-
-## Troubleshooting
-
-1. **Permission Denied**
-   - Run the program with administrator privileges
-   - Verify user permissions
-
-2. **Interface Not Found**
-   - Ensure Npcap is properly installed
-   - Check network interface availability
-   - Verify WinPcap API compatibility
-
-3. **Display Issues**
-   - Ensure terminal supports ANSI colors
-   - Check console window size
-   - Verify colorama installation
-
-## Logging
-
-Logs are stored in the `logs` directory with the format `YYYY-MM-DD.log`. Each log entry includes:
-- Timestamp
-- Event type (INFO/WARNING/ERROR)
-- Detailed event description
-
 ## Security Considerations
 
-- Run with minimal required privileges
-- Monitor only authorized networks
-- Review logs regularly
-- Keep configuration files secure
-- Update dependencies regularly
+1. Authentication
+   - Basic authentication implemented
+   - Password hashing enabled
+   - Session management included
 
-## Developer
+2. Configuration Security
+   - Section-based updates
+   - Type validation
+   - Error handling
+   - Configuration backup
 
-Rafael Mehdiyev
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+3. Network Security
+   - Flexible IP blocking
+   - Port scanning detection
+   - DNS threat monitoring
+   - DGA detection
 
 ## Contributing
 
@@ -153,8 +172,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 4. Push to the branch
 5. Create a Pull Request
 
-## Acknowledgments
+## License
 
-- Scapy development team
-- Npcap project contributors
-- Python networking community
+This project is licensed under the MIT License - see the LICENSE file for details.

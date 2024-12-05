@@ -1,33 +1,111 @@
 {
     "LOG_DIR": "logs",
-    "BLACKLISTED_IPS": [
-        "192.168.1.100",
-        "10.0.0.100",
-        "8.8.8.8"
-    ],
-    "SUSPICIOUS_PORTS": [
-        22, 23, 445, 1433, 3389, 4444, 5554
-    ],
-    "DNS_BLACKLIST": [
-        "malware.com",
-        "suspicious.net",
-        "evil.org"
-    ],
-    "THREAT_DETECTION": {
-        "TRAFFIC_ANALYSIS": {
+    "GENERAL_SETTINGS": {
+        "ENABLE_LOGGING": true,
+        "LOG_LEVEL": "INFO",
+        "INTERFACE": "auto",
+        "CAPTURE_TIMEOUT": 0
+    },
+    "IP_RULES": {
+        "BLACKLISTED_IPS": [
+            "192.168.1.100",
+            "10.0.0.100",
+            "8.8.8.8"
+        ],
+        "WHITELISTED_IPS": [],
+        "IP_RANGES_TO_MONITOR": [
+            "192.168.0.0/16",
+            "10.0.0.0/8"
+        ],
+        "MAX_CONNECTIONS_PER_IP": 50,
+        "CONNECTION_TIMEOUT": 300
+    },
+    "PORT_RULES": {
+        "SUSPICIOUS_PORTS": [
+            22, 23, 445, 1433, 3389, 4444, 5554
+        ],
+        "ALLOWED_PORTS": [
+            80, 443, 53
+        ],
+        "PORT_SCAN_DETECTION": {
+            "ENABLED": true,
+            "THRESHOLD": 20,
+            "TIME_WINDOW": 60
+        }
+    },
+    "DNS_RULES": {
+        "DNS_BLACKLIST": [
+            "malware.com",
+            "suspicious.net",
+            "evil.org"
+        ],
+        "DGA_DETECTION": {
+            "ENABLED": true,
+            "MIN_ENTROPY": 3.5,
+            "MIN_LENGTH": 10,
+            "CONSONANT_THRESHOLD": 0.7
+        },
+        "DNS_MONITORING": {
+            "CACHE_TIMEOUT": 300,
+            "MAX_QUERIES_PER_DOMAIN": 100,
+            "SUSPICIOUS_TLD": [
+                ".xyz",
+                ".tk",
+                ".top"
+            ]
+        }
+    },
+    "TRAFFIC_ANALYSIS": {
+        "PACKET_INSPECTION": {
             "MAX_PACKETS_PER_SEC": 1000,
             "UNUSUAL_PACKET_SIZE": 9000,
-            "SYN_FLOOD_THRESHOLD": 100
+            "ENABLE_DEEP_INSPECTION": false
+        },
+        "PROTOCOL_MONITORING": {
+            "BLOCKED_PROTOCOLS": ["TELNET", "FTP"],
+            "ALERT_ON_UNENCRYPTED": true
         },
         "RATE_LIMITING": {
-            "MAX_CONNECTIONS_PER_IP": 50,
-            "TIME_WINDOW_SECONDS": 60,
-            "PORT_SCAN_THRESHOLD": 20
-        },
-        "GEOLOCATION": {
-            "SUSPICIOUS_COUNTRIES": ["NK", "IR", "CU"],
-            "ALLOWED_COUNTRIES": [],
-            "ENABLE_GEOLOCATION": true
+            "ENABLED": true,
+            "SYN_FLOOD_THRESHOLD": 100,
+            "TIME_WINDOW_SECONDS": 60
         }
+    },
+    "ALERT_SETTINGS": {
+        "ALERT_LEVELS": {
+            "INFO": {
+                "COLOR": "WHITE",
+                "LOG": true
+            },
+            "WARNING": {
+                "COLOR": "YELLOW",
+                "LOG": true
+            },
+            "ALERT": {
+                "COLOR": "RED",
+                "LOG": true,
+                "NOTIFY": true
+            }
+        },
+        "ALERT_ACTIONS": {
+            "EMAIL_NOTIFICATIONS": {
+                "ENABLED": false,
+                "SMTP_SERVER": "",
+                "SMTP_PORT": 587,
+                "SENDER_EMAIL": "",
+                "RECIPIENT_EMAIL": ""
+            },
+            "AUTO_BLOCK": {
+                "ENABLED": true,
+                "BLOCK_DURATION": 3600,
+                "MAX_STRIKES": 3
+            }
+        }
+    },
+    "GEOLOCATION": {
+        "ENABLED": true,
+        "SUSPICIOUS_COUNTRIES": ["NK", "IR", "CU"],
+        "ALLOWED_COUNTRIES": [],
+        "GEO_DB_PATH": "geo.mmdb"
     }
 }

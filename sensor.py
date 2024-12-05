@@ -32,37 +32,38 @@ class Sensor:
         self.alert_history = deque(maxlen=5)
         self.display_lock = threading.Lock()
         self.recent_dns_queries = {}
-        self.dns_cache_timeout = 1.0
+        self.connection_tracker = {}
+        self.port_scan_tracker = {}
+        self.blocked_ips = set()
         self.running = True
         self.stats_thread = None
         
-        # Setup signal handlers
-        signal.signal(signal.SIGINT, self.signal_handler)
-        signal.signal(signal.SIGTERM, self.signal_handler)
-
         # Load configuration
         try:
             with open(config_path, 'r') as f:
                 self.config = json.load(f)
+            # Set up logging based on config
+            log_level = getattr(logging, self.config.get("GENERAL_SETTINGS", {}).get("LOG_LEVEL", "INFO"))
+            log_dir = self.config.get("LOG_DIR", "logs")
+            if not os.path.exists(log_dir):
+                os.makedirs(log_dir)
+            log_file = os.path.join(log_dir, f"{datetime.now().strftime('%Y-%m-%d')}.log")
+            logging.basicConfig(
+                filename=log_file,
+                level=log_level,
+                format='%(asctime)s - %(levelname)s - %(message)s'
+            )
         except Exception as e:
             print(f"Error loading config: {str(e)}")
             self.config = {
-                "BLACKLISTED_IPS": [],
-                "SUSPICIOUS_PORTS": [22, 23, 3389],
-                "DNS_BLACKLIST": []
+                "IP_RULES": {"BLACKLISTED_IPS": []},
+                "PORT_RULES": {"SUSPICIOUS_PORTS": [22, 23, 3389]},
+                "DNS_RULES": {"DNS_BLACKLIST": []}
             }
 
-        # Setup logging
-        log_dir = "logs"
-        if not os.path.exists(log_dir):
-            os.makedirs(log_dir)
-        
-        log_file = os.path.join(log_dir, f"{datetime.now().strftime('%Y-%m-%d')}.log")
-        logging.basicConfig(
-            filename=log_file,
-            level=logging.INFO,
-            format='%(asctime)s - %(levelname)s - %(message)s'
-        )
+        # Setup signal handlers
+        signal.signal(signal.SIGINT, self.signal_handler)
+        signal.signal(signal.SIGTERM, self.signal_handler)
 
     def signal_handler(self, signum, frame):
         """Handle shutdown signals"""
@@ -127,54 +128,170 @@ class Sensor:
         print(banner)
 
     def add_alert(self, alert_msg, alert_type="INFO"):
-        """Add a security alert (not DNS queries)"""
+        """Enhanced alert handling with configurable actions"""
         try:
             with self.display_lock:
                 timestamp = datetime.now().strftime('%H:%M:%S')
-                color = Fore.YELLOW if alert_type == "WARNING" else Fore.RED if alert_type == "ALERT" else Fore.WHITE
+                alert_settings = self.config.get("ALERT_SETTINGS", {})
+                alert_level = alert_settings.get("ALERT_LEVELS", {}).get(alert_type, {})
+                
+                # Get color based on alert type
+                color = getattr(Fore, alert_level.get("COLOR", "WHITE"))
                 formatted_alert = f"{color}[{timestamp}] {alert_msg}{Style.RESET_ALL}"
+                
+                # Add to history and increment counter
                 self.alert_history.append(formatted_alert)
                 self.alert_count += 1
-                logging.warning(f"Alert: {alert_msg}")  
+                
+                # Log if enabled
+                if alert_level.get("LOG", True):
+                    logging.warning(alert_msg)
+                
+                # Handle notifications
+                if alert_level.get("NOTIFY", False):
+                    self.handle_notification(alert_msg, alert_type)
+                
+                # Handle auto-blocking
+                if alert_type == "ALERT" and alert_settings.get("ALERT_ACTIONS", {}).get("AUTO_BLOCK", {}).get("ENABLED", False):
+                    self.handle_auto_block(alert_msg)
+                
         except Exception as e:
-            logging.error(f"Error adding alert: {str(e)}")
+            logging.error(f"Error updating display: {str(e)}")
 
-    def analyze_dns(self, packet, dns_packet):
-        """Analyze DNS packet with proper counting"""
+    def handle_notification(self, alert_msg, alert_type):
+        """Handle alert notifications (email, etc.)"""
+        email_config = self.config.get("ALERT_SETTINGS", {}).get("ALERT_ACTIONS", {}).get("EMAIL_NOTIFICATIONS", {})
+        if email_config.get("ENABLED", False):
+            # Implement email notification here
+            pass
+
+    def handle_auto_block(self, alert_msg):
+        """Handle automatic IP blocking"""
+        auto_block = self.config.get("ALERT_SETTINGS", {}).get("ALERT_ACTIONS", {}).get("AUTO_BLOCK", {})
+        if auto_block.get("ENABLED", False):
+            # Extract IP from alert message and add to blocked list
+            # Implementation depends on your blocking mechanism
+            pass
+
+    def check_ip_rules(self, src_ip, dst_ip):
+        """Check IP against configured rules"""
+        ip_rules = self.config.get("IP_RULES", {})
+        
+        # Check blacklisted IPs
+        if src_ip in ip_rules.get("BLACKLISTED_IPS", []) or dst_ip in ip_rules.get("BLACKLISTED_IPS", []):
+            self.add_alert(f"Detected traffic from/to blacklisted IP - Src: {src_ip}, Dst: {dst_ip}", "ALERT")
+            return True
+
+        # Check IP ranges
+        for ip_range in ip_rules.get("IP_RANGES_TO_MONITOR", []):
+            if self.ip_in_range(src_ip, ip_range) or self.ip_in_range(dst_ip, ip_range):
+                self.add_alert(f"Detected traffic in monitored IP range - Src: {src_ip}, Dst: {dst_ip}", "INFO")
+                return True
+
+        return False
+
+    def check_port_rules(self, src_ip, dst_ip, src_port, dst_port):
+        """Check ports against configured rules"""
+        port_rules = self.config.get("PORT_RULES", {})
+        
+        # Check suspicious ports
+        if dst_port in port_rules.get("SUSPICIOUS_PORTS", []):
+            self.add_alert(f"Suspicious port access detected - Src: {src_ip}:{src_port}, Dst: {dst_ip}:{dst_port}", "WARNING")
+            return True
+
+        # Port scan detection
+        if port_rules.get("PORT_SCAN_DETECTION", {}).get("ENABLED", False):
+            self.check_port_scan(src_ip, dst_port)
+
+        return False
+
+    def check_port_scan(self, src_ip, dst_port):
+        """Detect potential port scanning"""
+        port_rules = self.config.get("PORT_RULES", {}).get("PORT_SCAN_DETECTION", {})
+        threshold = port_rules.get("THRESHOLD", 20)
+        time_window = port_rules.get("TIME_WINDOW", 60)
+        
+        current_time = time.time()
+        if src_ip not in self.port_scan_tracker:
+            self.port_scan_tracker[src_ip] = {"ports": set(), "start_time": current_time}
+        
+        tracker = self.port_scan_tracker[src_ip]
+        tracker["ports"].add(dst_port)
+        
+        if current_time - tracker["start_time"] <= time_window:
+            if len(tracker["ports"]) >= threshold:
+                self.add_alert(f"Possible port scan detected from {src_ip} - {len(tracker['ports'])} ports in {time_window}s", "ALERT")
+                return True
+        else:
+            # Reset tracker after time window
+            tracker["ports"] = {dst_port}
+            tracker["start_time"] = current_time
+        
+        return False
+
+    def check_dns_rules(self, packet, dns_packet):
+        """Enhanced DNS analysis with new rules"""
+        dns_rules = self.config.get("DNS_RULES", {})
+        
+        if dns_packet.qr == 0:  # DNS query
+            query = dns_packet.qd.qname.decode('utf-8').lower().rstrip('.')
+            
+            # Check DNS blacklist
+            if query in dns_rules.get("DNS_BLACKLIST", []):
+                self.add_alert(f"Query to blacklisted domain detected: {query}", "ALERT")
+                return True
+            
+            # Check suspicious TLDs
+            for tld in dns_rules.get("DNS_MONITORING", {}).get("SUSPICIOUS_TLD", []):
+                if query.endswith(tld):
+                    self.add_alert(f"Query to suspicious TLD detected: {query}", "WARNING")
+                    return True
+            
+            # DGA detection
+            if dns_rules.get("DGA_DETECTION", {}).get("ENABLED", False):
+                if self.check_dga(query):
+                    self.add_alert(f"Possible DGA domain detected: {query}", "WARNING")
+                    return True
+        
+        return False
+
+    def check_dga(self, domain):
+        """Check if domain appears to be generated by DGA"""
+        dga_rules = self.config.get("DNS_RULES", {}).get("DGA_DETECTION", {})
+        min_entropy = dga_rules.get("MIN_ENTROPY", 3.5)
+        min_length = dga_rules.get("MIN_LENGTH", 10)
+        consonant_threshold = dga_rules.get("CONSONANT_THRESHOLD", 0.7)
+        
+        if len(domain) < min_length:
+            return False
+            
+        # Calculate entropy
+        entropy = self.calculate_entropy(domain)
+        if entropy < min_entropy:
+            return False
+            
+        # Calculate consonant ratio
+        consonants = sum(1 for c in domain if c.isalpha() and c.lower() not in 'aeiou')
+        consonant_ratio = consonants / len(domain)
+        if consonant_ratio > consonant_threshold:
+            return True
+            
+        return False
+
+    def calculate_entropy(self, string):
+        """Calculate Shannon entropy of a string"""
+        import math
+        prob = [float(string.count(c)) / len(string) for c in dict.fromkeys(list(string))]
+        entropy = - sum(p * math.log(p) / math.log(2.0) for p in prob)
+        return entropy
+
+    def ip_in_range(self, ip, ip_range):
+        """Check if IP is in CIDR range"""
         try:
-            if dns_packet.qr != 0:  
-                return
-
-            query_name = dns_packet.qd.qname.decode('utf-8').rstrip('.')
-            current_time = time.time()
-
-            with self.display_lock:
-                if query_name in self.recent_dns_queries:
-                    last_seen = self.recent_dns_queries[query_name]
-                    if current_time - last_seen < self.dns_cache_timeout:
-                        return  
-
-                self.recent_dns_queries[query_name] = current_time
-                
-                self.recent_dns_queries = {
-                    k: v for k, v in self.recent_dns_queries.items()
-                    if current_time - v < self.dns_cache_timeout
-                }
-
-                self.dns_query_count += 1
-                timestamp = datetime.now().strftime('%H:%M:%S')
-                formatted_msg = f"{Fore.BLUE}[{timestamp}] DNS Query: {query_name}{Style.RESET_ALL}"
-                self.alert_history.append(formatted_msg)
-                logging.info(f"DNS Query: {query_name}")
-                
-                if any(blocked in query_name for blocked in self.config["DNS_BLACKLIST"]):
-                    self.add_alert(f"Suspicious DNS query detected: {query_name}", "ALERT")
-                
-                if len(query_name) > 50:
-                    self.add_alert(f"Unusually long domain name detected: {query_name}", "WARNING")
-                    
-        except Exception as e:
-            logging.error(f"Error analyzing DNS packet: {str(e)}")
+            from ipaddress import ip_address, ip_network
+            return ip_address(ip) in ip_network(ip_range)
+        except Exception:
+            return False
 
     def clear_screen(self):
         """Clear the entire screen"""
@@ -264,8 +381,8 @@ class Sensor:
 
             logging.info("Network Security Monitor started")
             logging.info(f"Monitoring interface: {self.interface}")
-            logging.info(f"Blacklisted IPs: {', '.join(self.config['BLACKLISTED_IPS'])}")
-            logging.info(f"Suspicious ports: {', '.join(map(str, self.config['SUSPICIOUS_PORTS']))}")
+            logging.info(f"Blacklisted IPs: {', '.join(self.config['IP_RULES']['BLACKLISTED_IPS'])}")
+            logging.info(f"Suspicious ports: {', '.join(map(str, self.config['PORT_RULES']['SUSPICIOUS_PORTS']))}")
 
             self.start_time = time.time()
             
@@ -287,6 +404,7 @@ class Sensor:
             self.stop_capture()
 
     def packet_callback(self, packet):
+        """Enhanced packet callback with new detection rules"""
         try:
             with self.display_lock:
                 self.packet_count += 1
@@ -295,19 +413,25 @@ class Sensor:
                 src_ip = packet[IP].src
                 dst_ip = packet[IP].dst
                 
-                if src_ip in self.config["BLACKLISTED_IPS"] or dst_ip in self.config["BLACKLISTED_IPS"]:
-                    self.add_alert(f"Detected traffic from/to blacklisted IP - Src: {src_ip}, Dst: {dst_ip}", "ALERT")
+                # Skip if IP is blocked
+                if src_ip in self.blocked_ips or dst_ip in self.blocked_ips:
+                    return
+                
+                # Check IP rules
+                if self.check_ip_rules(src_ip, dst_ip):
                     return
 
                 if TCP in packet:
                     src_port = packet[TCP].sport
                     dst_port = packet[TCP].dport
                     
-                    if dst_port in self.config["SUSPICIOUS_PORTS"]:
-                        self.add_alert(f"Suspicious port access detected - Src: {src_ip}:{src_port}, Dst: {dst_ip}:{dst_port}", "WARNING")
+                    # Check port rules
+                    if self.check_port_rules(src_ip, dst_ip, src_port, dst_port):
+                        return
 
                 elif UDP in packet and DNS in packet:
-                    self.analyze_dns(packet, packet[DNS])
+                    # Check DNS rules
+                    self.check_dns_rules(packet, packet[DNS])
                     
         except Exception as e:
             logging.error(f"Error in packet callback: {str(e)}")
