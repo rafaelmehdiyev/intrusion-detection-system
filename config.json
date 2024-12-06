@@ -10,12 +10,11 @@
         "BLACKLISTED_IPS": [
             "192.168.1.100",
             "10.0.0.100",
-            "8.8.8.8",
-            "10.10.10.10"
+            "8.8.8.8"
         ],
         "WHITELISTED_IPS": [],
         "IP_RANGES_TO_MONITOR": [],
-        "MAX_CONNECTIONS_PER_IP": 50,
+        "MAX_CONNECTIONS_PER_IP": 10,
         "CONNECTION_TIMEOUT": 300
     },
     "PORT_RULES": {

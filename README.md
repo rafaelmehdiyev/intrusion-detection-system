@@ -1,72 +1,93 @@
-# Network Security Monitor
+# Network Security Monitoring System
 
-A comprehensive web-based network security monitoring and configuration system.
+## Project Structure
+
+```
+Project ver 4/
+├── .git/                      # Git repository
+├── __pycache__/              # Python cache directory
+├── logs/                     # Log files directory
+├── templates/                # HTML templates
+├── utils/                    # Utility functions and helpers
+├── config.json              # Configuration file
+├── json_logger.py           # JSON logging implementation
+├── requirements.txt         # Python dependencies
+├── sensor.py               # Network sensor implementation
+├── server.py              # Main server application
+└── README.md             # This file
+```
+
+## Key Components
+
+1. **server.py**: Main application server that handles:
+   - Web interface
+   - Event streaming
+   - Log management
+   - Real-time monitoring
+
+2. **sensor.py**: Network traffic sensor that:
+   - Captures packets
+   - Analyzes network traffic
+   - Detects suspicious activities
+   - Generates events
+
+3. **json_logger.py**: JSON-based logging system for:
+   - Structured event logging
+   - System events
+   - Network traffic events
+
+4. **templates/**: Web interface files
+   - HTML templates
+   - JavaScript
+   - CSS styles
+
+5. **utils/**: Helper modules and utilities
+
+6. **logs/**: Directory containing:
+   - JSON event logs
+   - System logs
+   - Network traffic logs
+
+7. **config.json**: Configuration settings for:
+   - Network interfaces
+   - Blacklisted IPs
+   - Suspicious ports
+   - System parameters
+
+## Dependencies
+
+See `requirements.txt` for a complete list of Python dependencies.
+
+## Setup and Usage
+
+1. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. Configure settings in `config.json`
+
+3. Start the server:
+   ```bash
+   python server.py
+   ```
+
+4. Start the sensor:
+   ```bash
+   python sensor.py
+   ```
+
+5. Access the web interface at `http://localhost:5000`
 
 ## Features
 
-### Dashboard
-- Real-time network status monitoring
-- Threat detection statistics
-- Blocked IP tracking
-- System health monitoring
-- Recent activity log
-
-### Configuration Interface
-- Section-based configuration management
-- Detailed help text for each setting
-- Real-time validation
-- Automatic configuration persistence
-
-## Configuration Sections
-
-### General Settings
-- Log Directory: Specify where log files are stored
-- Log Level: Set logging detail (DEBUG/INFO/WARNING/ERROR)
-- Network Interface: Select interface to monitor
-- Capture Timeout: Set packet capture duration
-
-### IP Rules
-- Blacklisted IPs: Block specific IP addresses
-- Whitelisted IPs: Allow trusted IP addresses
-- IP Ranges: Monitor specific network ranges (CIDR notation)
-- Connection Limits: Control per-IP connection count
-- Timeout Settings: Manage connection timeouts
-
-### Port Rules
-- Suspicious Ports: Define potentially malicious ports
-- Allowed Ports: Specify permitted service ports
-- Port Scan Detection:
-  * Enable/disable detection
-  * Set detection threshold
-  * Configure time window
-
-### DNS Rules
-- Domain Blacklist: Block specific domains
-- DGA Detection:
-  * Enable/disable detection
-  * Set entropy threshold
-  * Configure length requirements
-  * Adjust consonant ratio detection
-- DNS Monitoring:
-  * Set cache timeout
-  * Limit queries per domain
-  * Track suspicious TLDs
-
-## Recent Updates
-
-### Version 1.1.0
-- Added consistent navigation across all pages
-- Implemented section-based configuration saving
-- Added detailed configuration explanations
-- Fixed configuration persistence issues
-- Enhanced error handling
-- Improved mobile responsiveness
-
-### Version 1.0.0
-- Initial release with basic monitoring
-- Configuration management system
-- Dashboard implementation
-- Security rule management
+- Real-time network traffic monitoring
+- Suspicious activity detection
+- JSON-based structured logging
+- Web-based user interface
+- Event filtering and search
+- Export capabilities
+- System event tracking
 
 ## Technical Stack
 - Python 3.11

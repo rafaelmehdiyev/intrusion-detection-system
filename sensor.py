@@ -13,6 +13,7 @@ from datetime import datetime
 import time
 from colorama import init, Fore, Back, Style
 from collections import deque
+from utils.detailed_logger import DetailedLogger
 
 # Suppress specific warnings
 warnings.filterwarnings("ignore", category=CryptographyDeprecationWarning)
@@ -53,6 +54,10 @@ class Sensor:
                 level=log_level,
                 format='%(asctime)s - %(levelname)s - %(message)s'
             )
+            
+            # Initialize detailed logger
+            self.detailed_logger = DetailedLogger(os.path.join(log_dir, "detailed"))
+            
         except Exception as e:
             print(f"Error loading config: {str(e)}")
             self.config = {
@@ -124,7 +129,7 @@ class Sensor:
 ║             Network Security Monitor v1.0                    ║
 ║                By: Rafael Mehdiyev                           ║
 ╚══════════════════════════════════════════════════════════════╝{Style.RESET_ALL}
-"""
+    """
         print(banner)
 
     def add_alert(self, alert_msg, alert_type="INFO"):
@@ -386,6 +391,17 @@ class Sensor:
 
             self.start_time = time.time()
             
+            # Log capture start in detailed format
+            self.detailed_logger.log_event(
+                event_type="CAPTURE_START",
+                data={
+                    "interface": self.interface,
+                    "blacklisted_ips": self.config["IP_RULES"]["BLACKLISTED_IPS"],
+                    "suspicious_ports": self.config["PORT_RULES"]["SUSPICIOUS_PORTS"]
+                },
+                source="system"
+            )
+            
             try:
                 sniff(iface=self.interface,
                       prn=self.packet_callback,
@@ -405,36 +421,109 @@ class Sensor:
 
     def packet_callback(self, packet):
         """Enhanced packet callback with new detection rules"""
+        if not self.running:
+            return
+
         try:
-            with self.display_lock:
-                self.packet_count += 1
-            
             if IP in packet:
+                self.packet_count += 1
                 src_ip = packet[IP].src
                 dst_ip = packet[IP].dst
                 
-                # Skip if IP is blocked
-                if src_ip in self.blocked_ips or dst_ip in self.blocked_ips:
-                    return
+                # Log network event in detailed format
+                protocol = "TCP" if TCP in packet else "UDP" if UDP in packet else "Other"
+                src_port = packet[TCP].sport if TCP in packet else packet[UDP].sport if UDP in packet else None
+                dst_port = packet[TCP].dport if TCP in packet else packet[UDP].dport if UDP in packet else None
                 
-                # Check IP rules
-                if self.check_ip_rules(src_ip, dst_ip):
-                    return
-
+                # Fix TCP flags handling
                 if TCP in packet:
-                    src_port = packet[TCP].sport
-                    dst_port = packet[TCP].dport
-                    
-                    # Check port rules
-                    if self.check_port_rules(src_ip, dst_ip, src_port, dst_port):
-                        return
+                    tcp_flags = packet[TCP].flags
+                    flags_dict = {
+                        "FIN": bool(tcp_flags & 0x01),
+                        "SYN": bool(tcp_flags & 0x02),
+                        "RST": bool(tcp_flags & 0x04),
+                        "PSH": bool(tcp_flags & 0x08),
+                        "ACK": bool(tcp_flags & 0x10),
+                        "URG": bool(tcp_flags & 0x20),
+                        "ECE": bool(tcp_flags & 0x40),
+                        "CWR": bool(tcp_flags & 0x80)
+                    }
+                else:
+                    flags_dict = None
+                
+                self.detailed_logger.log_event(
+                    event_type="NETWORK_TRAFFIC",
+                    data={
+                        "source_ip": src_ip,
+                        "destination_ip": dst_ip,
+                        "protocol": protocol,
+                        "source_port": src_port,
+                        "destination_port": dst_port,
+                        "payload_size": len(packet),
+                        "flags": flags_dict
+                    },
+                    source="sensor"
+                )
 
-                elif UDP in packet and DNS in packet:
-                    # Check DNS rules
-                    self.check_dns_rules(packet, packet[DNS])
-                    
+                # Check IP rules
+                alert = self.check_ip_rules(src_ip, dst_ip)
+                if alert:
+                    self.detailed_logger.log_event(
+                        event_type="SECURITY_ALERT",
+                        data={
+                            "alert_type": "BLACKLIST_MATCH",
+                            "severity": "HIGH",
+                            "description": "Traffic detected from/to blacklisted IP",
+                            "source_ip": src_ip,
+                            "destination_ip": dst_ip
+                        },
+                        source="security"
+                    )
+
+                # Check for DNS queries
+                if DNS in packet:
+                    qname = packet[DNS].qd.qname.decode('utf-8')
+                    if qname:
+                        self.dns_query_count += 1
+                        logging.info(f"DNS Query: {qname.rstrip('.')}")
+                        self.detailed_logger.log_event(
+                            event_type="NETWORK_TRAFFIC",
+                            data={
+                                "source_ip": src_ip,
+                                "destination_ip": dst_ip,
+                                "protocol": "DNS",
+                                "payload_size": len(packet),
+                                "query": qname.rstrip('.')
+                            },
+                            source="dns"
+                        )
+
+                # Port scanning detection
+                if TCP in packet or UDP in packet:
+                    port = packet[TCP].dport if TCP in packet else packet[UDP].dport
+                    if self.check_port_scan(src_ip, port):
+                        self.detailed_logger.log_event(
+                            event_type="SECURITY_ALERT",
+                            data={
+                                "alert_type": "PORT_SCAN",
+                                "severity": "HIGH",
+                                "description": f"Potential port scanning detected from {src_ip}",
+                                "source_ip": src_ip,
+                                "target_port": port
+                            },
+                            source="security"
+                        )
+
         except Exception as e:
-            logging.error(f"Error in packet callback: {str(e)}")
+            logging.error(f"Error processing packet: {str(e)}")
+            self.detailed_logger.log_event(
+                event_type="ERROR",
+                data={
+                    "error_type": "PACKET_PROCESSING_ERROR",
+                    "description": str(e)
+                },
+                source="system"
+            )
 
 if __name__ == "__main__":
     os.system('cls' if os.name == 'nt' else 'clear')

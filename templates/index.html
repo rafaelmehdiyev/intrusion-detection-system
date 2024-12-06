@@ -44,6 +44,68 @@
         .event-card {
             margin-bottom: 10px;
             transition: all 0.3s ease;
+            border-left: 4px solid #ccc;
+        }
+        .event-card:hover {
+            transform: translateX(5px);
+        }
+        .event-critical { border-left-color: #dc3545; }
+        .event-security { border-left-color: #fd7e14; }
+        .event-warning { border-left-color: #ffc107; }
+        .event-dns { border-left-color: #0dcaf0; }
+        .event-network { border-left-color: #0d6efd; }
+        .event-system { border-left-color: #6c757d; }
+        .event-info { border-left-color: #20c997; }
+        .event-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .event-badges {
+            display: flex;
+            gap: 5px;
+        }
+        .event-timestamp {
+            font-size: 0.85rem;
+            color: #666;
+        }
+        .event-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 8px;
+            margin-top: 8px;
+            font-size: 0.9rem;
+        }
+        .event-detail {
+            display: flex;
+            align-items: center;
+        }
+        .detail-label {
+            color: #666;
+            margin-right: 5px;
+            font-weight: 500;
+        }
+        .detail-value {
+            color: #333;
+            word-break: break-all;
+        }
+        .event-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        #pause-events.paused {
+            background-color: #dc3545;
+            color: white;
+            border-color: #dc3545;
+        }
+        .event-card.new-event {
+            animation: highlightNew 2s ease-out;
+        }
+        @keyframes highlightNew {
+            0% { background-color: rgba(33, 150, 243, 0.1); }
+            100% { background-color: transparent; }
         }
         .chart-container {
             position: relative;
@@ -188,43 +250,37 @@
         <div class="row mb-4">
             <div class="col-md-12">
                 <div class="card dashboard-card">
-                    <div class="card-header">
+                    <div class="card-header d-flex justify-content-between align-items-center">
                         <h5 class="card-title mb-0">Event Monitor</h5>
+                        <div class="event-controls">
+                            <div class="filter-tags mb-2">
+                                <span class="filter-tag active" data-filter="all">All</span>
+                                <span class="filter-tag" data-filter="critical">Critical</span>
+                                <span class="filter-tag" data-filter="security">Security</span>
+                                <span class="filter-tag" data-filter="warning">Warning</span>
+                                <span class="filter-tag" data-filter="dns">DNS</span>
+                                <span class="filter-tag" data-filter="network">Network</span>
+                                <span class="filter-tag" data-filter="system">System</span>
+                                <span class="filter-tag" data-filter="info">Info</span>
+                            </div>
+                            <input type="text" id="searchInput" class="form-control form-control-sm" placeholder="Search events...">
+                            <button id="pause-events" class="btn btn-sm btn-outline-secondary ms-2">
+                                <i class="bi bi-pause-fill"></i>
+                            </button>
+                            <button id="clear-events" class="btn btn-sm btn-outline-secondary ms-2">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                            <button id="exportEvents" class="btn btn-sm btn-outline-secondary ms-2">
+                                <i class="bi bi-download"></i>
+                            </button>
+                        </div>
                     </div>
                     <div class="card-body">
-                        <div class="toolbar mb-3">
-                            <div class="row g-3">
-                                <div class="col-md-4">
-                                    <div class="search-container">
-                                        <i class="bi bi-search"></i>
-                                        <input type="text" id="filterInput" class="form-control search-input" placeholder="Search events...">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="filter-tags">
-                                        <span class="filter-tag active" data-category="all">All</span>
-                                        <span class="filter-tag" data-category="ip">IP Events</span>
-                                        <span class="filter-tag" data-category="port">Port Scans</span>
-                                        <span class="filter-tag" data-category="dns">DNS Queries</span>
-                                        <span class="filter-tag" data-category="error">Errors</span>
-                                        <span class="filter-tag" data-category="warning">Warnings</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 text-end">
-                                    <div class="btn-group">
-                                        <button class="btn btn-outline-secondary" id="clearEvents">
-                                            <i class="bi bi-trash"></i>
-                                        </button>
-                                        <button class="btn btn-outline-primary" id="exportEvents">
-                                            <i class="bi bi-download"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
+                        <div id="status-indicator" class="mb-2">
+                            <span class="badge bg-success"><i class="bi bi-circle-fill"></i> Connected</span>
+                            <small class="text-muted ms-2" id="event-count">0 Events</small>
                         </div>
-                        <div id="events-container" class="mb-4">
-                            <!-- Events will be inserted here -->
-                        </div>
+                        <div id="events-container"></div>
                     </div>
                 </div>
             </div>
@@ -235,7 +291,7 @@
         let eventsContainer = document.getElementById('events-container');
         let statusIndicator = document.getElementById('status-indicator');
         let connectionStatus = document.getElementById('connection-status');
-        let filterInput = document.getElementById('filterInput');
+        let filterInput = document.getElementById('searchInput');
         let eventSource = null;
         let maxEvents = 100;
 
@@ -252,8 +308,12 @@
             };
 
             eventSource.onmessage = function(event) {
-                const data = JSON.parse(event.data);
-                addEvent(data.message);
+                try {
+                    const data = JSON.parse(event.data);
+                    addEvent(data);
+                } catch (error) {
+                    console.error('Error processing event:', error);
+                }
             };
 
             eventSource.onerror = function() {
@@ -277,75 +337,190 @@
                 .catch(error => console.error('Error fetching config:', error));
         }
 
-        function addEvent(message) {
-            const card = document.createElement('div');
-            card.className = 'card event-card';
+        let isPaused = false;
+        let eventCount = 0;
+        let pendingEvents = [];
+
+        function updateEventCount() {
+            document.getElementById('event-count').textContent = `${eventCount} Events`;
+        }
+
+        document.getElementById('pause-events').addEventListener('click', function() {
+            isPaused = !isPaused;
+            this.innerHTML = isPaused ? '<i class="bi bi-play-fill"></i>' : '<i class="bi bi-pause-fill"></i>';
+            this.classList.toggle('paused');
             
-            // Determine event category and add appropriate class
-            if (message.includes('IP')) {
-                card.classList.add('event-ip');
-            } else if (message.includes('Port')) {
-                card.classList.add('event-port');
-            } else if (message.includes('DNS')) {
-                card.classList.add('event-dns');
-            } else if (message.toLowerCase().includes('warning')) {
-                card.classList.add('event-warning');
-            } else if (message.toLowerCase().includes('error')) {
-                card.classList.add('event-error');
-            } else {
-                card.classList.add('event-info');
+            if (!isPaused && pendingEvents.length > 0) {
+                pendingEvents.forEach(event => addEvent(event));
+                pendingEvents = [];
+            }
+        });
+
+        function determineEventType(content, level) {
+            // 1. Critical Events (Most Important)
+            if (level === 'ERROR') return 'CRITICAL';
+            
+            // 2. Security Events (High Priority)
+            if (content.includes('blacklisted IP') || 
+                content.includes('port scan') ||
+                content.includes('DGA domain')) {
+                return 'SECURITY';
+            }
+            
+            // 3. Warning Events
+            if (level === 'WARNING') return 'WARNING';
+            
+            // 4. Service-Specific Events
+            if (content.includes('DNS Query')) return 'DNS';
+            if (content.includes('Network Traffic')) return 'NETWORK';
+            
+            // 5. System Events
+            if (content.includes('started') || 
+                content.includes('stopped') ||
+                content.includes('monitoring')) {
+                return 'SYSTEM';
+            }
+            
+            // 6. Default
+            return 'INFO';
+        }
+
+        function addEvent(data) {
+            if (isPaused) {
+                pendingEvents.push(data);
+                return;
             }
 
-            // Extract timestamp and category
-            const timestamp = new Date().toLocaleTimeString();
-            let category = 'INFO';
-            if (card.classList.contains('event-ip')) category = 'IP';
-            if (card.classList.contains('event-port')) category = 'PORT';
-            if (card.classList.contains('event-dns')) category = 'DNS';
-            if (card.classList.contains('event-warning')) category = 'WARNING';
-            if (card.classList.contains('event-error')) category = 'ERROR';
-
+            const card = document.createElement('div');
+            card.className = 'card event-card mb-2';
+            
+            // Extract log components
+            const message = data.message;
+            const match = message.match(/(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2},\d{3}) - (\w+) - (.+)/);
+            
+            if (!match) return;
+            
+            const [_, timestamp, level, content] = match;
+            const localTime = new Date(timestamp.replace(',', '.')).toLocaleTimeString();
+            
+            // Update dashboard stats
+            updateStats(message);
+            
+            // Determine event type using our new function
+            const eventType = determineEventType(content, level);
+            card.classList.add(`event-${eventType.toLowerCase()}`);
+            
+            // Extract IP addresses if present
+            let ipDetails = '';
+            const ipMatch = content.match(/Src: ([\d\.]+), Dst: ([\d\.]+)/);
+            if (ipMatch) {
+                ipDetails = `
+                    <div class="row mt-2">
+                        <div class="col-md-6">
+                            <small class="text-muted">Source IP: </small>
+                            <span class="text-primary">${ipMatch[1]}</span>
+                        </div>
+                        <div class="col-md-6">
+                            <small class="text-muted">Destination IP: </small>
+                            <span class="text-primary">${ipMatch[2]}</span>
+                        </div>
+                    </div>`;
+            }
+            
+            // Create card content with event type badge
             card.innerHTML = `
-                <div class="card-body">
-                    <span class="category-badge badge bg-secondary">${category}</span>
-                    <small class="text-muted">${timestamp}</small>
-                    <p class="card-text mb-0">${message}</p>
+                <div class="card-body p-2">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <span class="badge bg-${level === 'ERROR' ? 'danger' : level === 'WARNING' ? 'warning' : 'info'}">${level}</span>
+                            <span class="badge bg-secondary ms-1">${eventType}</span>
+                        </div>
+                        <small class="text-muted">${localTime}</small>
+                    </div>
+                    <div class="mt-2">${content}</div>
+                    ${ipDetails}
                 </div>
             `;
-
+            
+            // Add to container
             eventsContainer.insertBefore(card, eventsContainer.firstChild);
+            eventCount++;
+            updateEventCount();
+            
+            // Limit number of events
             if (eventsContainer.children.length > maxEvents) {
                 eventsContainer.removeChild(eventsContainer.lastChild);
             }
         }
 
-        // Enhanced filtering system
+        function updateStats(message) {
+            // Parse the message
+            const match = message.match(/(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2},\d{3}) - (\w+) - (.+)/);
+            
+            if (!match) return;
+
+            const [_, timestamp, level, content] = match;
+            
+            // Update threat count for alerts and warnings
+            if (level === 'WARNING' || level === 'ERROR' || level === 'ALERT') {
+                let threatCount = parseInt(document.getElementById('threatCount').innerText);
+                document.getElementById('threatCount').innerText = threatCount + 1;
+
+                // Update threat distribution chart
+                let threatIndex = 3; // Default to Other (index 3)
+                if (content.includes('blacklisted IP')) {
+                    threatIndex = 0; // IP threats
+                } else if (content.includes('port scan') || content.includes('Suspicious port')) {
+                    threatIndex = 1; // Port threats
+                } else if (content.includes('DNS') || content.includes('domain')) {
+                    threatIndex = 2; // DNS threats
+                }
+
+                // Update the chart data
+                threatDistributionChart.data.datasets[0].data[threatIndex]++;
+                threatDistributionChart.update();
+            }
+
+            // Update packet count for all messages
+            let packetCount = parseInt(document.getElementById('packetCount').innerText);
+            document.getElementById('packetCount').innerText = packetCount + 1;
+            
+            // Increment packet counter for traffic chart
+            packetsSinceLastUpdate++;
+        }
+
+        // Filter functionality
         const filterTags = document.querySelectorAll('.filter-tag');
         let activeFilters = ['all'];
 
+        filterInput.addEventListener('input', applyFilters);
+
         filterTags.forEach(tag => {
             tag.addEventListener('click', () => {
-                const category = tag.dataset.category;
+                const filter = tag.getAttribute('data-filter');
                 
-                if (category === 'all') {
+                if (filter === 'all') {
                     activeFilters = ['all'];
                     filterTags.forEach(t => t.classList.remove('active'));
                     tag.classList.add('active');
                 } else {
-                    const allTag = document.querySelector('.filter-tag[data-category="all"]');
-                    allTag.classList.remove('active');
+                    if (activeFilters.includes('all')) {
+                        activeFilters = [];
+                        document.querySelector('[data-filter="all"]').classList.remove('active');
+                    }
                     
-                    tag.classList.toggle('active');
-                    if (tag.classList.contains('active')) {
-                        activeFilters = activeFilters.filter(f => f !== 'all');
-                        activeFilters.push(category);
+                    const filterIndex = activeFilters.indexOf(filter);
+                    if (filterIndex === -1) {
+                        activeFilters.push(filter);
+                        tag.classList.add('active');
                     } else {
-                        activeFilters = activeFilters.filter(f => f !== category);
+                        activeFilters.splice(filterIndex, 1);
+                        tag.classList.remove('active');
                     }
                     
                     if (activeFilters.length === 0) {
                         activeFilters = ['all'];
-                        allTag.classList.add('active');
+                        document.querySelector('[data-filter="all"]').classList.add('active');
                     }
                 }
                 
@@ -368,38 +543,15 @@
         }
 
         function getCardCategory(card) {
-            if (card.classList.contains('event-ip')) return 'ip';
-            if (card.classList.contains('event-port')) return 'port';
-            if (card.classList.contains('event-dns')) return 'dns';
-            if (card.classList.contains('event-warning')) return 'warning';
-            if (card.classList.contains('event-error')) return 'error';
+            const classList = card.classList;
+            if (classList.contains('event-critical')) return 'critical';
+            if (classList.contains('event-security')) return 'security';
+            if (classList.contains('event-warning')) return 'warning';
+            if (classList.contains('event-dns')) return 'dns';
+            if (classList.contains('event-network')) return 'network';
+            if (classList.contains('event-system')) return 'system';
             return 'info';
         }
-
-        // Export functionality
-        document.getElementById('exportEvents').addEventListener('click', () => {
-            const events = Array.from(eventsContainer.children)
-                .filter(card => card.style.display !== 'none')
-                .map(card => {
-                    const timestamp = card.querySelector('small').textContent;
-                    const category = card.querySelector('.category-badge').textContent;
-                    const message = card.querySelector('.card-text').textContent;
-                    return `${timestamp},${category},"${message}"`;
-                });
-            
-            const csv = ['Timestamp,Category,Message', ...events].join('\n');
-            const blob = new Blob([csv], { type: 'text/csv' });
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.setAttribute('hidden', '');
-            a.setAttribute('href', url);
-            a.setAttribute('download', `network_events_${new Date().toISOString().slice(0,10)}.csv`);
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        });
-
-        filterInput.addEventListener('input', applyFilters);
 
         // Initialize charts
         const trafficCtx = document.getElementById('trafficChart').getContext('2d');
@@ -525,53 +677,30 @@
             uniqueIPs: new Set()
         };
 
-        function updateStats(message) {
-            // Parse the message
-            let logMatch = message.match(/^(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2},\d{3}) - (\w+) - (.+)$/);
-            if (!logMatch) return;
-
-            let [_, timestamp, level, content] = logMatch;
+        // Export functionality
+        document.getElementById('exportEvents').addEventListener('click', () => {
+            const events = Array.from(eventsContainer.children)
+                .filter(card => card.style.display !== 'none')
+                .map(card => {
+                    const timestamp = card.querySelector('small.text-muted').textContent;
+                    const level = card.querySelector('.badge:first-child').textContent;
+                    const eventType = card.querySelector('.badge.bg-secondary').textContent;
+                    const content = card.querySelector('.mt-2').textContent;
+                    return `${timestamp},${level},${eventType},"${content.trim()}"`;
+                });
             
-            // Update threat count for alerts
-            if (level === 'WARNING' || level === 'ALERT') {
-                let threatCount = parseInt(document.getElementById('threatCount').innerText);
-                document.getElementById('threatCount').innerText = threatCount + 1;
-
-                // Update IPs blocked counter when blacklisted IP is detected
-                // if (content.includes('blacklisted IP')) {
-                //     let blockedCount = parseInt(document.getElementById('blockedCount').innerText);
-                //     document.getElementById('blockedCount').innerText = blockedCount + 1;
-                // }
-
-                // Update threat distribution chart
-                let threatIndex = 3; // Default to Other (index 3)
-                if (content.includes('blacklisted IP')) {
-                    threatIndex = 0; // IP threats
-                } else if (content.includes('port scan') || content.includes('Suspicious port')) {
-                    threatIndex = 1; // Port threats
-                } else if (content.includes('DNS') || content.includes('domain')) {
-                    threatIndex = 2; // DNS threats
-                }
-
-                // Update the chart data
-                threatDistributionChart.data.datasets[0].data[threatIndex]++;
-                threatDistributionChart.update();
-            }
-
-            // Update packet count for all messages
-            let packetCount = parseInt(document.getElementById('packetCount').innerText);
-            document.getElementById('packetCount').innerText = packetCount + 1;
-            
-            // Increment packet counter for traffic chart
-            packetsSinceLastUpdate++;
-        }
-
-        // Modify existing addEvent function to update stats
-        const originalAddEvent = addEvent;
-        addEvent = function(message) {
-            originalAddEvent(message);
-            updateStats(message);
-        };
+            const csv = ['Timestamp,Level,Type,Message', ...events].join('\n');
+            const blob = new Blob([csv], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.setAttribute('hidden', '');
+            a.setAttribute('href', url);
+            a.setAttribute('download', `network_events_${new Date().toISOString().slice(0,19).replace(/:/g,'-')}.csv`);
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        });
 
         // Start connection
         connectEventSource();
