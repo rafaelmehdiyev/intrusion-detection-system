@@ -13,19 +13,24 @@
             "8.8.8.8"
         ],
         "WHITELISTED_IPS": [],
-        "IP_RANGES_TO_MONITOR": [
-            "192.168.0.0/16",
-            "10.0.0.0/8"
-        ],
+        "IP_RANGES_TO_MONITOR": [],
         "MAX_CONNECTIONS_PER_IP": 50,
         "CONNECTION_TIMEOUT": 300
     },
     "PORT_RULES": {
         "SUSPICIOUS_PORTS": [
-            22, 23, 445, 1433, 3389, 4444, 5554
+            22,
+            23,
+            445,
+            1433,
+            3389,
+            4444,
+            5554
         ],
         "ALLOWED_PORTS": [
-            80, 443, 53
+            80,
+            443,
+            53
         ],
         "PORT_SCAN_DETECTION": {
             "ENABLED": true,
@@ -62,7 +67,10 @@
             "ENABLE_DEEP_INSPECTION": false
         },
         "PROTOCOL_MONITORING": {
-            "BLOCKED_PROTOCOLS": ["TELNET", "FTP"],
+            "BLOCKED_PROTOCOLS": [
+                "TELNET",
+                "FTP"
+            ],
             "ALERT_ON_UNENCRYPTED": true
         },
         "RATE_LIMITING": {
@@ -104,7 +112,11 @@
     },
     "GEOLOCATION": {
         "ENABLED": true,
-        "SUSPICIOUS_COUNTRIES": ["NK", "IR", "CU"],
+        "SUSPICIOUS_COUNTRIES": [
+            "NK",
+            "IR",
+            "CU"
+        ],
         "ALLOWED_COUNTRIES": [],
         "GEO_DB_PATH": "geo.mmdb"
     }

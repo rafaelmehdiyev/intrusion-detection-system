@@ -6,8 +6,61 @@
     <title>Network Security Monitor</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body { padding: 20px; background-color: #f8f9fa; }
+        .dashboard-card {
+            height: 100%;
+            transition: transform 0.2s;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+        }
+        .stat-card {
+            text-align: center;
+            padding: 1.5rem;
+        }
+        .stat-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+        .stat-label {
+            font-size: 1rem;
+            font-weight: 500;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Card color schemes with better contrast */
+        .card-threats {
+            background: linear-gradient(135deg, #2962ff, #1565c0);
+        }
+        .card-packets {
+            background: linear-gradient(135deg, #2e7d32, #1b5e20);
+        }
+        .card-blocked {
+            background: linear-gradient(135deg, #ed6c02, #e65100);
+        }
+        .card-status {
+            background: linear-gradient(135deg, #0288d1, #01579b);
+        }
+        
+        .chart-container {
+            position: relative;
+            height: 300px;
+            width: 100%;
+        }
         .event-card {
             margin-bottom: 10px;
             border-left: 4px solid #007bff;
@@ -81,93 +134,125 @@
         .nav-link.active {
             font-weight: bold;
         }
-        .dashboard-card {
-            transition: transform 0.2s;
-        }
-        .dashboard-card:hover {
-            transform: translateY(-5px);
-        }
     </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">
-                <i class="bi bi-shield-check me-2"></i>
-                Network Security Monitor
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/">
-                            <i class="bi bi-speedometer2 me-1"></i>
-                            Dashboard
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/config">
-                            <i class="bi bi-gear me-1"></i>
-                            Configuration
-                        </a>
-                    </li>
-                </ul>
-                <div class="navbar-text text-light">
-                    <i class="bi bi-person-circle me-1"></i>
-                    Welcome, Guest
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Main Content -->
-    <div class="container">
+    <div class="container-fluid">
+        <!-- Status Overview Row -->
         <div class="row mb-4">
-            <div class="col">
-                <h1 class="display-4">Network Security Monitor</h1>
-                <div class="d-flex align-items-center">
-                    <div id="status-indicator" class="status-disconnected"></div>
-                    <span id="connection-status">Disconnected</span>
+            <div class="col-md-3">
+                <div class="card dashboard-card stat-card card-threats text-white">
+                    <div class="stat-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <div class="stat-value" id="threatCount">0</div>
+                    <div class="stat-label">Threats Detected</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card dashboard-card stat-card card-packets text-white">
+                    <div class="stat-icon">
+                        <i class="bi bi-graph-up"></i>
+                    </div>
+                    <div class="stat-value" id="packetCount">0</div>
+                    <div class="stat-label">Packets Analyzed</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card dashboard-card stat-card card-blocked text-white">
+                    <div class="stat-icon">
+                        <i class="bi bi-shield-exclamation"></i>
+                    </div>
+                    <div class="stat-value" id="blockedCount">0</div>
+                    <div class="stat-label">IPs Blocked</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card dashboard-card stat-card card-status text-white">
+                    <div class="stat-icon">
+                        <i class="bi bi-activity"></i>
+                    </div>
+                    <div class="stat-value" id="systemStatus">
+                        <span id="status-indicator"></span>
+                        <span id="connection-status">Connected</span>
+                    </div>
+                    <div class="stat-label">System Status</div>
                 </div>
             </div>
         </div>
 
-        <div class="toolbar mb-3">
-            <div class="row g-3">
-                <div class="col-md-4">
-                    <div class="search-container">
-                        <i class="bi bi-search"></i>
-                        <input type="text" id="filterInput" class="form-control search-input" placeholder="Search events...">
+        <!-- Charts Row -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="card dashboard-card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">Network Traffic</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-container">
+                            <canvas id="trafficChart"></canvas>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="filter-tags">
-                        <span class="filter-tag active" data-category="all">All</span>
-                        <span class="filter-tag" data-category="ip">IP Events</span>
-                        <span class="filter-tag" data-category="port">Port Scans</span>
-                        <span class="filter-tag" data-category="dns">DNS Queries</span>
-                        <span class="filter-tag" data-category="error">Errors</span>
-                        <span class="filter-tag" data-category="warning">Warnings</span>
+            </div>
+            <div class="col-md-6">
+                <div class="card dashboard-card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">Threat Distribution</h5>
                     </div>
-                </div>
-                <div class="col-md-2 text-end">
-                    <div class="btn-group">
-                        <button class="btn btn-outline-secondary" id="clearEvents">
-                            <i class="bi bi-trash"></i>
-                        </button>
-                        <button class="btn btn-outline-primary" id="exportEvents">
-                            <i class="bi bi-download"></i>
-                        </button>
+                    <div class="card-body">
+                        <div class="chart-container">
+                            <canvas id="threatDistribution"></canvas>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div id="events-container" class="mb-4">
-            <!-- Events will be inserted here -->
+        <!-- Monitoring Section -->
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <div class="card dashboard-card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">Event Monitor</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="toolbar mb-3">
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <div class="search-container">
+                                        <i class="bi bi-search"></i>
+                                        <input type="text" id="filterInput" class="form-control search-input" placeholder="Search events...">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="filter-tags">
+                                        <span class="filter-tag active" data-category="all">All</span>
+                                        <span class="filter-tag" data-category="ip">IP Events</span>
+                                        <span class="filter-tag" data-category="port">Port Scans</span>
+                                        <span class="filter-tag" data-category="dns">DNS Queries</span>
+                                        <span class="filter-tag" data-category="error">Errors</span>
+                                        <span class="filter-tag" data-category="warning">Warnings</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 text-end">
+                                    <div class="btn-group">
+                                        <button class="btn btn-outline-secondary" id="clearEvents">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                        <button class="btn btn-outline-primary" id="exportEvents">
+                                            <i class="bi bi-download"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="events-container" class="mb-4">
+                            <!-- Events will be inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -180,6 +265,10 @@
         let maxEvents = 100;
 
         function connectEventSource() {
+            // Reset counters on new connection
+            document.getElementById('packetCount').innerText = '0';
+            document.getElementById('threatCount').innerText = '0';
+            
             eventSource = new EventSource('/events');
             
             eventSource.onopen = function() {
@@ -198,6 +287,19 @@
                 eventSource.close();
                 setTimeout(connectEventSource, 5000);
             };
+
+            // Get current configuration to update blocked IPs count
+            fetch('/api/config', {
+                credentials: 'include'  // Include credentials in the request
+            })
+                .then(response => response.json())
+                .then(config => {
+                    console.log('Fetched config:', config.IP_RULES.BLACKLISTED_IPS);
+                    if (config.IP_RULES.BLACKLISTED_IPS) {
+                        document.getElementById('blockedCount').innerText = config.IP_RULES.BLACKLISTED_IPS.length;
+                    }
+                })
+                .catch(error => console.error('Error fetching config:', error));
         }
 
         function addEvent(message) {
@@ -323,6 +425,178 @@
         });
 
         filterInput.addEventListener('input', applyFilters);
+
+        // Initialize charts
+        const trafficCtx = document.getElementById('trafficChart').getContext('2d');
+        const threatDistributionCtx = document.getElementById('threatDistribution').getContext('2d');
+
+        // Traffic Chart
+        const trafficChart = new Chart(trafficCtx, {
+            type: 'line',
+            data: {
+                labels: Array(60).fill(''),
+                datasets: [{
+                    label: 'Packets/s',
+                    data: Array(60).fill(0),
+                    borderColor: '#2196f3',
+                    tension: 0.4,
+                    fill: true,
+                    backgroundColor: 'rgba(33, 150, 243, 0.1)'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                animation: {
+                    duration: 0 // Disable animation for better performance
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Packets/second'
+                        }
+                    },
+                    x: {
+                        display: false // Hide x-axis labels for cleaner look
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+        // Initialize packet counter and timestamp for rate calculation
+        let lastUpdateTime = Date.now();
+        let packetsSinceLastUpdate = 0;
+
+        function updateTrafficChart() {
+            const now = Date.now();
+            const timeDiff = (now - lastUpdateTime) / 1000; // Convert to seconds
+            
+            if (timeDiff >= 1) { // Update every second
+                const packetsPerSecond = Math.round(packetsSinceLastUpdate / timeDiff);
+                
+                // Shift data array and add new value
+                trafficChart.data.datasets[0].data.shift();
+                trafficChart.data.datasets[0].data.push(packetsPerSecond);
+                
+                // Update chart
+                trafficChart.update('none'); // Use 'none' mode for better performance
+                
+                // Reset counters
+                packetsSinceLastUpdate = 0;
+                lastUpdateTime = now;
+            }
+        }
+
+        // Set up interval to update chart
+        setInterval(updateTrafficChart, 1000);
+
+        // Initialize Threat Distribution Chart
+        const threatDistributionChart = new Chart(threatDistributionCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['IP', 'Port', 'DNS', 'Other'],
+                datasets: [{
+                    data: [0, 0, 0, 0],
+                    backgroundColor: [
+                        '#2962ff',  // Blue for IP
+                        '#2e7d32',  // Green for Port
+                        '#6f42c1',  // Purple for DNS
+                        '#ed6c02'   // Orange for Other
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        labels: {
+                            usePointStyle: true,
+                            padding: 20
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                const percentage = total > 0 ? Math.round((context.raw / total) * 100) : 0;
+                                return `${context.label}: ${context.raw} (${percentage}%)`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        let stats = {
+            threats: 0,
+            packets: 0,
+            blockedIPs: new Set(),
+            threatTypes: {
+                ip: 0,
+                port: 0,
+                dns: 0,
+                other: 0
+            },
+            uniqueIPs: new Set()
+        };
+
+        function updateStats(message) {
+            // Parse the message
+            let logMatch = message.match(/^(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2},\d{3}) - (\w+) - (.+)$/);
+            if (!logMatch) return;
+
+            let [_, timestamp, level, content] = logMatch;
+            
+            // Update threat count for alerts
+            if (level === 'WARNING' || level === 'ALERT') {
+                let threatCount = parseInt(document.getElementById('threatCount').innerText);
+                document.getElementById('threatCount').innerText = threatCount + 1;
+
+                // Update IPs blocked counter when blacklisted IP is detected
+                // if (content.includes('blacklisted IP')) {
+                //     let blockedCount = parseInt(document.getElementById('blockedCount').innerText);
+                //     document.getElementById('blockedCount').innerText = blockedCount + 1;
+                // }
+
+                // Update threat distribution chart
+                let threatIndex = 3; // Default to Other (index 3)
+                if (content.includes('blacklisted IP')) {
+                    threatIndex = 0; // IP threats
+                } else if (content.includes('port scan') || content.includes('Suspicious port')) {
+                    threatIndex = 1; // Port threats
+                } else if (content.includes('DNS') || content.includes('domain')) {
+                    threatIndex = 2; // DNS threats
+                }
+
+                // Update the chart data
+                threatDistributionChart.data.datasets[0].data[threatIndex]++;
+                threatDistributionChart.update();
+            }
+
+            // Update packet count for all messages
+            let packetCount = parseInt(document.getElementById('packetCount').innerText);
+            document.getElementById('packetCount').innerText = packetCount + 1;
+            
+            // Increment packet counter for traffic chart
+            packetsSinceLastUpdate++;
+        }
+
+        // Modify existing addEvent function to update stats
+        const originalAddEvent = addEvent;
+        addEvent = function(message) {
+            originalAddEvent(message);
+            updateStats(message);
+        };
 
         // Start connection
         connectEventSource();

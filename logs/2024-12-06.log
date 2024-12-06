@@ -472,3 +472,1032 @@ Interface Details:
 2024-12-06 02:08:47,695 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 104.18.32.47
 2024-12-06 02:08:47,704 - WARNING - Detected traffic in monitored IP range - Src: 104.18.32.47, Dst: 192.168.31.50
 2024-12-06 02:08:49,090 - INFO - Packet capture stopped by user
+2024-12-06 03:08:57,411 - INFO - Network Security Monitor started
+2024-12-06 03:08:57,412 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 03:08:57,412 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 03:08:57,413 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 03:08:59,671 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:08:59,673 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:08:59,853 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:08:59,855 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:08:59,876 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:08:59,878 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:08:59,880 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:00,112 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:00,113 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:00,114 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:00,116 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:02,320 - WARNING - Detected traffic in monitored IP range - Src: 31.209.137.10, Dst: 192.168.31.50
+2024-12-06 03:09:02,326 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 31.209.137.10
+2024-12-06 03:09:02,446 - WARNING - Detected traffic in monitored IP range - Src: 31.209.137.10, Dst: 192.168.31.50
+2024-12-06 03:09:02,695 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:02,885 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:02,886 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:02,887 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:02,920 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:02,921 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:02,923 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:04,761 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:04,763 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:04,764 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:04,953 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:04,955 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:04,956 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:04,964 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:04,966 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:04,968 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:04,970 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:04,971 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:05,201 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:06,548 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 142.251.18.188
+2024-12-06 03:09:06,638 - WARNING - Detected traffic in monitored IP range - Src: 142.251.18.188, Dst: 192.168.31.50
+2024-12-06 03:09:07,779 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:07,781 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:07,972 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:07,974 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:07,994 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:07,995 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:07,997 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:09,697 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:09,697 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:09,698 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 108.177.96.109
+2024-12-06 03:09:09,785 - WARNING - Detected traffic in monitored IP range - Src: 108.177.96.109, Dst: 192.168.31.50
+2024-12-06 03:09:09,896 - WARNING - Detected traffic in monitored IP range - Src: 108.177.96.109, Dst: 192.168.31.50
+2024-12-06 03:09:09,942 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 108.177.96.109
+2024-12-06 03:09:10,852 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:10,853 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:10,901 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:10,902 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:10,904 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 108.177.96.109
+2024-12-06 03:09:10,995 - WARNING - Detected traffic in monitored IP range - Src: 108.177.96.109, Dst: 192.168.31.50
+2024-12-06 03:09:11,046 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:11,060 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:11,061 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:11,197 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:11,199 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:11,202 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:11,203 - WARNING - Detected traffic in monitored IP range - Src: 108.177.96.109, Dst: 192.168.31.50
+2024-12-06 03:09:11,238 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 108.177.96.109
+2024-12-06 03:09:11,298 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:13,924 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:14,120 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:14,122 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:14,123 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:14,162 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:14,164 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:14,166 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:14,197 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:14,532 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:14,534 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:14,536 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 51.116.246.105
+2024-12-06 03:09:14,612 - WARNING - Detected traffic in monitored IP range - Src: 51.116.246.105, Dst: 192.168.31.50
+2024-12-06 03:09:14,613 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 51.116.246.105
+2024-12-06 03:09:14,694 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 51.116.246.105
+2024-12-06 03:09:14,696 - WARNING - Detected traffic in monitored IP range - Src: 51.116.246.105, Dst: 192.168.31.50
+2024-12-06 03:09:14,709 - WARNING - Detected traffic in monitored IP range - Src: 51.116.246.105, Dst: 192.168.31.50
+2024-12-06 03:09:14,711 - WARNING - Detected traffic in monitored IP range - Src: 51.116.246.105, Dst: 192.168.31.50
+2024-12-06 03:09:14,713 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 51.116.246.105
+2024-12-06 03:09:14,714 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 51.116.246.105
+2024-12-06 03:09:14,792 - WARNING - Detected traffic in monitored IP range - Src: 51.116.246.105, Dst: 192.168.31.50
+2024-12-06 03:09:14,801 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 51.116.246.105
+2024-12-06 03:09:14,802 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 51.116.246.105
+2024-12-06 03:09:14,815 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 51.116.246.105
+2024-12-06 03:09:14,817 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 51.116.246.105
+2024-12-06 03:09:14,819 - WARNING - Detected traffic in monitored IP range - Src: 51.116.246.105, Dst: 192.168.31.50
+2024-12-06 03:09:14,880 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 51.116.246.105
+2024-12-06 03:09:14,883 - WARNING - Detected traffic in monitored IP range - Src: 51.116.246.105, Dst: 192.168.31.50
+2024-12-06 03:09:14,897 - WARNING - Detected traffic in monitored IP range - Src: 51.116.246.105, Dst: 192.168.31.50
+2024-12-06 03:09:14,901 - WARNING - Detected traffic in monitored IP range - Src: 51.116.246.105, Dst: 192.168.31.50
+2024-12-06 03:09:14,937 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 51.116.246.105
+2024-12-06 03:09:15,014 - WARNING - Detected traffic in monitored IP range - Src: 51.116.246.105, Dst: 192.168.31.50
+2024-12-06 03:09:15,038 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 192.168.31.1
+2024-12-06 03:09:15,047 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.1, Dst: 192.168.31.50
+2024-12-06 03:09:15,048 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 20.42.65.89
+2024-12-06 03:09:15,052 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 51.116.246.105
+2024-12-06 03:09:15,219 - WARNING - Detected traffic in monitored IP range - Src: 20.42.65.89, Dst: 192.168.31.50
+2024-12-06 03:09:15,221 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 20.42.65.89
+2024-12-06 03:09:15,414 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 20.42.65.89
+2024-12-06 03:09:15,419 - WARNING - Detected traffic in monitored IP range - Src: 20.42.65.89, Dst: 192.168.31.50
+2024-12-06 03:09:15,423 - WARNING - Detected traffic in monitored IP range - Src: 20.42.65.89, Dst: 192.168.31.50
+2024-12-06 03:09:15,426 - WARNING - Detected traffic in monitored IP range - Src: 20.42.65.89, Dst: 192.168.31.50
+2024-12-06 03:09:15,429 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 20.42.65.89
+2024-12-06 03:09:15,432 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 20.42.65.89
+2024-12-06 03:09:15,596 - WARNING - Detected traffic in monitored IP range - Src: 20.42.65.89, Dst: 192.168.31.50
+2024-12-06 03:09:15,601 - WARNING - Detected traffic in monitored IP range - Src: 20.42.65.89, Dst: 192.168.31.50
+2024-12-06 03:09:15,603 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 20.42.65.89
+2024-12-06 03:09:15,604 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 20.42.65.89
+2024-12-06 03:09:15,773 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 20.42.65.89
+2024-12-06 03:09:15,774 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 20.42.65.89
+2024-12-06 03:09:15,776 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 20.42.65.89
+2024-12-06 03:09:15,779 - WARNING - Detected traffic in monitored IP range - Src: 20.42.65.89, Dst: 192.168.31.50
+2024-12-06 03:09:15,814 - WARNING - Detected traffic in monitored IP range - Src: 20.42.65.89, Dst: 192.168.31.50
+2024-12-06 03:09:15,817 - WARNING - Detected traffic in monitored IP range - Src: 20.42.65.89, Dst: 192.168.31.50
+2024-12-06 03:09:15,820 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 20.42.65.89
+2024-12-06 03:09:15,989 - WARNING - Detected traffic in monitored IP range - Src: 20.42.65.89, Dst: 192.168.31.50
+2024-12-06 03:09:15,997 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 51.116.246.105
+2024-12-06 03:09:15,999 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 51.116.246.105
+2024-12-06 03:09:16,028 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 51.116.246.105
+2024-12-06 03:09:16,029 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 20.42.65.89
+2024-12-06 03:09:16,072 - WARNING - Detected traffic in monitored IP range - Src: 51.116.246.105, Dst: 192.168.31.50
+2024-12-06 03:09:16,079 - WARNING - Detected traffic in monitored IP range - Src: 51.116.246.105, Dst: 192.168.31.50
+2024-12-06 03:09:16,081 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 51.116.246.105
+2024-12-06 03:09:16,082 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 51.116.246.105
+2024-12-06 03:09:16,159 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 51.116.246.105
+2024-12-06 03:09:16,161 - WARNING - Detected traffic in monitored IP range - Src: 51.116.246.105, Dst: 192.168.31.50
+2024-12-06 03:09:16,166 - WARNING - Detected traffic in monitored IP range - Src: 51.116.246.105, Dst: 192.168.31.50
+2024-12-06 03:09:16,168 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 51.116.246.105
+2024-12-06 03:09:16,170 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 20.42.65.89
+2024-12-06 03:09:16,261 - WARNING - Detected traffic in monitored IP range - Src: 51.116.246.105, Dst: 192.168.31.50
+2024-12-06 03:09:16,357 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 51.116.246.105
+2024-12-06 03:09:16,362 - WARNING - Detected traffic in monitored IP range - Src: 20.42.65.89, Dst: 192.168.31.50
+2024-12-06 03:09:17,016 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 20.42.65.89
+2024-12-06 03:09:17,022 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:17,208 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:17,209 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:17,211 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:17,214 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:17,217 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:17,219 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:17,221 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:17,223 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:17,225 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:17,227 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:17,230 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:17,233 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:17,234 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:17,235 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:17,237 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:17,239 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:17,462 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:20,097 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 192.168.31.1
+2024-12-06 03:09:20,104 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 192.168.31.1
+2024-12-06 03:09:20,105 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:20,107 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:20,108 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:20,117 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.1, Dst: 192.168.31.50
+2024-12-06 03:09:20,291 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.1, Dst: 192.168.31.50
+2024-12-06 03:09:20,293 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:20,309 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:20,311 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:20,313 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:22,321 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:22,322 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:22,322 - WARNING - Detected traffic in monitored IP range - Src: 31.209.137.10, Dst: 192.168.31.50
+2024-12-06 03:09:22,326 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 31.209.137.10
+2024-12-06 03:09:22,448 - WARNING - Detected traffic in monitored IP range - Src: 31.209.137.10, Dst: 192.168.31.50
+2024-12-06 03:09:23,148 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:23,343 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:23,343 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:23,344 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:23,379 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:23,380 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:23,384 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:23,395 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:23,396 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:23,396 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:23,566 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:23,568 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:23,614 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:23,617 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:09:23,629 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:09:24,324 - INFO - Packet capture stopped by user
+2024-12-06 03:13:17,515 - INFO - Network Security Monitor started
+2024-12-06 03:13:17,515 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 03:13:17,515 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 03:13:17,516 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 03:13:19,985 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:20,177 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:20,179 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:20,180 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:20,182 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:20,216 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:20,218 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:20,220 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:20,221 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:20,291 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:20,293 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:20,295 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:20,297 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:20,527 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:22,328 - WARNING - Detected traffic in monitored IP range - Src: 31.209.137.10, Dst: 192.168.31.50
+2024-12-06 03:13:22,335 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 31.209.137.10
+2024-12-06 03:13:22,455 - WARNING - Detected traffic in monitored IP range - Src: 31.209.137.10, Dst: 192.168.31.50
+2024-12-06 03:13:23,020 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:23,022 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:23,219 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:23,219 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:23,225 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:23,256 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:23,258 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:23,352 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:23,354 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:23,355 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 146.75.2.137
+2024-12-06 03:13:23,383 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:23,385 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:23,455 - WARNING - Detected traffic in monitored IP range - Src: 146.75.2.137, Dst: 192.168.31.50
+2024-12-06 03:13:23,566 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:23,571 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:23,611 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:23,614 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:23,616 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:24,324 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:24,327 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:24,372 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:24,373 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:24,373 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:24,374 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 192.168.31.1
+2024-12-06 03:13:24,385 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.1, Dst: 192.168.31.50
+2024-12-06 03:13:24,386 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:24,509 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:24,512 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:24,515 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:24,556 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:24,558 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:24,559 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:24,562 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:24,563 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:24,567 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:24,568 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:24,698 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:24,702 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:24,704 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:24,705 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:24,706 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:24,739 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:24,747 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:24,750 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:24,751 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:24,760 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:24,762 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:24,763 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:24,766 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:24,942 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:24,944 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:24,945 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:25,070 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:25,071 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:25,073 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:25,074 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:25,076 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:25,266 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:25,266 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:25,266 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:25,266 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:25,267 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:25,277 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:25,278 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:25,278 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:26,693 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:26,696 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:26,698 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 146.75.118.137
+2024-12-06 03:13:26,768 - WARNING - Detected traffic in monitored IP range - Src: 146.75.118.137, Dst: 192.168.31.50
+2024-12-06 03:13:27,129 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:27,131 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:27,327 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:27,329 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:27,351 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:27,354 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:27,588 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:27,590 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:27,592 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:27,593 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:28,019 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 149.255.152.178
+2024-12-06 03:13:28,033 - WARNING - Detected traffic in monitored IP range - Src: 149.255.152.178, Dst: 192.168.31.50
+2024-12-06 03:13:28,814 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 45.33.64.214
+2024-12-06 03:13:28,973 - WARNING - Detected traffic in monitored IP range - Src: 45.33.64.214, Dst: 192.168.31.50
+2024-12-06 03:13:29,188 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:29,190 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:29,382 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:29,384 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:29,393 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:29,394 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:29,397 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:29,398 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:29,400 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:29,544 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:29,549 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:29,553 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 172.217.17.99
+2024-12-06 03:13:29,597 - WARNING - Detected traffic in monitored IP range - Src: 172.217.17.99, Dst: 192.168.31.50
+2024-12-06 03:13:31,074 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 192.34.20.166
+2024-12-06 03:13:31,211 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:31,296 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:31,298 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:31,300 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:31,301 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:31,304 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:31,305 - WARNING - Detected traffic in monitored IP range - Src: 192.34.20.166, Dst: 192.168.31.50
+2024-12-06 03:13:31,408 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:31,418 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:31,419 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:31,421 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:31,422 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:31,586 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:31,588 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:31,589 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 192.34.20.166
+2024-12-06 03:13:31,811 - WARNING - Detected traffic in monitored IP range - Src: 192.34.20.166, Dst: 192.168.31.50
+2024-12-06 03:13:33,278 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:33,281 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:33,469 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:33,470 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:33,470 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:33,471 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:33,471 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:33,481 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:33,482 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:33,483 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:33,742 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:33,743 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:33,748 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:33,750 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:36,340 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:36,343 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:36,344 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:36,536 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:36,543 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:36,545 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:36,550 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:36,977 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:36,980 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:36,981 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 31.209.137.10
+2024-12-06 03:13:37,102 - WARNING - Detected traffic in monitored IP range - Src: 31.209.137.10, Dst: 192.168.31.50
+2024-12-06 03:13:37,144 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 192.168.31.1
+2024-12-06 03:13:37,148 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 192.168.31.1
+2024-12-06 03:13:37,154 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 31.209.137.10
+2024-12-06 03:13:37,156 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 31.209.137.10
+2024-12-06 03:13:37,168 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.1, Dst: 192.168.31.50
+2024-12-06 03:13:37,172 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.1, Dst: 192.168.31.50
+2024-12-06 03:13:37,176 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 146.75.1.229
+2024-12-06 03:13:37,252 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 146.75.1.229
+2024-12-06 03:13:37,253 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 142.251.18.188
+2024-12-06 03:13:37,254 - WARNING - Detected traffic in monitored IP range - Src: 142.251.18.188, Dst: 192.168.31.50
+2024-12-06 03:13:37,255 - WARNING - Detected traffic in monitored IP range - Src: 146.75.1.229, Dst: 192.168.31.50
+2024-12-06 03:13:37,256 - WARNING - Detected traffic in monitored IP range - Src: 146.75.1.229, Dst: 192.168.31.50
+2024-12-06 03:13:37,257 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 146.75.1.229
+2024-12-06 03:13:37,354 - WARNING - Detected traffic in monitored IP range - Src: 146.75.1.229, Dst: 192.168.31.50
+2024-12-06 03:13:37,380 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 146.75.1.229
+2024-12-06 03:13:39,327 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:39,530 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:39,533 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:39,534 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:39,536 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:39,537 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:39,773 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:39,774 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:39,775 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:39,776 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:40,215 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 152.199.19.160
+2024-12-06 03:13:40,278 - WARNING - Detected traffic in monitored IP range - Src: 152.199.19.160, Dst: 192.168.31.50
+2024-12-06 03:13:40,746 - WARNING - Detected traffic in monitored IP range - Src: 152.199.19.160, Dst: 192.168.31.50
+2024-12-06 03:13:40,748 - WARNING - Detected traffic in monitored IP range - Src: 152.199.19.160, Dst: 192.168.31.50
+2024-12-06 03:13:40,752 - WARNING - Detected traffic in monitored IP range - Src: 152.199.19.160, Dst: 192.168.31.50
+2024-12-06 03:13:40,755 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 152.199.19.160
+2024-12-06 03:13:40,757 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 152.199.19.160
+2024-12-06 03:13:40,801 - WARNING - Detected traffic in monitored IP range - Src: 152.199.19.160, Dst: 192.168.31.50
+2024-12-06 03:13:41,854 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:42,049 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:42,051 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:42,052 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:42,054 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:42,063 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:42,065 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:42,067 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:42,329 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:42,331 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:42,333 - WARNING - Detected traffic in monitored IP range - Src: 31.209.137.10, Dst: 192.168.31.50
+2024-12-06 03:13:42,336 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 31.209.137.10
+2024-12-06 03:13:42,456 - WARNING - Detected traffic in monitored IP range - Src: 31.209.137.10, Dst: 192.168.31.50
+2024-12-06 03:13:44,835 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:44,837 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:45,031 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:45,033 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:45,043 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:45,046 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:45,280 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:45,281 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:45,283 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:45,284 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:46,586 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 192.168.31.1
+2024-12-06 03:13:46,598 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.1, Dst: 192.168.31.50
+2024-12-06 03:13:46,600 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:46,791 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:46,793 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:46,980 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:46,982 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:46,985 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:46,992 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:46,994 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:46,995 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:46,997 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:47,176 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:47,179 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:47,180 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:47,183 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:47,211 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:47,212 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:47,214 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:47,216 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:47,218 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:47,220 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:47,279 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:47,284 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:13:47,286 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 216.58.213.100
+2024-12-06 03:13:47,288 - WARNING - Detected traffic in monitored IP range - Src: 216.58.213.100, Dst: 192.168.31.50
+2024-12-06 03:13:47,368 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:47,424 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:47,427 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:47,429 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:47,431 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:13:49,276 - INFO - Packet capture stopped by user
+2024-12-06 03:15:05,700 - INFO - Network Security Monitor started
+2024-12-06 03:15:05,702 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 03:15:05,702 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 03:15:05,702 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 03:15:07,342 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 142.251.18.188
+2024-12-06 03:15:07,428 - WARNING - Detected traffic in monitored IP range - Src: 142.251.18.188, Dst: 192.168.31.50
+2024-12-06 03:15:08,005 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:08,008 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:08,012 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:08,199 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:08,200 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:08,202 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:08,204 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:08,205 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:08,206 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:08,212 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:08,215 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:08,216 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:08,217 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:08,448 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:10,067 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:10,069 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:10,070 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:10,072 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:10,190 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:10,262 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:10,273 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:10,274 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:10,277 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:10,395 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:10,397 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:10,398 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:13,058 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:13,256 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:13,258 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:13,259 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:13,277 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:13,280 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:13,538 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:13,539 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:13,542 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:13,544 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:16,089 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:16,284 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:16,286 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:16,287 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:16,296 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:16,298 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:16,300 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:17,383 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:17,384 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:17,384 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 108.177.96.109
+2024-12-06 03:15:17,478 - WARNING - Detected traffic in monitored IP range - Src: 108.177.96.109, Dst: 192.168.31.50
+2024-12-06 03:15:17,591 - WARNING - Detected traffic in monitored IP range - Src: 108.177.96.109, Dst: 192.168.31.50
+2024-12-06 03:15:17,622 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 108.177.96.109
+2024-12-06 03:15:18,586 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 108.177.96.109
+2024-12-06 03:15:18,687 - WARNING - Detected traffic in monitored IP range - Src: 108.177.96.109, Dst: 192.168.31.50
+2024-12-06 03:15:18,784 - WARNING - Detected traffic in monitored IP range - Src: 108.177.96.109, Dst: 192.168.31.50
+2024-12-06 03:15:18,822 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 108.177.96.109
+2024-12-06 03:15:19,151 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:19,152 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:19,343 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:19,346 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:19,348 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:19,355 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:19,356 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:19,593 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:19,597 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:19,601 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:19,604 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:19,807 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 192.168.31.1
+2024-12-06 03:15:19,809 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 192.168.31.1
+2024-12-06 03:15:19,814 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.1, Dst: 192.168.31.50
+2024-12-06 03:15:19,816 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.1, Dst: 192.168.31.50
+2024-12-06 03:15:19,816 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 146.75.117.229
+2024-12-06 03:15:19,894 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 146.75.117.229
+2024-12-06 03:15:19,894 - WARNING - Detected traffic in monitored IP range - Src: 146.75.117.229, Dst: 192.168.31.50
+2024-12-06 03:15:19,974 - WARNING - Detected traffic in monitored IP range - Src: 146.75.117.229, Dst: 192.168.31.50
+2024-12-06 03:15:19,981 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 146.75.117.229
+2024-12-06 03:15:19,983 - WARNING - Detected traffic in monitored IP range - Src: 146.75.117.229, Dst: 192.168.31.50
+2024-12-06 03:15:20,001 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 146.75.117.229
+2024-12-06 03:15:20,862 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 192.34.20.166
+2024-12-06 03:15:20,870 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 192.34.20.166
+2024-12-06 03:15:21,083 - WARNING - Detected traffic in monitored IP range - Src: 192.34.20.166, Dst: 192.168.31.50
+2024-12-06 03:15:21,090 - WARNING - Detected traffic in monitored IP range - Src: 192.34.20.166, Dst: 192.168.31.50
+2024-12-06 03:15:21,214 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:21,216 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:21,409 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:21,410 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:21,412 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:21,423 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:21,425 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:21,427 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:22,345 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:22,348 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:22,352 - WARNING - Detected traffic in monitored IP range - Src: 31.209.137.10, Dst: 192.168.31.50
+2024-12-06 03:15:22,459 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 31.209.137.10
+2024-12-06 03:15:22,461 - WARNING - Detected traffic in monitored IP range - Src: 31.209.137.10, Dst: 192.168.31.50
+2024-12-06 03:15:23,382 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:23,385 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:23,574 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:23,575 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:23,577 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:23,579 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:23,611 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:23,611 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:23,613 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:23,613 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:23,614 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:23,744 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:23,757 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:23,758 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:24,324 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:24,327 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:24,330 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:24,389 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:24,392 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:24,394 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:24,396 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 192.168.31.1
+2024-12-06 03:15:24,415 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 192.168.31.1
+2024-12-06 03:15:24,505 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:24,516 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:24,517 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:24,528 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:24,528 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:24,528 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:24,529 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:24,542 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.1, Dst: 192.168.31.50
+2024-12-06 03:15:24,543 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:24,569 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:24,701 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:24,728 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:24,742 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:24,746 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:25,543 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:25,555 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:25,556 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:25,745 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:25,745 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:25,746 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:25,746 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:25,746 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:25,747 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:25,750 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:25,750 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:25,766 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:25,767 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:26,005 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:26,008 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:26,011 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:26,015 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:27,517 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:27,518 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:27,545 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:27,546 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:27,678 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:27,680 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:27,697 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:27,699 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:27,744 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:27,750 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:27,872 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:27,873 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:27,874 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:27,874 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:27,888 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:27,889 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:27,889 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:27,898 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:27,898 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:27,912 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:27,937 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:27,938 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:28,056 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 149.255.152.178
+2024-12-06 03:15:28,062 - WARNING - Detected traffic in monitored IP range - Src: 149.255.152.178, Dst: 192.168.31.50
+2024-12-06 03:15:28,094 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 149.255.152.178
+2024-12-06 03:15:28,094 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:28,096 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:28,100 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:28,101 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:28,102 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:28,102 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:28,284 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:28,284 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:28,284 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:29,544 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:29,544 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:29,545 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:29,864 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:30,063 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:30,066 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:30,068 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:30,070 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:30,072 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:30,074 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:30,077 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:30,103 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:30,106 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:30,108 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:30,111 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:31,096 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:31,097 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:31,097 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:31,098 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:31,341 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:31,539 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 192.34.20.166
+2024-12-06 03:15:31,731 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 192.34.20.166
+2024-12-06 03:15:31,732 - WARNING - Detected traffic in monitored IP range - Src: 192.34.20.166, Dst: 192.168.31.50
+2024-12-06 03:15:31,747 - WARNING - Detected traffic in monitored IP range - Src: 192.34.20.166, Dst: 192.168.31.50
+2024-12-06 03:15:31,749 - WARNING - Detected traffic in monitored IP range - Src: 192.34.20.166, Dst: 192.168.31.50
+2024-12-06 03:15:31,974 - WARNING - Detected traffic in monitored IP range - Src: 192.34.20.166, Dst: 192.168.31.50
+2024-12-06 03:15:31,976 - WARNING - Detected traffic in monitored IP range - Src: 192.34.20.166, Dst: 192.168.31.50
+2024-12-06 03:15:31,979 - WARNING - Detected traffic in monitored IP range - Src: 192.34.20.166, Dst: 192.168.31.50
+2024-12-06 03:15:31,982 - WARNING - Detected traffic in monitored IP range - Src: 192.34.20.166, Dst: 192.168.31.50
+2024-12-06 03:15:31,984 - WARNING - Detected traffic in monitored IP range - Src: 192.34.20.166, Dst: 192.168.31.50
+2024-12-06 03:15:31,988 - WARNING - Detected traffic in monitored IP range - Src: 192.34.20.166, Dst: 192.168.31.50
+2024-12-06 03:15:31,990 - WARNING - Detected traffic in monitored IP range - Src: 192.34.20.166, Dst: 192.168.31.50
+2024-12-06 03:15:31,993 - WARNING - Detected traffic in monitored IP range - Src: 192.34.20.166, Dst: 192.168.31.50
+2024-12-06 03:15:31,996 - WARNING - Detected traffic in monitored IP range - Src: 192.34.20.166, Dst: 192.168.31.50
+2024-12-06 03:15:32,000 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 192.34.20.166
+2024-12-06 03:15:32,004 - WARNING - Detected traffic in monitored IP range - Src: 192.34.20.166, Dst: 192.168.31.50
+2024-12-06 03:15:32,254 - WARNING - Detected traffic in monitored IP range - Src: 192.34.20.166, Dst: 192.168.31.50
+2024-12-06 03:15:32,256 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 192.34.20.166
+2024-12-06 03:15:32,261 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:32,449 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:32,453 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:32,456 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:32,458 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:32,461 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:32,469 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:32,471 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:32,474 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:32,476 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:34,638 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:34,640 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:34,642 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 192.168.31.1
+2024-12-06 03:15:34,654 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 192.168.31.1
+2024-12-06 03:15:34,656 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:34,658 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:34,659 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:34,662 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.1, Dst: 192.168.31.50
+2024-12-06 03:15:34,836 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.1, Dst: 192.168.31.50
+2024-12-06 03:15:34,838 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:34,873 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:34,875 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:35,004 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:35,006 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:35,009 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 192.168.31.1
+2024-12-06 03:15:35,013 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 192.168.31.1
+2024-12-06 03:15:35,015 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.1, Dst: 192.168.31.50
+2024-12-06 03:15:35,156 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.1, Dst: 192.168.31.50
+2024-12-06 03:15:35,158 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 31.209.137.10
+2024-12-06 03:15:35,160 - WARNING - Detected traffic in monitored IP range - Src: 31.209.137.10, Dst: 192.168.31.50
+2024-12-06 03:15:35,268 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 31.209.137.10
+2024-12-06 03:15:35,271 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 31.209.137.10
+2024-12-06 03:15:35,273 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 31.209.137.10
+2024-12-06 03:15:35,289 - WARNING - Detected traffic in monitored IP range - Src: 31.209.137.10, Dst: 192.168.31.50
+2024-12-06 03:15:35,880 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 31.209.137.10
+2024-12-06 03:15:36,037 - WARNING - Detected traffic in monitored IP range - Src: 31.209.137.10, Dst: 192.168.31.50
+2024-12-06 03:15:36,153 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 31.209.137.10
+2024-12-06 03:15:36,153 - WARNING - Detected traffic in monitored IP range - Src: 31.209.137.10, Dst: 192.168.31.50
+2024-12-06 03:15:36,271 - WARNING - Detected traffic in monitored IP range - Src: 31.209.137.10, Dst: 192.168.31.50
+2024-12-06 03:15:36,273 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 31.209.137.10
+2024-12-06 03:15:36,275 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 31.209.137.10
+2024-12-06 03:15:36,276 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 31.209.137.10
+2024-12-06 03:15:36,278 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 31.209.137.10
+2024-12-06 03:15:36,280 - WARNING - Detected traffic in monitored IP range - Src: 31.209.137.10, Dst: 192.168.31.50
+2024-12-06 03:15:36,387 - WARNING - Detected traffic in monitored IP range - Src: 31.209.137.10, Dst: 192.168.31.50
+2024-12-06 03:15:36,389 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 31.209.137.10
+2024-12-06 03:15:36,390 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 31.209.137.10
+2024-12-06 03:15:36,392 - WARNING - Detected traffic in monitored IP range - Src: 31.209.137.10, Dst: 192.168.31.50
+2024-12-06 03:15:36,502 - WARNING - Detected traffic in monitored IP range - Src: 31.209.137.10, Dst: 192.168.31.50
+2024-12-06 03:15:36,541 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 31.209.137.10
+2024-12-06 03:15:37,293 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:37,296 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:37,489 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:37,491 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:37,493 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:37,494 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:37,496 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:37,499 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:37,502 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:37,529 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:37,530 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:37,532 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:37,534 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:37,729 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:37,734 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 104.18.32.47
+2024-12-06 03:15:38,204 - WARNING - Detected traffic in monitored IP range - Src: 104.18.32.47, Dst: 192.168.31.50
+2024-12-06 03:15:38,207 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:38,401 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:38,403 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:38,404 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:38,405 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:38,687 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 146.75.2.137
+2024-12-06 03:15:38,802 - WARNING - Detected traffic in monitored IP range - Src: 146.75.2.137, Dst: 192.168.31.50
+2024-12-06 03:15:39,787 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 52.113.194.132
+2024-12-06 03:15:39,862 - WARNING - Detected traffic in monitored IP range - Src: 52.113.194.132, Dst: 192.168.31.50
+2024-12-06 03:15:39,864 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 52.113.194.132
+2024-12-06 03:15:39,941 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 52.113.194.132
+2024-12-06 03:15:39,944 - WARNING - Detected traffic in monitored IP range - Src: 52.113.194.132, Dst: 192.168.31.50
+2024-12-06 03:15:39,980 - WARNING - Detected traffic in monitored IP range - Src: 52.113.194.132, Dst: 192.168.31.50
+2024-12-06 03:15:39,984 - WARNING - Detected traffic in monitored IP range - Src: 52.113.194.132, Dst: 192.168.31.50
+2024-12-06 03:15:39,986 - WARNING - Detected traffic in monitored IP range - Src: 52.113.194.132, Dst: 192.168.31.50
+2024-12-06 03:15:39,989 - WARNING - Detected traffic in monitored IP range - Src: 52.113.194.132, Dst: 192.168.31.50
+2024-12-06 03:15:39,991 - WARNING - Detected traffic in monitored IP range - Src: 52.113.194.132, Dst: 192.168.31.50
+2024-12-06 03:15:39,992 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 52.113.194.132
+2024-12-06 03:15:39,994 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 52.113.194.132
+2024-12-06 03:15:40,065 - WARNING - Detected traffic in monitored IP range - Src: 52.113.194.132, Dst: 192.168.31.50
+2024-12-06 03:15:40,066 - WARNING - Detected traffic in monitored IP range - Src: 52.113.194.132, Dst: 192.168.31.50
+2024-12-06 03:15:40,068 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 52.113.194.132
+2024-12-06 03:15:40,070 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 52.113.194.132
+2024-12-06 03:15:40,144 - WARNING - Detected traffic in monitored IP range - Src: 52.113.194.132, Dst: 192.168.31.50
+2024-12-06 03:15:40,266 - WARNING - Detected traffic in monitored IP range - Src: 52.113.194.132, Dst: 192.168.31.50
+2024-12-06 03:15:40,349 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 52.113.194.132
+2024-12-06 03:15:40,354 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:40,542 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:40,546 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:40,549 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:40,551 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:40,583 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:40,585 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:40,586 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:40,591 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:40,593 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:42,338 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:42,338 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:42,338 - WARNING - Detected traffic in monitored IP range - Src: 31.209.137.10, Dst: 192.168.31.50
+2024-12-06 03:15:42,341 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 31.209.137.10
+2024-12-06 03:15:42,411 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:42,470 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:42,470 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:42,471 - WARNING - Detected traffic in monitored IP range - Src: 31.209.137.10, Dst: 192.168.31.50
+2024-12-06 03:15:42,608 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:42,635 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:42,636 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:42,638 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:44,287 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:44,288 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:44,289 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 45.33.64.214
+2024-12-06 03:15:44,443 - WARNING - Detected traffic in monitored IP range - Src: 45.33.64.214, Dst: 192.168.31.50
+2024-12-06 03:15:44,490 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:44,492 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:44,684 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:44,685 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:44,687 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:44,701 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:44,703 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:44,939 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:44,941 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:44,942 - WARNING - Detected traffic in monitored IP range - Src: 192.168.31.50, Dst: 35.223.238.178
+2024-12-06 03:15:44,943 - WARNING - Detected traffic in monitored IP range - Src: 35.223.238.178, Dst: 192.168.31.50
+2024-12-06 03:15:47,363 - INFO - Packet capture stopped by user
+2024-12-06 03:16:27,480 - INFO - Network Security Monitor started
+2024-12-06 03:16:27,481 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 03:16:27,482 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 03:16:27,482 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 03:17:22,467 - INFO - Packet capture stopped by user
+2024-12-06 03:23:08,725 - INFO - Network Security Monitor started
+2024-12-06 03:23:08,726 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 03:23:08,727 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 03:23:08,727 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 03:23:42,349 - INFO - Packet capture stopped by user
+2024-12-06 03:25:08,712 - INFO - Network Security Monitor started
+2024-12-06 03:25:08,714 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 03:25:08,714 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 03:25:08,715 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 03:25:13,974 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,055 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,056 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,091 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,093 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,097 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,099 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,103 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,140 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,143 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,146 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,148 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,152 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,227 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,228 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,230 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,232 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,236 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,238 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,241 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,242 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,244 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,245 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,247 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,248 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,249 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,250 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,252 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,253 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,321 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,323 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,328 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,364 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,368 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,371 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,373 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,378 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,447 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,456 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,469 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,472 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,473 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,474 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,476 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,478 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,479 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,480 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,481 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,481 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,514 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,514 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,515 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,515 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,543 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,544 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,544 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,567 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,570 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,594 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,597 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,609 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,612 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,613 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,616 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,617 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,712 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,713 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,752 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,753 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,754 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,754 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:14,754 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,779 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:25:14,884 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:25:46,160 - INFO - Packet capture stopped by user
+2024-12-06 03:31:00,454 - INFO - Network Security Monitor started
+2024-12-06 03:31:00,454 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 03:31:00,455 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 03:31:00,455 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 03:31:27,409 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:31:27,409 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:31:27,410 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:31:27,423 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:31:27,437 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:31:27,438 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:31:27,438 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:31:27,472 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:31:27,472 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:31:27,473 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:31:27,494 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:31:27,494 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:31:27,506 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:31:27,507 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:31:27,507 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:31:27,507 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:31:27,507 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:31:27,509 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:31:27,510 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:31:27,510 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:31:27,510 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:31:27,514 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:31:27,514 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:31:27,516 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:31:27,516 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:31:27,516 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:31:27,551 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:31:27,551 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:31:27,553 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:31:27,555 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:31:27,556 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:31:27,557 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:31:27,603 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:31:27,609 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:31:27,611 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:31:27,676 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:31:27,864 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:31:27,866 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:31:27,868 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:31:27,871 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:31:27,893 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:31:27,941 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:31:39,422 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:31:39,499 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:31:39,507 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:31:39,508 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:31:39,509 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:31:39,533 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:31:39,582 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:31:47,023 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:31:47,082 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:31:47,107 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:31:47,107 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:31:47,107 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:31:47,134 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:31:47,182 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:31:55,647 - INFO - Packet capture stopped by user
+2024-12-06 03:32:13,135 - INFO - Network Security Monitor started
+2024-12-06 03:32:13,136 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 03:32:13,136 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 03:32:13,136 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 03:32:24,572 - INFO - Packet capture stopped by user
+2024-12-06 03:32:48,538 - INFO - Network Security Monitor started
+2024-12-06 03:32:48,539 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 03:32:48,539 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 03:32:48,539 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 03:32:58,066 - INFO - Packet capture stopped by user
+2024-12-06 03:32:58,386 - INFO - Packet capture stopped by user
+2024-12-06 03:34:12,480 - INFO - Network Security Monitor started
+2024-12-06 03:34:12,482 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 03:34:12,482 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 03:34:12,482 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 03:34:20,333 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:34:20,333 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:34:20,334 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:34:20,334 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:34:20,348 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:34:20,376 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:34:20,384 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:34:20,395 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:34:20,397 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:34:20,398 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:34:20,400 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:34:20,401 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:34:20,402 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:34:20,447 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:34:20,450 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:34:20,470 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:34:20,612 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:34:20,633 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:34:20,634 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:34:20,635 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:34:20,637 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:34:20,661 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:34:34,330 - INFO - Packet capture stopped by user
+2024-12-06 03:37:22,218 - INFO - Network Security Monitor started
+2024-12-06 03:37:22,219 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 03:37:22,219 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 03:37:22,219 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 03:37:34,464 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:37:34,464 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:37:34,464 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:37:34,466 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:37:34,497 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:37:34,520 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:37:34,534 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:37:34,543 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:37:34,543 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:37:34,543 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:37:34,552 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:37:34,553 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:37:34,553 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:37:34,586 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:37:34,589 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:37:34,593 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:37:34,596 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:37:34,597 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:37:34,620 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:37:34,621 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 03:37:34,624 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 03:37:52,274 - INFO - Packet capture stopped by user
+2024-12-06 04:02:10,592 - INFO - Network Security Monitor started
+2024-12-06 04:02:10,593 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 04:02:10,593 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 04:02:10,593 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 04:02:29,549 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:02:29,552 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:02:29,568 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:02:29,569 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:02:29,631 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:02:29,636 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:02:29,638 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:02:29,641 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:02:29,642 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:02:29,643 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:02:29,644 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:02:29,645 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:02:29,645 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:02:29,646 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:02:29,646 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:02:29,702 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:02:29,705 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:02:29,707 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:02:29,708 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:02:29,748 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:02:29,753 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:03:17,638 - INFO - Packet capture stopped by user

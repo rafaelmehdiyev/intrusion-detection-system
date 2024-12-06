@@ -163,10 +163,10 @@ def index():
 def get_events():
     """Event stream for real-time updates"""
     def generate():
-        # Send existing logs first
-        existing_logs = log_reader.read_existing_logs()
-        for log in existing_logs:
-            yield f"data: {json.dumps({'message': log.strip()})}\n\n"
+        # Initialize file position for new logs only
+        log_file = log_reader.get_current_log_file()
+        if log_file not in log_reader.current_position:
+            log_reader.current_position[log_file] = os.path.getsize(log_file)
 
         while True:
             # Get new log entries
