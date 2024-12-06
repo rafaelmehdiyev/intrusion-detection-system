@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, request, Response, redirect, url_for, session
+from flask import Flask, render_template, jsonify, request, Response, redirect, url_for, session, send_file
 import os
 from datetime import datetime
 import json
@@ -15,66 +15,76 @@ USERS = {
 }
 
 class LogReader:
-    def __init__(self, log_dir="logs"):
+    def __init__(self, log_dir):
         self.log_dir = log_dir
-        self.current_position = {}
-        os.makedirs(log_dir, exist_ok=True)
+        self.current_date = None
+        self.current_file = None
+        self.last_position = 0
+        self._ensure_log_file()
+
+    def _ensure_log_file(self):
+        """Ensure the correct log file exists for the current date"""
+        today = datetime.now().date()
+        
+        # If it's a new day or no file is open
+        if self.current_date != today:
+            # Close the current file if it's open
+            if self.current_file:
+                self.current_file.close()
+                self.current_file = None
+            
+            # Update the current date
+            self.current_date = today
+            
+            # Create new log file if it doesn't exist
+            log_file = self.get_current_log_file()
+            os.makedirs(os.path.dirname(log_file), exist_ok=True)
+            if not os.path.exists(log_file):
+                with open(log_file, 'w') as f:
+                    f.write(f"--- Log file created on {today} ---\n")
+            
+            # Reset the position
+            self.last_position = 0
 
     def get_current_log_file(self):
-        return os.path.join(self.log_dir, f"{datetime.now().strftime('%Y-%m-%d')}.log")
-
-    def read_existing_logs(self, max_lines=1000):
-        """Read existing logs from the current day's log file"""
-        log_file = self.get_current_log_file()
-        
-        if not os.path.exists(log_file):
-            return []
-
-        try:
-            with open(log_file, 'r') as f:
-                # Read last max_lines lines
-                lines = f.readlines()[-max_lines:]
-                return lines
-        except Exception as e:
-            print(f"Error reading existing logs: {str(e)}")
-            return []
+        """Get the path to the current day's log file"""
+        today = datetime.now().date()
+        return os.path.join(self.log_dir, f"{today}.log")
 
     def read_new_logs(self):
-        log_file = self.get_current_log_file()
+        """Read new logs from the current day's file"""
+        self._ensure_log_file()  # Check if we need to create a new day's file
         
+        log_file = self.get_current_log_file()
         if not os.path.exists(log_file):
             return []
 
-        # Initialize position for new files
-        if log_file not in self.current_position:
-            self.current_position[log_file] = os.path.getsize(log_file)
-            return []  # Don't return existing logs on first connect
-
         try:
             with open(log_file, 'r') as f:
-                # Get file size
-                f.seek(0, 2)
-                file_size = f.tell()
-
-                # If file has been truncated, reset position
-                if file_size < self.current_position[log_file]:
-                    self.current_position[log_file] = 0
-
-                # If there's new content
-                if file_size > self.current_position[log_file]:
-                    f.seek(self.current_position[log_file])
-                    new_lines = f.readlines()
-                    self.current_position[log_file] = file_size
-                    return new_lines
-
+                f.seek(self.last_position)
+                new_logs = f.readlines()
+                self.last_position = f.tell()
+                return new_logs
         except Exception as e:
-            print(f"Error reading log file: {str(e)}")
+            print(f"Error reading logs: {e}")
             return []
 
-        return []
+    def write_log(self, level, message):
+        """Write a new log entry"""
+        self._ensure_log_file()  # Check if we need to create a new day's file
+        
+        timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S,%f')[:-3]
+        log_entry = f"{timestamp} - {level} - {message}\n"
+        
+        log_file = self.get_current_log_file()
+        try:
+            with open(log_file, 'a') as f:
+                f.write(log_entry)
+        except Exception as e:
+            print(f"Error writing log: {e}")
 
 # Initialize LogReader
-log_reader = LogReader()
+log_reader = LogReader("logs")
 
 # Configuration file path
 CONFIG_FILE = "config.json"
@@ -165,8 +175,8 @@ def get_events():
     def generate():
         # Initialize file position for new logs
         log_file = log_reader.get_current_log_file()
-        if log_file not in log_reader.current_position:
-            log_reader.current_position[log_file] = os.path.getsize(log_file)
+        if log_reader.last_position == 0:
+            log_reader.last_position = os.path.getsize(log_file)
 
         while True:
             # Get new log entries
@@ -183,6 +193,12 @@ def get_events():
             time.sleep(1)
 
     return Response(generate(), mimetype='text/event-stream')
+
+@app.route('/logs')
+@requires_auth
+def logs():
+    """Render the logs page"""
+    return render_template('logs.html')
 
 @app.route('/config')
 @requires_auth
@@ -295,6 +311,86 @@ def update_config_section(section):
             return jsonify({"status": "error", "message": "Failed to save configuration"}), 500
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)}), 500
+
+@app.route('/api/logs/today')
+@requires_auth
+def get_today_logs():
+    """API endpoint to get all logs from today"""
+    try:
+        log_file = log_reader.get_current_log_file()
+        if os.path.exists(log_file):
+            with open(log_file, 'r') as f:
+                logs = f.readlines()
+                return jsonify({
+                    'logs': [log.strip() for log in logs],
+                    'count': len(logs)
+                })
+        return jsonify({'logs': [], 'count': 0})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/api/logs/download')
+@requires_auth
+def download_logs():
+    """Download today's logs as a text file"""
+    try:
+        log_file = log_reader.get_current_log_file()
+        if os.path.exists(log_file):
+            return send_file(
+                log_file,
+                mimetype='text/plain',
+                as_attachment=True,
+                download_name=f'security_logs_{datetime.now().strftime("%Y-%m-%d")}.txt'
+            )
+        return jsonify({'error': 'No logs found for today'}), 404
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/api/logs/dates')
+@requires_auth
+def get_available_log_dates():
+    """Get list of dates that have log files"""
+    try:
+        available_dates = []
+        for file in os.listdir(log_reader.log_dir):
+            if file.endswith('.log'):
+                date_str = file[:-4]  # Remove .log extension
+                try:
+                    # Validate it's a proper date
+                    datetime.strptime(date_str, '%Y-%m-%d')
+                    available_dates.append(date_str)
+                except ValueError:
+                    continue
+        return jsonify({
+            'dates': sorted(available_dates, reverse=True),
+            'current': datetime.now().strftime('%Y-%m-%d')
+        })
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/api/logs/<date>')
+@requires_auth
+def get_logs_for_date(date):
+    """Get logs for a specific date"""
+    try:
+        # Validate date format
+        try:
+            datetime.strptime(date, '%Y-%m-%d')
+        except ValueError:
+            return jsonify({'error': 'Invalid date format'}), 400
+
+        log_file = os.path.join(log_reader.log_dir, f"{date}.log")
+        if not os.path.exists(log_file):
+            return jsonify({'error': 'No logs found for this date'}), 404
+
+        with open(log_file, 'r') as f:
+            logs = f.readlines()
+            return jsonify({
+                'logs': [log.strip() for log in logs],
+                'count': len(logs)
+            })
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
     print("Starting Network Security Monitor Server...")
