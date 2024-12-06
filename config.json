@@ -10,7 +10,8 @@
         "BLACKLISTED_IPS": [
             "192.168.1.100",
             "10.0.0.100",
-            "8.8.8.8"
+            "8.8.8.8",
+            "10.10.10.10"
         ],
         "WHITELISTED_IPS": [],
         "IP_RANGES_TO_MONITOR": [],

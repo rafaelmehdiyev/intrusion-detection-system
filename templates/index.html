@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        body { padding: 20px; background-color: #f8f9fa; }
+        body { background-color: #f8f9fa; }
         .dashboard-card {
             height: 100%;
             transition: transform 0.2s;
@@ -30,113 +30,84 @@
         }
         .stat-value {
             font-size: 2rem;
-            font-weight: 600;
+            font-weight: bold;
             margin-bottom: 0.5rem;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
         }
         .stat-label {
             font-size: 1rem;
-            font-weight: 500;
             opacity: 0.9;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
-        
-        /* Card color schemes with better contrast */
-        .card-threats {
-            background: linear-gradient(135deg, #2962ff, #1565c0);
+        .card-threats { background: linear-gradient(45deg, #f44336, #ff5252); }
+        .card-packets { background: linear-gradient(45deg, #2196f3, #64b5f6); }
+        .card-blocked { background: linear-gradient(45deg, #4caf50, #81c784); }
+        .card-uptime { background: linear-gradient(45deg, #ff9800, #ffb74d); }
+        .event-card {
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
         }
-        .card-packets {
-            background: linear-gradient(135deg, #2e7d32, #1b5e20);
-        }
-        .card-blocked {
-            background: linear-gradient(135deg, #ed6c02, #e65100);
-        }
-        .card-status {
-            background: linear-gradient(135deg, #0288d1, #01579b);
-        }
-        
         .chart-container {
             position: relative;
             height: 300px;
             width: 100%;
         }
-        .event-card {
-            margin-bottom: 10px;
-            border-left: 4px solid #007bff;
-            transition: all 0.3s ease;
-        }
-        .event-card:hover {
-            transform: translateX(5px);
-        }
-        /* Event Categories */
-        .event-info { border-left-color: #007bff; background-color: #cfe2ff; }
-        .event-warning { border-left-color: #ffc107; background-color: #fff3cd; }
-        .event-error { border-left-color: #dc3545; background-color: #f8d7da; }
-        .event-ip { border-left-color: #0dcaf0; background-color: #cff4fc; }
-        .event-port { border-left-color: #198754; background-color: #d1e7dd; }
-        .event-dns { border-left-color: #6f42c1; background-color: #e2d9f3; }
-
-        .category-badge {
-            font-size: 0.8em;
-            padding: 0.25em 0.5em;
-            border-radius: 0.25rem;
-            margin-right: 0.5em;
-        }
-        
+        .connected { color: #4caf50; }
+        .disconnected { color: #f44336; }
         .filter-tag {
-            display: inline-block;
-            padding: 0.25em 0.75em;
-            margin: 0.25em;
-            border-radius: 1rem;
-            background-color: #e9ecef;
             cursor: pointer;
+            padding: 5px 10px;
+            margin: 0 5px;
+            border-radius: 15px;
+            background-color: #e9ecef;
+            transition: all 0.3s ease;
         }
         .filter-tag.active {
             background-color: #0d6efd;
             color: white;
         }
-        
-        .search-container {
-            position: relative;
+        .navbar {
+            background: linear-gradient(45deg, #1a237e, #283593);
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .search-container i {
-            position: absolute;
-            left: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #6c757d;
+        .navbar-brand {
+            color: white !important;
+            font-weight: bold;
         }
-        .search-input {
-            padding-left: 30px;
+        .nav-link {
+            color: rgba(255,255,255,0.8) !important;
+            transition: color 0.3s ease;
         }
-        #status-indicator {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            display: inline-block;
-            margin-right: 5px;
-        }
-        .status-connected { background-color: #28a745; }
-        .status-disconnected { background-color: #dc3545; }
-        #events-container {
-            max-height: 600px;
-            overflow-y: auto;
-        }
-        .toolbar {
-            position: sticky;
-            top: 0;
-            background-color: #f8f9fa;
-            padding: 10px 0;
-            z-index: 1000;
-            border-bottom: 1px solid #dee2e6;
+        .nav-link:hover {
+            color: white !important;
         }
         .nav-link.active {
+            color: white !important;
             font-weight: bold;
         }
     </style>
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-shield-check"></i>
+                Network Security Monitor
+            </a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link active" href="/">
+                    <i class="bi bi-speedometer2"></i>
+                    Dashboard
+                </a>
+                <a class="nav-link" href="/config">
+                    <i class="bi bi-gear"></i>
+                    Configuration
+                </a>
+            </div>
+        </div>
+    </nav>
+
     <div class="container-fluid">
         <!-- Status Overview Row -->
         <div class="row mb-4">
@@ -168,7 +139,7 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="card dashboard-card stat-card card-status text-white">
+                <div class="card dashboard-card stat-card card-uptime text-white">
                     <div class="stat-icon">
                         <i class="bi bi-activity"></i>
                     </div>

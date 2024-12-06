@@ -48,7 +48,7 @@ class LogReader:
         # Initialize position for new files
         if log_file not in self.current_position:
             self.current_position[log_file] = os.path.getsize(log_file)
-            return self.read_existing_logs()  # Return existing logs on first connect
+            return []  # Don't return existing logs on first connect
 
         try:
             with open(log_file, 'r') as f:
@@ -163,7 +163,7 @@ def index():
 def get_events():
     """Event stream for real-time updates"""
     def generate():
-        # Initialize file position for new logs only
+        # Initialize file position for new logs
         log_file = log_reader.get_current_log_file()
         if log_file not in log_reader.current_position:
             log_reader.current_position[log_file] = os.path.getsize(log_file)

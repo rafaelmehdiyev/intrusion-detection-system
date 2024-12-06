@@ -1501,3 +1501,85 @@ Interface Details:
 2024-12-06 04:02:29,748 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
 2024-12-06 04:02:29,753 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
 2024-12-06 04:03:17,638 - INFO - Packet capture stopped by user
+2024-12-06 04:10:34,416 - INFO - Network Security Monitor started
+2024-12-06 04:10:34,417 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 04:10:34,417 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 04:10:34,417 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 04:10:38,349 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:10:38,350 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:10:38,352 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:10:38,353 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:10:38,399 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:10:38,413 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:10:38,434 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:10:38,435 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:10:38,435 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:10:38,435 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:10:38,437 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:10:38,445 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:10:38,471 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:10:38,486 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:10:38,487 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:10:38,510 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:10:38,511 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:10:38,511 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:10:38,511 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:10:38,534 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:10:38,559 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:11:02,495 - INFO - Packet capture stopped by user
+2024-12-06 04:11:02,775 - INFO - Packet capture stopped by user
+2024-12-06 04:21:36,887 - INFO - Network Security Monitor started
+2024-12-06 04:21:36,888 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 04:21:36,888 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 04:21:36,889 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 04:21:43,142 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:21:43,158 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:21:43,158 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:21:43,159 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:21:43,163 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:21:43,166 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:21:43,167 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:21:43,167 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:21:43,167 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:21:43,169 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:21:43,169 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:21:43,170 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:21:43,170 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:21:43,171 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:21:43,171 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:21:43,174 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:21:43,186 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:21:43,187 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:21:43,188 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:21:43,188 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:21:43,190 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:21:43,191 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:21:43,192 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:21:43,244 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:21:51,226 - INFO - Packet capture stopped by user
+2024-12-06 04:24:05,548 - INFO - Network Security Monitor started
+2024-12-06 04:24:05,549 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-06 04:24:05,549 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-06 04:24:05,549 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-06 04:24:34,221 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:24:34,222 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:24:34,223 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:24:34,224 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:24:34,276 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:24:34,310 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:24:34,311 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:24:34,311 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:24:34,311 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:24:34,311 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:24:34,313 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:24:34,313 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:24:34,313 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:24:34,314 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:24:34,369 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:24:34,369 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:24:34,370 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:24:34,371 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:24:34,371 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 8.8.8.8
+2024-12-06 04:24:34,425 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:24:34,427 - WARNING - Detected traffic from/to blacklisted IP - Src: 8.8.8.8, Dst: 192.168.31.50
+2024-12-06 04:25:10,549 - INFO - Packet capture stopped by user
