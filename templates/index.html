@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,68 +9,115 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        body { background-color: #f8f9fa; }
+        body {
+            background-color: #f8f9fa;
+        }
+
         .dashboard-card {
             height: 100%;
             transition: transform 0.2s;
             border: none;
             border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
         .dashboard-card:hover {
             transform: translateY(-5px);
         }
+
         .stat-card {
             text-align: center;
             padding: 1.5rem;
         }
+
         .stat-icon {
             font-size: 2.5rem;
             margin-bottom: 1rem;
             opacity: 0.9;
         }
+
         .stat-value {
             font-size: 2rem;
             font-weight: bold;
             margin-bottom: 0.5rem;
         }
+
         .stat-label {
             font-size: 1rem;
             opacity: 0.9;
         }
-        .card-threats { background: linear-gradient(45deg, #f44336, #ff5252); }
-        .card-packets { background: linear-gradient(45deg, #2196f3, #64b5f6); }
-        .card-blocked { background: linear-gradient(45deg, #4caf50, #81c784); }
-        .card-uptime { background: linear-gradient(45deg, #ff9800, #ffb74d); }
+
+        .card-threats {
+            background: linear-gradient(45deg, #f44336, #ff5252);
+        }
+
+        .card-packets {
+            background: linear-gradient(45deg, #2196f3, #64b5f6);
+        }
+
+        .card-blocked {
+            background: linear-gradient(45deg, #4caf50, #81c784);
+        }
+
+        .card-uptime {
+            background: linear-gradient(45deg, #ff9800, #ffb74d);
+        }
+
         .event-card {
             margin-bottom: 10px;
             transition: all 0.3s ease;
             border-left: 4px solid #ccc;
         }
+
         .event-card:hover {
             transform: translateX(5px);
         }
-        .event-critical { border-left-color: #dc3545; }
-        .event-security { border-left-color: #fd7e14; }
-        .event-warning { border-left-color: #ffc107; }
-        .event-dns { border-left-color: #0dcaf0; }
-        .event-network { border-left-color: #0d6efd; }
-        .event-system { border-left-color: #6c757d; }
-        .event-info { border-left-color: #20c997; }
+
+        .event-critical {
+            border-left-color: #dc3545;
+        }
+
+        .event-security {
+            border-left-color: #fd7e14;
+        }
+
+        .event-warning {
+            border-left-color: #ffc107;
+        }
+
+        .event-dns {
+            border-left-color: #0dcaf0;
+        }
+
+        .event-network {
+            border-left-color: #0d6efd;
+        }
+
+        .event-system {
+            border-left-color: #6c757d;
+        }
+
+        .event-info {
+            border-left-color: #20c997;
+        }
+
         .event-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 8px;
         }
+
         .event-badges {
             display: flex;
             gap: 5px;
         }
+
         .event-timestamp {
             font-size: 0.85rem;
             color: #666;
         }
+
         .event-details {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -77,43 +125,63 @@
             margin-top: 8px;
             font-size: 0.9rem;
         }
+
         .event-detail {
             display: flex;
             align-items: center;
         }
+
         .detail-label {
             color: #666;
             margin-right: 5px;
             font-weight: 500;
         }
+
         .detail-value {
             color: #333;
             word-break: break-all;
         }
+
         .event-controls {
             display: flex;
             align-items: center;
             gap: 10px;
         }
+
         #pause-events.paused {
             background-color: #dc3545;
             color: white;
             border-color: #dc3545;
         }
+
         .event-card.new-event {
             animation: highlightNew 2s ease-out;
         }
+
         @keyframes highlightNew {
-            0% { background-color: rgba(33, 150, 243, 0.1); }
-            100% { background-color: transparent; }
+            0% {
+                background-color: rgba(33, 150, 243, 0.1);
+            }
+
+            100% {
+                background-color: transparent;
+            }
         }
+
         .chart-container {
             position: relative;
             height: 300px;
             width: 100%;
         }
-        .connected { color: #4caf50; }
-        .disconnected { color: #f44336; }
+
+        .connected {
+            color: #4caf50;
+        }
+
+        .disconnected {
+            color: #f44336;
+        }
+
         .filter-tag {
             cursor: pointer;
             padding: 5px 10px;
@@ -122,27 +190,33 @@
             background-color: #e9ecef;
             transition: all 0.3s ease;
         }
+
         .filter-tag.active {
             background-color: #0d6efd;
             color: white;
         }
+
         .navbar {
             background: linear-gradient(45deg, #1a237e, #283593);
             margin-bottom: 20px;
             border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
         .navbar-brand {
             color: white !important;
             font-weight: bold;
         }
+
         .nav-link {
-            color: rgba(255,255,255,0.8) !important;
+            color: rgba(255, 255, 255, 0.8) !important;
             transition: color 0.3s ease;
         }
+
         .nav-link:hover {
             color: white !important;
         }
+
         .nav-link.active {
             color: white !important;
             font-weight: bold;
@@ -169,20 +243,25 @@
 
         /* Event Type Highlighting */
         #logDetailsModal .event-type-CRITICAL {
-            color: #dc3545; /* Red */
+            color: #dc3545;
+            /* Red */
         }
 
         #logDetailsModal .event-type-WARNING {
-            color: #ffc107; /* Yellow */
+            color: #ffc107;
+            /* Yellow */
         }
 
         #logDetailsModal .event-type-SECURITY {
-            color: #fd7e14; /* Orange */
+            color: #fd7e14;
+            /* Orange */
         }
 
         #logDetailsModal .event-type-NETWORK_TRAFFIC {
-            color: #0d6efd; /* Blue */
+            color: #0d6efd;
+            /* Blue */
         }
+
         /* Severity Highlighting */
         #logDetailsModal .severity-HIGH {
             color: #dc3545;
@@ -190,6 +269,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg">
@@ -304,7 +384,8 @@
                                 <span class="filter-tag" data-filter="system">System</span>
                                 <span class="filter-tag" data-filter="info">Info</span>
                             </div>
-                            <input type="text" id="searchInput" class="form-control form-control-sm" placeholder="Search events...">
+                            <input type="text" id="searchInput" class="form-control form-control-sm"
+                                placeholder="Search events...">
                             <button id="pause-events" class="btn btn-sm btn-outline-secondary ms-2">
                                 <i class="bi bi-pause-fill"></i>
                             </button>
@@ -328,7 +409,8 @@
         </div>
     </div>
 
-    <div class="modal fade" id="logDetailsModal" tabindex="-1" aria-labelledby="logDetailsModalLabel" aria-hidden="true">
+    <div class="modal fade" id="logDetailsModal" tabindex="-1" aria-labelledby="logDetailsModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -361,15 +443,15 @@
             // Reset counters on new connection
             document.getElementById('packetCount').innerText = '0';
             document.getElementById('threatCount').innerText = '0';
-            
+
             eventSource = new EventSource('/events');
-            
-            eventSource.onopen = function() {
+
+            eventSource.onopen = function () {
                 statusIndicator.className = 'status-connected';
                 connectionStatus.textContent = 'Connected';
             };
 
-            eventSource.onmessage = function(event) {
+            eventSource.onmessage = function (event) {
                 try {
                     const data = JSON.parse(event.data);
                     addEvent(data);
@@ -378,7 +460,7 @@
                 }
             };
 
-            eventSource.onerror = function() {
+            eventSource.onerror = function () {
                 statusIndicator.className = 'status-disconnected';
                 connectionStatus.textContent = 'Disconnected - Reconnecting...';
                 eventSource.close();
@@ -407,11 +489,11 @@
             document.getElementById('event-count').textContent = `${eventCount} Events`;
         }
 
-        document.getElementById('pause-events').addEventListener('click', function() {
+        document.getElementById('pause-events').addEventListener('click', function () {
             isPaused = !isPaused;
             this.innerHTML = isPaused ? '<i class="bi bi-play-fill"></i>' : '<i class="bi bi-pause-fill"></i>';
             this.classList.toggle('paused');
-            
+
             if (!isPaused && pendingEvents.length > 0) {
                 pendingEvents.forEach(event => addEvent(event));
                 pendingEvents = [];
@@ -421,133 +503,248 @@
         function determineEventType(content, level) {
             // 1. Critical Events (Most Important)
             if (level === 'ERROR') return 'CRITICAL';
-            
+
             // 2. Security Events (High Priority)
-            if (content.includes('blacklisted IP') || 
+            if (content.includes('blacklisted IP') ||
                 content.includes('port scan') ||
                 content.includes('DGA domain')) {
                 return 'SECURITY';
             }
-            
+
             // 3. Warning Events
             if (level === 'WARNING') return 'WARNING';
-            
+
             // 4. Service-Specific Events
             if (content.includes('DNS Query')) return 'DNS';
             if (content.includes('Network Traffic')) return 'NETWORK';
-            
+
             // 5. System Events
-            if (content.includes('started') || 
+            if (content.includes('started') ||
                 content.includes('stopped') ||
                 content.includes('monitoring')) {
                 return 'SYSTEM';
             }
-            
+
             // 6. Default
             return 'INFO';
         }
 
         function formatLogDetails(logEntry) {
-    const parts = logEntry.split(" - ");
-    const timestamp = parts[0];
-    const eventType = parts[1];
-    const details = {};
+            const parts = logEntry.split(" - ");
+            const timestamp = parts[0];
+            const eventType = parts[1];
+            const details = {};
 
-    // Parse the key-value pairs
-    const detailsString = parts.slice(2).join(" - ");
-    const keyValuePairs = detailsString.split(" - ");
-    for (const pair of keyValuePairs) {
-        const keyValue = pair.split("=");
-        if (keyValue.length === 2) {
-            details[keyValue[0]] = keyValue[1];
-        }
-    }
+            const detailsString = parts.slice(2).join(" - ");
+            const keyValuePairs = detailsString.split(" - ");
+            for (const pair of keyValuePairs) {
+                const keyValue = pair.split("=");
+                if (keyValue.length === 2) {
+                    details[keyValue[0]] = keyValue[1];
+                }
+            }
 
-    // Start generating the HTML table
-    let html = '';
+            let html = '';
 
-    // Convert timestamp to a more readable format
-    const readableTimestamp = new Date(timestamp.replace(',', '.')).toLocaleString('en-GB', {
-        day: '2-digit',
-        month: 'short',
-        year: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit',
-        hour12: false
-    });
-    html += `<tr>
+            // Format the timestamp
+            const readableTimestamp = new Date(timestamp.replace(',', '.')).toLocaleString('en-GB', {
+                day: '2-digit',
+                month: 'short',
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            });
+            html += `<tr>
                 <th><i class="bi bi-clock"></i> Timestamp</th>
                 <td><code>${readableTimestamp}</code></td>
              </tr>`;
 
-    // Event Type with Badge
-    html += `<tr>
+            // Add event type
+            html += `<tr>
                 <th><i class="bi bi-shield-fill"></i> Event Type</th>
                 <td><span class="badge bg-${getEventTypeColor(eventType)}">${eventType}</span></td>
              </tr>`;
 
-    // Severity with Badge
-    if (details['severity']) {
-        html += `<tr>
+            // Add severity if available
+            if (details['severity']) {
+                html += `<tr>
                     <th><i class="bi bi-bar-chart"></i> Severity</th>
                     <td><span class="badge bg-${getSeverityColor(details['severity'])}">${details['severity']}</span></td>
                  </tr>`;
-        delete details['severity']; // Remove after processing
-    }
+                delete details['severity'];
+            }
 
-    // Description
-    if (details['description']) {
-        html += `<tr>
+            // Add description if available
+            if (details['description']) {
+                html += `<tr>
                     <th><i class="bi bi-info-circle"></i> Description</th>
                     <td>${details['description']}</td>
                  </tr>`;
-        delete details['description']; // Remove after processing
-    }
+                delete details['description'];
+            }
 
-    // Source and Destination as Flow
-    if (details['source_ip'] && details['destination_ip']) {
-        html += `<tr>
+            // Add connection details
+            if (details['source_ip'] && details['destination_ip']) {
+                html += `<tr>
                     <th><i class="bi bi-arrow-left-right"></i> Connection</th>
                     <td>
                         <strong>${details['source_ip']}</strong>
-                        <span class="text-muted"> ---→ </span>
+                        <span class="text-muted"> → </span>
                         <strong>${details['destination_ip']}</strong>
+                        <span id="geoip-${details['destination_ip']}" class="text-muted"> (Locating...)</span>
                     </td>
                  </tr>`;
-        delete details['source_ip']; // Remove after processing
-        delete details['destination_ip']; // Remove after processing
-    }
 
-    // Process remaining fields
-    for (const key in details) {
-        html += `<tr>
+                // Ensure GeoIP information table exists before fetching data
+                // GeoIP information table cells will be filled after the fetch
+                html += `
+            <tr><td colspan="2"><hr></td></tr>
+            <tr><th colspan="2">GeoIP Information</th></tr>
+            <tr>
+                <th><i class="bi bi-globe"></i> Country</th>
+                <td id="geoip-country">Loading...</td>
+            </tr>
+            <tr>
+                <th><i class="bi bi-map"></i> Region</th>
+                <td id="geoip-region">Loading...</td>
+            </tr>
+            <tr>
+                <th><i class="bi bi-building"></i> City</th>
+                <td id="geoip-city">Loading...</td>
+            </tr>
+            <tr>
+                <th><i class="bi bi-globe"></i> Continent</th>
+                <td id="geoip-continent">Loading...</td>
+            </tr>
+            <tr>
+                <th><i class="bi bi-geo-alt"></i> Latitude</th>
+                <td id="geoip-latitude">Loading...</td>
+            </tr>
+            <tr>
+                <th><i class="bi bi-geo-alt"></i> Longitude</th>
+                <td id="geoip-longitude">Loading...</td>
+            </tr>
+            <tr>
+                <th><i class="bi bi-flag"></i> Country Capital</th>
+                <td id="geoip-country-capital">Loading...</td>
+            </tr>
+            <tr>
+                <th><i class="bi bi-phone"></i> Country Phone</th>
+                <td id="geoip-country-phone">Loading...</td>
+            </tr>
+            <tr>
+                <th><i class="bi bi-gear"></i> ASN</th>
+                <td id="geoip-asn">Loading...</td>
+            </tr>
+            <tr>
+                <th><i class="bi bi-inbox"></i> Organization</th>
+                <td id="geoip-org">Loading...</td>
+            </tr>
+            <tr>
+                <th><i class="bi bi-currency-dollar"></i> Currency</th>
+                <td id="geoip-currency">Loading...</td>
+            </tr>
+        `;
+            }
+
+            // Show compact flags (compact representation of flags)
+            if (details['flags']) {
+                const flags = [
+                    { name: 'FIN', value: details['flags FIN'] },
+                    { name: 'SYN', value: details['flags SYN'] },
+                    { name: 'RST', value: details['flags RST'] },
+                    { name: 'PSH', value: details['flags PSH'] },
+                    { name: 'ACK', value: details['flags ACK'] },
+                    { name: 'URG', value: details['flags URG'] },
+                    { name: 'ECE', value: details['flags ECE'] },
+                    { name: 'CWR', value: details['flags CWR'] }
+                ];
+
+                const activeFlags = flags.filter(flag => flag.value === 'True').map(flag => flag.name);
+
+                // Display flags in a more readable format
+                html += `<tr>
+                    <th><i class="bi bi-flag"></i> Flags</th>
+                    <td>${activeFlags.length > 0 ? activeFlags.map(flag => `<span class="badge bg-info">${flag}</span>`).join(' ') : 'None'}</td>
+                 </tr>`;
+            }
+
+            // Process remaining fields
+            for (const key in details) {
+                html += `<tr>
                     <th>${key.replace('_', ' ')}</th>
                     <td>${details[key]}</td>
                  </tr>`;
-    }
+            }
 
-    return html;
-}
+            updateGeoIP(details['destination_ip'])
 
-// Helper Functions for Colors
-function getEventTypeColor(eventType) {
-    switch (eventType) {
-        case 'SECURITY_ALERT': return 'danger'; // Red
-        case 'WARNING': return 'warning'; // Yellow
-        case 'INFO': return 'info'; // Blue
-        default: return 'secondary'; // Gray
-    }
-}
+            // Return the generated HTML
+            return html;
+        }
 
-function getSeverityColor(severity) {
-    switch (severity.toUpperCase()) {
-        case 'HIGH': return 'danger'; // Red
-        case 'MEDIUM': return 'warning'; // Yellow
-        case 'LOW': return 'success'; // Green
-        default: return 'secondary'; // Gray
-    }
-}
+        // Fetch GeoIP data and update the GeoIP information table
+        function updateGeoIP(destinationIp) {
+            fetch(`/api/geoip?ip=${destinationIp}`)
+                .then(response => response.json())
+                .then(data => {
+                    const geoipElement = document.getElementById(`geoip-${destinationIp}`);
+                    if (geoipElement) {
+                        geoipElement.textContent = ` (${data.country || 'Unknown'})`;
+                    }
+
+                    // Update GeoIP info table dynamically
+                    document.getElementById('geoip-country').textContent = data.country || 'Unknown';
+                    document.getElementById('geoip-region').textContent = data.region || 'Unknown';
+                    document.getElementById('geoip-city').textContent = data.city || 'Unknown';
+                    document.getElementById('geoip-continent').textContent = data.continent || 'Unknown';
+                    document.getElementById('geoip-latitude').textContent = data.latitude || 'Unknown';
+                    document.getElementById('geoip-longitude').textContent = data.longitude || 'Unknown';
+                    document.getElementById('geoip-country-capital').textContent = data.country_capital || 'Unknown';
+                    document.getElementById('geoip-country-phone').textContent = data.country_phone || 'Unknown';
+                    document.getElementById('geoip-asn').textContent = data.asn || 'Unknown';
+                    document.getElementById('geoip-org').textContent = data.org || 'Unknown';
+                    document.getElementById('geoip-currency').textContent = data.currency || 'Unknown';
+                })
+                .catch(error => {
+                    console.error('Error fetching GeoIP data:', error);
+                    document.getElementById('geoip-country').textContent = 'Error';
+                    document.getElementById('geoip-region').textContent = 'Error';
+                    document.getElementById('geoip-city').textContent = 'Error';
+                    document.getElementById('geoip-continent').textContent = 'Error';
+                    document.getElementById('geoip-latitude').textContent = 'Error';
+                    document.getElementById('geoip-longitude').textContent = 'Error';
+                    document.getElementById('geoip-country-capital').textContent = 'Error';
+                    document.getElementById('geoip-country-phone').textContent = 'Error';
+                    document.getElementById('geoip-asn').textContent = 'Error';
+                    document.getElementById('geoip-org').textContent = 'Error';
+                    document.getElementById('geoip-currency').textContent = 'Error';
+                });
+        }
+
+
+
+        // Helper Functions for Colors
+        function getEventTypeColor(eventType) {
+            switch (eventType) {
+                case 'SECURITY_ALERT': return 'danger'; // Red
+                case 'WARNING': return 'warning'; // Yellow
+                case 'INFO': return 'info'; // Blue
+                default: return 'secondary'; // Gray
+            }
+        }
+
+        function getSeverityColor(severity) {
+            switch (severity.toUpperCase()) {
+                case 'HIGH': return 'danger'; // Red
+                case 'MEDIUM': return 'warning'; // Yellow
+                case 'LOW': return 'success'; // Green
+                default: return 'secondary'; // Gray
+            }
+        }
+
         function addEvent(data) {
             if (isPaused) {
                 pendingEvents.push(data);
@@ -556,23 +753,23 @@ function getSeverityColor(severity) {
 
             const card = document.createElement('div');
             card.className = 'card event-card mb-2';
-            
+
             // Extract log components
             const message = data.message;
             const match = message.match(/(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2},\d{3}) - (\w+) - (.+)/);
-            
+
             if (!match) return;
-            
+
             const [_, timestamp, level, content] = match;
             const localTime = new Date(timestamp.replace(',', '.')).toLocaleTimeString();
-            
+
             // Update dashboard stats
             updateStats(message);
-            
+
             // Determine event type using our new function
             const eventType = determineEventType(content, level);
             card.classList.add(`event-${eventType.toLowerCase()}`);
-            
+
             // Extract IP addresses if present
             let ipDetails = '';
             const ipMatch = content.match(/Src: ([\d\.]+), Dst: ([\d\.]+)/);
@@ -589,7 +786,7 @@ function getSeverityColor(severity) {
                         </div>
                     </div>`;
             }
-            
+
             // Create card content with event type badge
             card.innerHTML = `
                     <div class="card-body p-2">
@@ -607,47 +804,47 @@ function getSeverityColor(severity) {
                         ${ipDetails}
                     </div>
                 `;
-            
+
             // Add to container
             eventsContainer.insertBefore(card, eventsContainer.firstChild);
             eventCount++;
             updateEventCount();
-            
+
             // Limit number of events
             if (eventsContainer.children.length > maxEvents) {
                 eventsContainer.removeChild(eventsContainer.lastChild);
             }
             // Add event listener to the "View Details" button
-            card.querySelector('.view-details').addEventListener('click', function() {
-        const timestamp = this.getAttribute('data-timestamp');
-        fetch(`/api/detailed_log?timestamp=${timestamp}`)
-            .then(response => response.json())
-            .then(data => {
-                if (data.error) {
-                    console.error('Error fetching detailed log:', data.error);
-                } else {
-                    // Format the log details
-                    const formattedLogDetails = formatLogDetails(data.log);
+            card.querySelector('.view-details').addEventListener('click', function () {
+                const timestamp = this.getAttribute('data-timestamp');
+                fetch(`/api/detailed_log?timestamp=${timestamp}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.error) {
+                            console.error('Error fetching detailed log:', data.error);
+                        } else {
+                            // Format the log details
+                            const formattedLogDetails = formatLogDetails(data.log);
 
-                    // Update the modal content with the formatted HTML
-                    document.getElementById('detailed-log-content').innerHTML = formattedLogDetails;
+                            // Update the modal content with the formatted HTML
+                            document.getElementById('detailed-log-content').innerHTML = formattedLogDetails;
 
-                    const logDetailsModal = new bootstrap.Modal(document.getElementById('logDetailsModal'));
-                    logDetailsModal.show();
-                }
-            })
-            .catch(error => console.error('Error:', error));
-    });
-            }
+                            const logDetailsModal = new bootstrap.Modal(document.getElementById('logDetailsModal'));
+                            logDetailsModal.show();
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
+            });
+        }
 
         function updateStats(message) {
             // Parse the message
             const match = message.match(/(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2},\d{3}) - (\w+) - (.+)/);
-            
+
             if (!match) return;
 
             const [_, timestamp, level, content] = match;
-            
+
             // Update threat count for alerts and warnings
             if (level === 'WARNING' || level === 'ERROR' || level === 'ALERT') {
                 let threatCount = parseInt(document.getElementById('threatCount').innerText);
@@ -671,7 +868,7 @@ function getSeverityColor(severity) {
             // Update packet count for all messages
             let packetCount = parseInt(document.getElementById('packetCount').innerText);
             document.getElementById('packetCount').innerText = packetCount + 1;
-            
+
             // Increment packet counter for traffic chart
             packetsSinceLastUpdate++;
         }
@@ -685,7 +882,7 @@ function getSeverityColor(severity) {
         filterTags.forEach(tag => {
             tag.addEventListener('click', () => {
                 const filter = tag.getAttribute('data-filter');
-                
+
                 if (filter === 'all') {
                     activeFilters = ['all'];
                     filterTags.forEach(t => t.classList.remove('active'));
@@ -695,7 +892,7 @@ function getSeverityColor(severity) {
                         activeFilters = [];
                         document.querySelector('[data-filter="all"]').classList.remove('active');
                     }
-                    
+
                     const filterIndex = activeFilters.indexOf(filter);
                     if (filterIndex === -1) {
                         activeFilters.push(filter);
@@ -704,13 +901,13 @@ function getSeverityColor(severity) {
                         activeFilters.splice(filterIndex, 1);
                         tag.classList.remove('active');
                     }
-                    
+
                     if (activeFilters.length === 0) {
                         activeFilters = ['all'];
                         document.querySelector('[data-filter="all"]').classList.add('active');
                     }
                 }
-                
+
                 applyFilters();
             });
         });
@@ -720,11 +917,11 @@ function getSeverityColor(severity) {
             Array.from(eventsContainer.children).forEach(card => {
                 const cardText = card.textContent.toLowerCase();
                 const cardCategory = getCardCategory(card);
-                
+
                 const matchesSearch = cardText.includes(searchText);
-                const matchesCategory = activeFilters.includes('all') || 
-                                     activeFilters.some(filter => cardCategory.includes(filter.toLowerCase()));
-                
+                const matchesCategory = activeFilters.includes('all') ||
+                    activeFilters.some(filter => cardCategory.includes(filter.toLowerCase()));
+
                 card.style.display = matchesSearch && matchesCategory ? '' : 'none';
             });
         }
@@ -791,17 +988,17 @@ function getSeverityColor(severity) {
         function updateTrafficChart() {
             const now = Date.now();
             const timeDiff = (now - lastUpdateTime) / 1000; // Convert to seconds
-            
+
             if (timeDiff >= 1) { // Update every second
                 const packetsPerSecond = Math.round(packetsSinceLastUpdate / timeDiff);
-                
+
                 // Shift data array and add new value
                 trafficChart.data.datasets[0].data.shift();
                 trafficChart.data.datasets[0].data.push(packetsPerSecond);
-                
+
                 // Update chart
                 trafficChart.update('none'); // Use 'none' mode for better performance
-                
+
                 // Reset counters
                 packetsSinceLastUpdate = 0;
                 lastUpdateTime = now;
@@ -840,7 +1037,7 @@ function getSeverityColor(severity) {
                     },
                     tooltip: {
                         callbacks: {
-                            label: function(context) {
+                            label: function (context) {
                                 const total = context.dataset.data.reduce((a, b) => a + b, 0);
                                 const percentage = total > 0 ? Math.round((context.raw / total) * 100) : 0;
                                 return `${context.label}: ${context.raw} (${percentage}%)`;
@@ -875,14 +1072,14 @@ function getSeverityColor(severity) {
                     const content = card.querySelector('.mt-2').textContent;
                     return `${timestamp},${level},${eventType},"${content.trim()}"`;
                 });
-            
+
             const csv = ['Timestamp,Level,Type,Message', ...events].join('\n');
             const blob = new Blob([csv], { type: 'text/csv' });
             const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.setAttribute('hidden', '');
             a.setAttribute('href', url);
-            a.setAttribute('download', `network_events_${new Date().toISOString().slice(0,19).replace(/:/g,'-')}.csv`);
+            a.setAttribute('download', `network_events_${new Date().toISOString().slice(0, 19).replace(/:/g, '-')}.csv`);
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
@@ -894,4 +1091,5 @@ function getSeverityColor(severity) {
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

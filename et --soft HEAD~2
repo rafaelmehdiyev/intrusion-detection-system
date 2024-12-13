@@ -1,0 +1,86 @@
+[33mcommit ced99ee47f6a1b06bca0ce9397eb828bd80d978c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: Rafael Mehdiyev <rafaelmehdiyev0@gmail.com>
+Date:   Fri Dec 13 17:24:28 2024 +0400
+
+    Improving DNS Query content and Adding GeoIp feature
+
+[33mcommit 9256ea98aa7364da72659978fb33e8c8c4ccf6f4[m
+Author: Rafael Mehdiyev <rafaelmehdiyev0@gmail.com>
+Date:   Fri Dec 13 17:22:25 2024 +0400
+
+    Improving DNS Query content and Adding GeoIp feature
+
+[33mcommit 7128025c56caa98ce48061e7c2ddb664ff064da9[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Rafael Mehdiyev <rafaelmehdiyev0@gmail.com>
+Date:   Fri Dec 13 15:51:27 2024 +0400
+
+    Adding GitIgnore File
+
+[33mcommit d846a933fcb3a27faa825be377ce3be36d3281bc[m
+Author: Rafael Mehdiyev <rafaelmehdiyev0@gmail.com>
+Date:   Fri Dec 13 15:50:15 2024 +0400
+
+    Adding Pop-up modal to table to show detailed information
+
+[33mcommit 4a8765ef9b0b22c6868e9b914ef690153961b0ed[m
+Author: Rafael Mehdiyev <rafaelmehdiyev0@gmail.com>
+Date:   Fri Dec 6 15:49:25 2024 +0400
+
+    Overhaul in Web
+
+[33mcommit 441439d2f85f47ce7ff8273e5cd006087007684c[m
+Author: Rafael Mehdiyev <rafaelmehdiyev0@gmail.com>
+Date:   Fri Dec 6 05:08:40 2024 +0400
+
+    Logs page
+
+[33mcommit 31dfcb6eea754437d925963a03346f5d85f6026e[m
+Author: Rafael Mehdiyev <rafaelmehdiyev0@gmail.com>
+Date:   Fri Dec 6 04:26:17 2024 +0400
+
+    UI Changes and Navigation
+
+[33mcommit 2e68bd8b999a900e62bcb49f30e645b8c81d2566[m
+Author: Rafael Mehdiyev <rafaelmehdiyev0@gmail.com>
+Date:   Fri Dec 6 04:04:23 2024 +0400
+
+    Dashboard and Charts
+
+[33mcommit 2afefd0fe088f0ec80ebda3d3cf82f578ef737f6[m
+Author: Rafael Mehdiyev <rafaelmehdiyev0@gmail.com>
+Date:   Fri Dec 6 03:08:38 2024 +0400
+
+    Categorizlation
+
+[33mcommit d8f893816e6df4eff9e8add6e0075dae37ef37d6[m
+Author: Rafael Mehdiyev <rafaelmehdiyev0@gmail.com>
+Date:   Fri Dec 6 02:42:37 2024 +0400
+
+    Configration  Page and Modifications
+
+[33mcommit f544e9ef16f457ae4f01d4da20c0f20d4ee06c73[m
+Author: Rafael Mehdiyev <rafaelmehdiyev0@gmail.com>
+Date:   Fri Dec 6 01:53:02 2024 +0400
+
+    Major update: Enhanced network monitor with improved features
+    
+    - Added DNS query caching to prevent duplicates
+    - Implemented thread-safe display and logging
+    - Added robust signal handling for clean shutdown
+    - Enhanced error handling and logging system
+    - Improved UI stability and responsiveness
+    - Updated README with comprehensive documentation
+    - Added colorama to requirements.txt
+    - Code cleanup and optimization
+
+[33mcommit 898bb5f668d73cd9d651d8652c9698ab165c098f[m
+Author: Rafael Mehdiyev <rafaelmehdiyev0@gmail.com>
+Date:   Fri Dec 6 01:01:49 2024 +0400
+
+    new features
+
+[33mcommit 248f1e15dec7fe97fc1509dc5ba3129c394b3a21[m
+Author: Rafael Mehdiyev <rafaelmehdiyev0@gmail.com>
+Date:   Fri Dec 6 00:30:05 2024 +0400
+
+    Initial commit of the Network Security Monitor project
