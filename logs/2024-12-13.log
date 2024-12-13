@@ -1,0 +1,1697 @@
+--- Log file created on 2024-12-13 ---
+2024-12-13 12:48:49,652 - INFO - Network Security Monitor started
+2024-12-13 12:48:49,652 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-13 12:48:49,653 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-13 12:48:49,653 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-13 12:49:57,619 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 12:49:57,870 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 12:49:57,876 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 12:49:58,620 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 12:49:58,873 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 12:49:58,878 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 12:50:00,621 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 12:50:00,633 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 12:50:00,872 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 12:50:04,619 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 12:50:04,635 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 12:50:04,873 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 12:50:12,620 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 12:50:12,633 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 12:50:12,871 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 12:50:16,759 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:50:16,771 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:50:31,348 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 12:50:31,350 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 12:50:31,355 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 12:50:31,357 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 12:50:43,054 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:50:43,059 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:50:43,104 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:50:43,163 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:50:45,096 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 12:50:45,099 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 12:50:47,022 - INFO - DNS Query: chat.codeium.com
+2024-12-13 12:50:47,173 - INFO - DNS Query: chat.codeium.com
+2024-12-13 12:51:24,459 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 12:51:24,473 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 12:51:39,812 - INFO - DNS Query: github.com
+2024-12-13 12:51:39,821 - INFO - DNS Query: github.com
+2024-12-13 12:51:43,304 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:51:43,307 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:51:43,344 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:51:43,413 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:51:47,769 - INFO - DNS Query: m365cdn.nel.measure.office.net
+2024-12-13 12:51:47,789 - INFO - DNS Query: m365cdn.nel.measure.office.net
+2024-12-13 12:52:44,032 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:52:44,038 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:52:44,151 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:52:44,159 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:53:44,698 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:53:44,703 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:53:44,723 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:53:44,801 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:53:45,114 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 12:53:45,131 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 12:54:42,351 - INFO - DNS Query: github.com
+2024-12-13 12:54:42,385 - INFO - DNS Query: github.com
+2024-12-13 12:54:45,070 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:54:45,076 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:54:45,154 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:54:45,160 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:55:09,638 - INFO - DNS Query: settings-win.data.microsoft.com
+2024-12-13 12:55:09,654 - INFO - DNS Query: settings-win.data.microsoft.com
+2024-12-13 12:55:17,055 - INFO - DNS Query: login.live.com
+2024-12-13 12:55:17,063 - INFO - DNS Query: login.live.com
+2024-12-13 12:55:17,067 - INFO - DNS Query: login.live.com
+2024-12-13 12:55:17,080 - INFO - DNS Query: login.live.com
+2024-12-13 12:55:17,664 - INFO - DNS Query: cs.dds.microsoft.com
+2024-12-13 12:55:17,696 - INFO - DNS Query: cs.dds.microsoft.com
+2024-12-13 12:55:32,032 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 12:55:32,034 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 12:55:32,042 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 12:55:32,045 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 12:55:47,057 - INFO - DNS Query: chat.codeium.com
+2024-12-13 12:55:47,077 - INFO - DNS Query: chat.codeium.com
+2024-12-13 12:55:47,181 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:55:47,183 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:55:47,190 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:55:47,192 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:55:51,563 - INFO - DNS Query: update.vivaldi.com
+2024-12-13 12:55:51,567 - INFO - DNS Query: update.vivaldi.com
+2024-12-13 12:56:09,319 - INFO - DNS Query: mimir2.vivaldi.com
+2024-12-13 12:56:09,320 - INFO - DNS Query: mimir2.vivaldi.com
+2024-12-13 12:56:09,579 - INFO - DNS Query: r10.o.lencr.org
+2024-12-13 12:56:09,581 - INFO - DNS Query: r10.o.lencr.org
+2024-12-13 12:56:12,069 - INFO - DNS Query: modrinth.com
+2024-12-13 12:56:12,088 - INFO - DNS Query: modrinth.com
+2024-12-13 12:56:24,457 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 12:56:24,475 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 12:56:45,049 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 12:56:45,097 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 12:56:47,126 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:56:47,127 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:56:47,148 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:56:47,230 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:57:09,369 - INFO - DNS Query: v10.events.data.microsoft.com
+2024-12-13 12:57:09,376 - INFO - DNS Query: v10.events.data.microsoft.com
+2024-12-13 12:57:11,479 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:57:11,490 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:57:44,982 - INFO - DNS Query: github.com
+2024-12-13 12:57:44,992 - INFO - DNS Query: github.com
+2024-12-13 12:57:48,244 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:57:48,245 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:57:48,260 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:57:48,346 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:58:10,980 - INFO - DNS Query: ctldl.windowsupdate.com
+2024-12-13 12:58:10,992 - INFO - DNS Query: ctldl.windowsupdate.com
+2024-12-13 12:58:30,022 - INFO - DNS Query: bifrost.vivaldi.com
+2024-12-13 12:58:30,030 - INFO - DNS Query: bifrost.vivaldi.com
+2024-12-13 12:58:49,335 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:58:49,339 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:58:49,371 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:58:49,438 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:59:01,412 - INFO - DNS Query: ecs.office.com
+2024-12-13 12:59:01,422 - INFO - DNS Query: ecs.office.com
+2024-12-13 12:59:26,584 - INFO - DNS Query: safebrowsing.googleapis.com
+2024-12-13 12:59:26,592 - INFO - DNS Query: safebrowsing.googleapis.com
+2024-12-13 12:59:51,052 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:59:51,057 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:59:51,091 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 12:59:51,167 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:00:10,576 - INFO - DNS Query: v10.events.data.microsoft.com
+2024-12-13 13:00:10,587 - INFO - DNS Query: v10.events.data.microsoft.com
+2024-12-13 13:00:12,546 - INFO - DNS Query: v20.events.data.microsoft.com
+2024-12-13 13:00:12,559 - INFO - DNS Query: v20.events.data.microsoft.com
+2024-12-13 13:00:32,616 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 13:00:32,618 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 13:00:32,632 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 13:00:32,637 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 13:00:47,081 - INFO - DNS Query: chat.codeium.com
+2024-12-13 13:00:47,220 - INFO - DNS Query: chat.codeium.com
+2024-12-13 13:00:47,225 - INFO - DNS Query: github.com
+2024-12-13 13:00:47,228 - INFO - DNS Query: github.com
+2024-12-13 13:00:51,599 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:00:51,604 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:00:51,649 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:00:51,702 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:01:24,456 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 13:01:24,474 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 13:01:45,036 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 13:01:45,042 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 13:01:45,168 - INFO - DNS Query: ocsp.r2m03.amazontrust.com
+2024-12-13 13:01:45,173 - INFO - DNS Query: ocsp.r2m03.amazontrust.com
+2024-12-13 13:01:52,885 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:01:52,890 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:01:52,911 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:01:52,989 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:02:53,845 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:02:53,852 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:02:53,978 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:02:53,983 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:03:49,723 - INFO - DNS Query: github.com
+2024-12-13 13:03:49,733 - INFO - DNS Query: github.com
+2024-12-13 13:03:55,155 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:03:55,176 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:03:55,189 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:03:55,261 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:04:45,107 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 13:04:45,127 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 13:04:46,995 - INFO - DNS Query: chat.codeium.com
+2024-12-13 13:04:47,002 - INFO - DNS Query: chat.codeium.com
+2024-12-13 13:04:53,095 - INFO - DNS Query: www.google.com
+2024-12-13 13:04:53,100 - INFO - DNS Query: www.google.com
+2024-12-13 13:04:56,000 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:04:56,008 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:04:56,117 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:04:56,124 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:05:33,286 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 13:05:33,291 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 13:05:33,302 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 13:05:33,313 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 13:05:56,030 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:05:56,035 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:05:56,055 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:05:56,135 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:06:24,463 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 13:06:24,494 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 13:06:52,137 - INFO - DNS Query: github.com
+2024-12-13 13:06:52,148 - INFO - DNS Query: github.com
+2024-12-13 13:06:57,826 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:06:57,831 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:06:57,852 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:06:57,929 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:07:45,127 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 13:07:45,150 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 13:07:59,304 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:07:59,308 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:07:59,335 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:07:59,404 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:08:30,538 - INFO - DNS Query: bifrost.vivaldi.com
+2024-12-13 13:08:30,544 - INFO - DNS Query: bifrost.vivaldi.com
+2024-12-13 13:08:47,106 - INFO - DNS Query: chat.codeium.com
+2024-12-13 13:08:47,296 - INFO - DNS Query: chat.codeium.com
+2024-12-13 13:09:00,756 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:09:00,762 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:09:00,829 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:09:00,866 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:09:54,637 - INFO - DNS Query: github.com
+2024-12-13 13:09:54,649 - INFO - DNS Query: github.com
+2024-12-13 13:10:02,142 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:10:02,147 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:10:02,173 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:10:02,246 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:10:07,825 - INFO - DNS Query: v10.events.data.microsoft.com
+2024-12-13 13:10:08,073 - INFO - DNS Query: v10.events.data.microsoft.com
+2024-12-13 13:10:33,999 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 13:10:34,001 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 13:10:34,008 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 13:10:34,010 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 13:10:45,009 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 13:10:45,089 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 13:11:03,253 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:11:03,259 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:11:03,280 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:11:03,357 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:11:14,398 - INFO - DNS Query: substrate.office.com
+2024-12-13 13:11:14,406 - INFO - DNS Query: substrate.office.com
+2024-12-13 13:11:14,940 - INFO - DNS Query: server.events.data.microsoft.com
+2024-12-13 13:11:14,952 - INFO - DNS Query: server.events.data.microsoft.com
+2024-12-13 13:11:24,439 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 13:11:24,461 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 13:12:04,655 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:12:04,661 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:12:04,710 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:12:04,759 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:12:47,195 - INFO - DNS Query: chat.codeium.com
+2024-12-13 13:12:47,215 - INFO - DNS Query: chat.codeium.com
+2024-12-13 13:12:56,693 - INFO - DNS Query: github.com
+2024-12-13 13:12:56,703 - INFO - DNS Query: github.com
+2024-12-13 13:13:06,100 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:13:06,106 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:13:06,133 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:13:06,205 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:13:44,992 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 13:13:44,996 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 13:13:59,661 - INFO - DNS Query: assets.msn.com
+2024-12-13 13:13:59,670 - INFO - DNS Query: assets.msn.com
+2024-12-13 13:14:07,886 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:14:07,890 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:14:07,920 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 13:14:45,113 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 13:14:45,126 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 13:15:03,340 - INFO - Packet capture stopped by user
+2024-12-13 14:17:00,795 - INFO - Network Security Monitor started
+2024-12-13 14:17:00,796 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-13 14:17:00,796 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-13 14:17:00,797 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-13 14:17:23,125 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:17:23,375 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:17:23,379 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:17:24,123 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:17:24,127 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:17:24,375 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:17:26,125 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:17:26,128 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:17:26,375 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:17:30,124 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:17:30,130 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:17:30,375 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:17:38,124 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:17:38,131 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:17:38,377 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:17:44,468 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:17:44,474 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:17:44,672 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:17:44,675 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:17:58,269 - INFO - Packet capture stopped by user
+2024-12-13 14:28:59,355 - INFO - Network Security Monitor started
+2024-12-13 14:28:59,355 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-13 14:28:59,356 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-13 14:28:59,356 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-13 14:28:59,622 - INFO - DNS Query: github.com
+2024-12-13 14:28:59,633 - INFO - DNS Query: github.com
+2024-12-13 14:29:01,602 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:29:01,616 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:29:01,670 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:29:01,678 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:29:12,159 - INFO - DNS Query: www.youtube.com
+2024-12-13 14:29:12,182 - INFO - DNS Query: www.youtube.com
+2024-12-13 14:29:20,634 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:29:20,884 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:29:20,885 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:29:21,169 - INFO - DNS Query: safebrowsing.googleapis.com
+2024-12-13 14:29:21,184 - INFO - DNS Query: safebrowsing.googleapis.com
+2024-12-13 14:29:21,223 - INFO - DNS Query: o.pki.goog
+2024-12-13 14:29:21,235 - INFO - DNS Query: o.pki.goog
+2024-12-13 14:29:21,667 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:29:21,670 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:29:21,885 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:29:23,637 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:29:23,648 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:29:23,886 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:29:27,637 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:29:27,649 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:29:27,886 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:29:35,638 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:29:35,650 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:29:35,888 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:29:45,128 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 14:29:45,152 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 14:29:45,865 - INFO - Packet capture stopped by user
+2024-12-13 14:42:57,049 - INFO - Network Security Monitor started
+2024-12-13 14:42:57,049 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-13 14:42:57,049 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-13 14:42:57,049 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-13 14:43:05,474 - INFO - DNS Query: rr3---sn-5buxax3vo51-btqs.googlevideo.com
+2024-12-13 14:43:05,480 - INFO - DNS Query: rr3---sn-5buxax3vo51-btqs.googlevideo.com
+2024-12-13 14:43:08,268 - INFO - DNS Query: rr2---sn-5buxax3vo51-btql.googlevideo.com
+2024-12-13 14:43:08,313 - INFO - DNS Query: rr2---sn-5buxax3vo51-btql.googlevideo.com
+2024-12-13 14:43:22,035 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:43:22,234 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:43:22,235 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:43:22,996 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:43:23,234 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:43:23,236 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:43:23,579 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:43:23,580 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:43:23,623 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:43:23,815 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:43:25,060 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:43:25,234 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:43:25,235 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:43:29,299 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:43:29,787 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:43:29,791 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:43:33,777 - INFO - DNS Query: cdn.jsdelivr.net
+2024-12-13 14:43:33,844 - INFO - DNS Query: cdn.jsdelivr.net
+2024-12-13 14:43:37,001 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:43:37,015 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:43:37,234 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:43:45,102 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 14:43:45,127 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 14:44:13,332 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:44:13,583 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:44:13,586 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:44:14,364 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:44:14,547 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:44:14,585 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:44:16,332 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:44:16,335 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:44:16,586 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:44:23,695 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:44:25,191 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:44:25,197 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:44:25,235 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:44:25,422 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:44:28,334 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:44:28,349 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:44:28,583 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:44:29,153 - INFO - DNS Query: i.ytimg.com
+2024-12-13 14:44:29,157 - INFO - DNS Query: i.ytimg.com
+2024-12-13 14:44:35,841 - INFO - DNS Query: www.youtube.com
+2024-12-13 14:44:35,877 - INFO - DNS Query: www.youtube.com
+2024-12-13 14:44:47,151 - INFO - DNS Query: chat.codeium.com
+2024-12-13 14:44:47,259 - INFO - DNS Query: chat.codeium.com
+2024-12-13 14:45:27,700 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:45:27,710 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:45:27,884 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:45:27,885 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:45:27,980 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:45:27,983 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:45:27,987 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:45:27,992 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:45:28,429 - INFO - DNS Query: default.exp-tas.com
+2024-12-13 14:45:28,431 - INFO - DNS Query: default.exp-tas.com
+2024-12-13 14:45:28,965 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 14:45:28,968 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 14:45:28,983 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 14:45:28,986 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 14:45:45,608 - INFO - DNS Query: update.code.visualstudio.com
+2024-12-13 14:45:45,620 - INFO - DNS Query: update.code.visualstudio.com
+2024-12-13 14:45:45,656 - INFO - DNS Query: update.code.visualstudio.com
+2024-12-13 14:45:45,668 - INFO - DNS Query: update.code.visualstudio.com
+2024-12-13 14:45:51,061 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 14:45:51,062 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 14:45:51,065 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 14:45:51,066 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 14:45:55,837 - INFO - DNS Query: www.youtube.com
+2024-12-13 14:45:55,924 - INFO - DNS Query: www.youtube.com
+2024-12-13 14:45:59,827 - INFO - DNS Query: yt3.ggpht.com
+2024-12-13 14:45:59,830 - INFO - DNS Query: yt3.ggpht.com
+2024-12-13 14:45:59,839 - INFO - DNS Query: i.ytimg.com
+2024-12-13 14:45:59,847 - INFO - DNS Query: i.ytimg.com
+2024-12-13 14:46:05,156 - INFO - DNS Query: rr1---sn-5buxax3vo51-btql.googlevideo.com
+2024-12-13 14:46:05,159 - INFO - DNS Query: rr1---sn-5buxax3vo51-btql.googlevideo.com
+2024-12-13 14:46:06,068 - WARNING - Possible port scan detected from 192.168.31.1 - 20 ports in 60s
+2024-12-13 14:46:06,070 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 14:46:06,083 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 14:46:06,085 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 14:46:06,087 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 14:46:06,090 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 14:46:06,096 - INFO - DNS Query: rr4---sn-5buxax3vo51-btqs.googlevideo.com
+2024-12-13 14:46:06,098 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 14:46:06,104 - INFO - DNS Query: rr4---sn-5buxax3vo51-btqs.googlevideo.com
+2024-12-13 14:46:06,105 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 14:46:06,114 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 14:46:06,117 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 14:46:10,147 - WARNING - Possible port scan detected from 192.168.31.1 - 22 ports in 60s
+2024-12-13 14:46:10,148 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 14:46:10,153 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 14:46:10,153 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 14:46:10,154 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 14:46:10,155 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 14:46:10,159 - INFO - DNS Query: fonts.gstatic.com
+2024-12-13 14:46:10,159 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 14:46:10,162 - INFO - DNS Query: fonts.gstatic.com
+2024-12-13 14:46:10,162 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 14:46:10,167 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 14:46:10,168 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 14:46:29,268 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 14:46:29,274 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 14:46:29,313 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:46:29,314 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:46:29,320 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:46:29,322 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:46:59,648 - INFO - DNS Query: github.com
+2024-12-13 14:46:59,659 - INFO - DNS Query: github.com
+2024-12-13 14:47:05,585 - INFO - DNS Query: www.youtube.com
+2024-12-13 14:47:05,590 - INFO - DNS Query: www.youtube.com
+2024-12-13 14:47:22,732 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 14:47:22,748 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 14:47:22,751 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 14:47:23,378 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 14:47:23,591 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 14:47:25,562 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:47:25,564 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:47:27,786 - INFO - DNS Query: cdn.jsdelivr.net
+2024-12-13 14:47:27,792 - INFO - DNS Query: cdn.jsdelivr.net
+2024-12-13 14:47:27,872 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:47:27,874 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:47:27,884 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:47:27,891 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:47:29,686 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:47:29,698 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:47:30,681 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:47:30,683 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:47:32,682 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:47:32,685 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:47:36,690 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:47:36,751 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:47:44,684 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:47:44,966 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 14:47:52,181 - INFO - DNS Query: i.ytimg.com
+2024-12-13 14:47:52,183 - INFO - DNS Query: i.ytimg.com
+2024-12-13 14:47:52,771 - INFO - DNS Query: yt3.ggpht.com
+2024-12-13 14:47:52,777 - INFO - DNS Query: yt3.ggpht.com
+2024-12-13 14:47:57,365 - INFO - DNS Query: rr2---sn-5buxax3vo51-btqe.googlevideo.com
+2024-12-13 14:47:57,370 - INFO - DNS Query: rr2---sn-5buxax3vo51-btqe.googlevideo.com
+2024-12-13 14:48:00,318 - INFO - DNS Query: rr2---sn-5buxax3vo51-btqs.googlevideo.com
+2024-12-13 14:48:00,323 - INFO - DNS Query: rr2---sn-5buxax3vo51-btqs.googlevideo.com
+2024-12-13 14:48:05,135 - INFO - DNS Query: rr1---sn-5buxax3vo51-btqs.googlevideo.com
+2024-12-13 14:48:05,155 - INFO - DNS Query: rr1---sn-5buxax3vo51-btqs.googlevideo.com
+2024-12-13 14:48:20,679 - INFO - DNS Query: rr7---sn-5buxax3vo51-btqe.googlevideo.com
+2024-12-13 14:48:20,682 - INFO - DNS Query: rr7---sn-5buxax3vo51-btqe.googlevideo.com
+2024-12-13 14:48:28,840 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:48:28,842 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:48:28,860 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:48:29,085 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:48:42,170 - INFO - DNS Query: bifrost.vivaldi.com
+2024-12-13 14:48:42,187 - INFO - DNS Query: bifrost.vivaldi.com
+2024-12-13 14:48:47,002 - INFO - DNS Query: chat.codeium.com
+2024-12-13 14:48:47,161 - INFO - DNS Query: chat.codeium.com
+2024-12-13 14:49:24,236 - INFO - DNS Query: www.youtube.com
+2024-12-13 14:49:24,261 - INFO - DNS Query: www.youtube.com
+2024-12-13 14:49:31,129 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:49:31,130 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:49:31,140 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:49:31,234 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:49:45,109 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 14:49:45,121 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 14:50:07,933 - INFO - DNS Query: v10.events.data.microsoft.com
+2024-12-13 14:50:07,947 - INFO - DNS Query: v10.events.data.microsoft.com
+2024-12-13 14:50:08,445 - INFO - DNS Query: v20.events.data.microsoft.com
+2024-12-13 14:50:08,452 - INFO - DNS Query: v20.events.data.microsoft.com
+2024-12-13 14:50:31,469 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:50:31,473 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:50:31,490 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:50:31,702 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:50:32,956 - INFO - DNS Query: assets.msn.com
+2024-12-13 14:50:32,997 - INFO - DNS Query: assets.msn.com
+2024-12-13 14:50:44,199 - INFO - DNS Query: www.youtube.com
+2024-12-13 14:50:44,206 - INFO - DNS Query: www.youtube.com
+2024-12-13 14:50:45,548 - INFO - DNS Query: watson.events.data.microsoft.com
+2024-12-13 14:50:45,557 - INFO - DNS Query: watson.events.data.microsoft.com
+2024-12-13 14:50:50,770 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 14:50:50,773 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 14:50:50,775 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 14:50:50,855 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 14:51:24,449 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 14:51:24,461 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 14:51:31,925 - INFO - DNS Query: i.ytimg.com
+2024-12-13 14:51:31,931 - INFO - DNS Query: i.ytimg.com
+2024-12-13 14:51:32,649 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:51:32,668 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:51:32,679 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:51:32,758 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:51:32,778 - INFO - DNS Query: yt3.ggpht.com
+2024-12-13 14:51:32,779 - INFO - DNS Query: yt3.ggpht.com
+2024-12-13 14:52:04,218 - ERROR - Error processing packet: 'NoneType' object has no attribute 'qname'
+2024-12-13 14:52:04,264 - INFO - DNS Query: www.youtube.com
+2024-12-13 14:52:04,307 - INFO - DNS Query: www.youtube.com
+2024-12-13 14:52:34,707 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:52:34,713 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:52:34,902 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:52:44,996 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 14:52:44,998 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 14:52:47,062 - INFO - DNS Query: chat.codeium.com
+2024-12-13 14:52:47,067 - INFO - DNS Query: chat.codeium.com
+2024-12-13 14:53:24,314 - INFO - DNS Query: www.youtube.com
+2024-12-13 14:53:24,323 - INFO - DNS Query: www.youtube.com
+2024-12-13 14:53:35,863 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:53:35,875 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:53:35,925 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:53:35,938 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:53:45,085 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 14:53:45,107 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 14:54:36,395 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:54:36,400 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:54:36,438 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:54:36,647 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:54:44,212 - INFO - DNS Query: www.youtube.com
+2024-12-13 14:54:44,275 - INFO - DNS Query: www.youtube.com
+2024-12-13 14:54:52,910 - INFO - DNS Query: i.ytimg.com
+2024-12-13 14:54:52,916 - INFO - DNS Query: i.ytimg.com
+2024-12-13 14:54:52,918 - INFO - DNS Query: yt3.ggpht.com
+2024-12-13 14:54:52,922 - INFO - DNS Query: yt3.ggpht.com
+2024-12-13 14:54:52,927 - INFO - DNS Query: i9.ytimg.com
+2024-12-13 14:54:52,929 - INFO - DNS Query: i9.ytimg.com
+2024-12-13 14:55:04,424 - INFO - DNS Query: rr1---sn-5buxax3vo51-btqs.googlevideo.com
+2024-12-13 14:55:04,430 - INFO - DNS Query: rr1---sn-5buxax3vo51-btqs.googlevideo.com
+2024-12-13 14:55:08,342 - INFO - DNS Query: rr5---sn-5buxax3vo51-btqs.googlevideo.com
+2024-12-13 14:55:08,346 - INFO - DNS Query: rr5---sn-5buxax3vo51-btqs.googlevideo.com
+2024-12-13 14:55:08,432 - INFO - DNS Query: rr2---sn-5buxax3vo51-btqe.googlevideo.com
+2024-12-13 14:55:08,437 - INFO - DNS Query: rr2---sn-5buxax3vo51-btqe.googlevideo.com
+2024-12-13 14:55:21,392 - INFO - DNS Query: substrate.office.com
+2024-12-13 14:55:21,400 - INFO - DNS Query: substrate.office.com
+2024-12-13 14:55:21,849 - INFO - DNS Query: server.events.data.microsoft.com
+2024-12-13 14:55:21,856 - INFO - DNS Query: server.events.data.microsoft.com
+2024-12-13 14:55:38,517 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:55:38,522 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:55:38,537 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:55:38,540 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:55:45,387 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 14:55:45,391 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 14:55:51,299 - INFO - DNS Query: github.com
+2024-12-13 14:55:51,304 - INFO - DNS Query: github.com
+2024-12-13 14:55:51,524 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 14:55:51,527 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 14:55:51,530 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 14:55:51,532 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 14:56:10,156 - INFO - DNS Query: mimir2.vivaldi.com
+2024-12-13 14:56:10,160 - INFO - DNS Query: mimir2.vivaldi.com
+2024-12-13 14:56:11,782 - INFO - DNS Query: www.youtube.com
+2024-12-13 14:56:11,791 - INFO - DNS Query: www.youtube.com
+2024-12-13 14:56:24,431 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 14:56:24,443 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 14:56:38,393 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:56:38,416 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:56:38,449 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:56:38,608 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:56:53,223 - INFO - DNS Query: accounts.youtube.com
+2024-12-13 14:56:53,226 - INFO - DNS Query: accounts.youtube.com
+2024-12-13 14:57:11,481 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:57:11,494 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:57:12,413 - INFO - DNS Query: downloads.vivaldi.com
+2024-12-13 14:57:12,428 - INFO - DNS Query: downloads.vivaldi.com
+2024-12-13 14:57:31,782 - INFO - DNS Query: www.youtube.com
+2024-12-13 14:57:31,855 - INFO - DNS Query: www.youtube.com
+2024-12-13 14:57:38,627 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:57:38,633 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:57:38,928 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:57:38,931 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:58:40,581 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:58:40,583 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:58:40,597 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:58:40,815 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:58:43,243 - INFO - DNS Query: bifrost.vivaldi.com
+2024-12-13 14:58:43,246 - INFO - DNS Query: bifrost.vivaldi.com
+2024-12-13 14:58:47,066 - INFO - DNS Query: chat.codeium.com
+2024-12-13 14:58:47,089 - INFO - DNS Query: chat.codeium.com
+2024-12-13 14:58:52,688 - INFO - DNS Query: www.youtube.com
+2024-12-13 14:58:52,701 - INFO - DNS Query: www.youtube.com
+2024-12-13 14:58:54,400 - INFO - DNS Query: github.com
+2024-12-13 14:58:54,404 - INFO - DNS Query: github.com
+2024-12-13 14:59:31,389 - INFO - DNS Query: safebrowsing.googleapis.com
+2024-12-13 14:59:31,392 - INFO - DNS Query: safebrowsing.googleapis.com
+2024-12-13 14:59:31,461 - INFO - DNS Query: o.pki.goog
+2024-12-13 14:59:31,473 - INFO - DNS Query: o.pki.goog
+2024-12-13 14:59:41,210 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:59:41,216 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:59:41,249 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 14:59:41,265 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:00:11,775 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:00:11,837 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:00:41,926 - INFO - DNS Query: settings-win.data.microsoft.com
+2024-12-13 15:00:41,933 - INFO - DNS Query: settings-win.data.microsoft.com
+2024-12-13 15:00:42,920 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:00:42,922 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:00:42,946 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:00:43,038 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:00:45,118 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 15:00:45,121 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 15:00:52,495 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:00:52,497 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:00:52,505 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:00:52,509 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:01:24,429 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 15:01:24,440 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 15:01:31,769 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:01:31,774 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:01:42,509 - INFO - DNS Query: ctldl.windowsupdate.com
+2024-12-13 15:01:42,518 - INFO - DNS Query: ctldl.windowsupdate.com
+2024-12-13 15:01:42,527 - INFO - DNS Query: ctldl.windowsupdate.com
+2024-12-13 15:01:42,536 - INFO - DNS Query: ctldl.windowsupdate.com
+2024-12-13 15:01:44,691 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:01:44,693 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:01:44,718 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:01:44,919 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:01:57,584 - INFO - DNS Query: github.com
+2024-12-13 15:01:57,592 - INFO - DNS Query: github.com
+2024-12-13 15:02:46,891 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:02:46,893 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:02:46,908 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:02:46,961 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:02:47,126 - INFO - DNS Query: chat.codeium.com
+2024-12-13 15:02:47,129 - INFO - DNS Query: chat.codeium.com
+2024-12-13 15:02:51,796 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:02:51,806 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:03:45,671 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 15:03:45,686 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 15:03:48,338 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:03:48,342 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:03:48,351 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:03:48,570 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:04:12,495 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:04:12,501 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:04:50,422 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:04:50,437 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:04:50,482 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:04:50,648 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:04:58,627 - INFO - DNS Query: www.google.com
+2024-12-13 15:04:58,633 - INFO - DNS Query: www.google.com
+2024-12-13 15:04:59,362 - INFO - DNS Query: github.com
+2024-12-13 15:04:59,407 - INFO - DNS Query: github.com
+2024-12-13 15:05:31,857 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:05:31,863 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:05:47,703 - INFO - DNS Query: settings-win.data.microsoft.com
+2024-12-13 15:05:47,728 - INFO - DNS Query: settings-win.data.microsoft.com
+2024-12-13 15:05:47,744 - INFO - DNS Query: settings-win.data.microsoft.com
+2024-12-13 15:05:47,748 - INFO - DNS Query: settings-win.data.microsoft.com
+2024-12-13 15:05:50,463 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:05:50,473 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:05:50,715 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:05:50,720 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:05:53,597 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:05:53,601 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:05:53,607 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:05:53,609 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:06:23,537 - INFO - DNS Query: v10.events.data.microsoft.com
+2024-12-13 15:06:23,554 - INFO - DNS Query: v10.events.data.microsoft.com
+2024-12-13 15:06:24,426 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 15:06:24,439 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 15:06:24,793 - INFO - DNS Query: v20.events.data.microsoft.com
+2024-12-13 15:06:24,802 - INFO - DNS Query: v20.events.data.microsoft.com
+2024-12-13 15:06:45,084 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 15:06:45,115 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 15:06:47,069 - INFO - DNS Query: chat.codeium.com
+2024-12-13 15:06:47,258 - INFO - DNS Query: chat.codeium.com
+2024-12-13 15:06:52,053 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:06:52,055 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:06:52,066 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:06:52,069 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:06:52,560 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:06:52,563 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:06:54,026 - INFO - DNS Query: accounts.youtube.com
+2024-12-13 15:06:54,031 - INFO - DNS Query: accounts.youtube.com
+2024-12-13 15:07:51,901 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:07:51,904 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:07:51,922 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:07:52,155 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:08:02,597 - INFO - DNS Query: github.com
+2024-12-13 15:08:02,607 - INFO - DNS Query: github.com
+2024-12-13 15:08:11,856 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:08:11,865 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:08:22,422 - INFO - DNS Query: i.ytimg.com
+2024-12-13 15:08:22,425 - INFO - DNS Query: i.ytimg.com
+2024-12-13 15:08:22,814 - INFO - DNS Query: yt3.ggpht.com
+2024-12-13 15:08:22,819 - INFO - DNS Query: yt3.ggpht.com
+2024-12-13 15:08:24,717 - INFO - DNS Query: yt3.googleusercontent.com
+2024-12-13 15:08:24,720 - INFO - DNS Query: yt3.googleusercontent.com
+2024-12-13 15:08:27,816 - INFO - DNS Query: i9.ytimg.com
+2024-12-13 15:08:27,823 - INFO - DNS Query: i9.ytimg.com
+2024-12-13 15:08:44,530 - INFO - DNS Query: bifrost.vivaldi.com
+2024-12-13 15:08:44,537 - INFO - DNS Query: bifrost.vivaldi.com
+2024-12-13 15:08:52,592 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:08:52,598 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:08:52,618 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:08:52,820 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:09:10,238 - INFO - DNS Query: rr2---sn-5buxax3vo51-btqe.googlevideo.com
+2024-12-13 15:09:10,245 - INFO - DNS Query: rr2---sn-5buxax3vo51-btqe.googlevideo.com
+2024-12-13 15:09:31,774 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:09:31,778 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:09:45,032 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 15:09:45,079 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 15:09:53,254 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:09:53,263 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:09:53,496 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:09:53,500 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:10:50,855 - INFO - DNS Query: i.ytimg.com
+2024-12-13 15:10:50,860 - INFO - DNS Query: i.ytimg.com
+2024-12-13 15:10:51,826 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:10:51,846 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:10:54,837 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:10:54,839 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:10:54,863 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:10:54,866 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:10:54,895 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:10:54,951 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:10:54,956 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:10:54,963 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:11:03,994 - INFO - DNS Query: yt3.ggpht.com
+2024-12-13 15:11:04,002 - INFO - DNS Query: yt3.ggpht.com
+2024-12-13 15:11:04,781 - INFO - DNS Query: rr4---sn-5buxax3vo51-btqe.googlevideo.com
+2024-12-13 15:11:04,788 - INFO - DNS Query: rr4---sn-5buxax3vo51-btqe.googlevideo.com
+2024-12-13 15:11:12,879 - INFO - DNS Query: rr6---sn-5buxax3vo51-btqe.googlevideo.com
+2024-12-13 15:11:12,884 - INFO - DNS Query: rr6---sn-5buxax3vo51-btqe.googlevideo.com
+2024-12-13 15:11:15,136 - INFO - DNS Query: rr3---sn-5buxax3vo51-btqs.googlevideo.com
+2024-12-13 15:11:15,142 - INFO - DNS Query: rr3---sn-5buxax3vo51-btqs.googlevideo.com
+2024-12-13 15:11:17,426 - INFO - DNS Query: rr1---sn-5buxax3vo51-btql.googlevideo.com
+2024-12-13 15:11:17,489 - INFO - DNS Query: rr1---sn-5buxax3vo51-btql.googlevideo.com
+2024-12-13 15:11:24,461 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 15:11:24,471 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 15:11:47,143 - INFO - DNS Query: chat.codeium.com
+2024-12-13 15:11:47,166 - INFO - DNS Query: chat.codeium.com
+2024-12-13 15:11:53,644 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:11:53,667 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:11:53,684 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:11:53,879 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:11:57,980 - INFO - DNS Query: github.com
+2024-12-13 15:11:58,005 - INFO - DNS Query: github.com
+2024-12-13 15:12:22,056 - INFO - Packet capture stopped by user
+2024-12-13 15:12:31,917 - INFO - Network Security Monitor started
+2024-12-13 15:12:31,917 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-13 15:12:31,917 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-13 15:12:31,917 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-13 15:12:35,955 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:12:35,965 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:12:45,006 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 15:12:45,012 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 15:12:45,858 - INFO - DNS Query: substrate.office.com
+2024-12-13 15:12:45,883 - INFO - DNS Query: substrate.office.com
+2024-12-13 15:12:46,216 - INFO - DNS Query: server.events.data.microsoft.com
+2024-12-13 15:12:46,230 - INFO - DNS Query: server.events.data.microsoft.com
+2024-12-13 15:12:54,082 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:12:54,093 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:12:54,128 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:13:55,124 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:13:55,129 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:13:55,150 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:13:55,378 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:13:55,949 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:13:55,958 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:14:05,815 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:14:06,064 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:14:06,066 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:14:06,813 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:14:07,070 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:14:07,084 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:14:08,816 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:14:09,064 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:14:09,065 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:14:12,814 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:14:13,065 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:14:13,066 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:14:20,817 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:14:21,065 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:14:21,066 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:14:21,560 - INFO - DNS Query: alkalimakersuite-pa.clients6.google.com
+2024-12-13 15:14:21,567 - INFO - DNS Query: alkalimakersuite-pa.clients6.google.com
+2024-12-13 15:14:30,839 - INFO - DNS Query: scone-pa.clients6.google.com
+2024-12-13 15:14:30,844 - INFO - DNS Query: scone-pa.clients6.google.com
+2024-12-13 15:14:55,886 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:14:55,894 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:14:55,949 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:14:56,125 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:15:00,390 - INFO - DNS Query: yt3.ggpht.com
+2024-12-13 15:15:00,405 - INFO - DNS Query: yt3.ggpht.com
+2024-12-13 15:15:05,148 - INFO - DNS Query: i.ytimg.com
+2024-12-13 15:15:05,155 - INFO - DNS Query: i.ytimg.com
+2024-12-13 15:15:08,256 - INFO - DNS Query: rr3---sn-5buxax3vo51-btqe.googlevideo.com
+2024-12-13 15:15:08,269 - INFO - DNS Query: rr3---sn-5buxax3vo51-btqe.googlevideo.com
+2024-12-13 15:15:28,447 - INFO - DNS Query: default.exp-tas.com
+2024-12-13 15:15:28,449 - INFO - DNS Query: default.exp-tas.com
+2024-12-13 15:15:28,452 - INFO - DNS Query: default.exp-tas.com
+2024-12-13 15:15:43,609 - INFO - DNS Query: settings-win.data.microsoft.com
+2024-12-13 15:15:43,636 - INFO - DNS Query: settings-win.data.microsoft.com
+2024-12-13 15:15:47,901 - INFO - DNS Query: chat.codeium.com
+2024-12-13 15:15:47,909 - INFO - DNS Query: chat.codeium.com
+2024-12-13 15:15:55,944 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:15:55,960 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:15:55,965 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:15:56,050 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:15:56,731 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:15:56,784 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:15:56,805 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:15:56,811 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:16:13,856 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:16:13,862 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:16:18,296 - INFO - DNS Query: i.ytimg.com
+2024-12-13 15:16:18,299 - INFO - DNS Query: i.ytimg.com
+2024-12-13 15:16:19,182 - INFO - DNS Query: yt3.ggpht.com
+2024-12-13 15:16:19,189 - INFO - DNS Query: yt3.ggpht.com
+2024-12-13 15:16:24,429 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 15:16:24,442 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 15:16:33,374 - INFO - DNS Query: rr1---sn-5buxax3vo51-btql.googlevideo.com
+2024-12-13 15:16:33,377 - INFO - DNS Query: rr1---sn-5buxax3vo51-btql.googlevideo.com
+2024-12-13 15:16:34,317 - INFO - DNS Query: rr4---sn-5buxax3vo51-btqe.googlevideo.com
+2024-12-13 15:16:34,338 - INFO - DNS Query: rr4---sn-5buxax3vo51-btqe.googlevideo.com
+2024-12-13 15:16:35,880 - INFO - DNS Query: rr4---sn-5buxax3vo51-btqs.googlevideo.com
+2024-12-13 15:16:35,887 - INFO - DNS Query: rr4---sn-5buxax3vo51-btqs.googlevideo.com
+2024-12-13 15:16:37,623 - INFO - DNS Query: rr2---sn-5buxax3vo51-btqs.googlevideo.com
+2024-12-13 15:16:37,627 - INFO - DNS Query: rr2---sn-5buxax3vo51-btqs.googlevideo.com
+2024-12-13 15:16:40,138 - WARNING - Possible port scan detected from 192.168.31.1 - 20 ports in 60s
+2024-12-13 15:16:40,140 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 15:16:40,151 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 15:16:40,153 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 15:16:40,154 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 15:16:40,156 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 15:16:40,163 - INFO - DNS Query: rr1---sn-5buxax3vo51-btqe.googlevideo.com
+2024-12-13 15:16:40,165 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 15:16:40,172 - INFO - DNS Query: rr1---sn-5buxax3vo51-btqe.googlevideo.com
+2024-12-13 15:16:40,173 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 15:16:40,175 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 15:16:40,203 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 15:16:44,541 - WARNING - Possible port scan detected from 192.168.31.1 - 22 ports in 60s
+2024-12-13 15:16:44,543 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 15:16:44,553 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 15:16:44,554 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 15:16:44,556 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 15:16:44,557 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 15:16:44,562 - INFO - DNS Query: rr1---sn-5buxax3vo51-btqs.googlevideo.com
+2024-12-13 15:16:44,563 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 15:16:44,571 - INFO - DNS Query: rr1---sn-5buxax3vo51-btqs.googlevideo.com
+2024-12-13 15:16:44,572 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 15:16:44,574 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 15:16:44,581 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 15:16:48,840 - WARNING - Possible port scan detected from 192.168.31.1 - 24 ports in 60s
+2024-12-13 15:16:48,841 - WARNING - Possible port scan detected from 192.168.31.1 - 25 ports in 60s
+2024-12-13 15:16:48,853 - WARNING - Possible port scan detected from 192.168.31.1 - 25 ports in 60s
+2024-12-13 15:16:48,854 - WARNING - Possible port scan detected from 192.168.31.1 - 25 ports in 60s
+2024-12-13 15:16:48,856 - WARNING - Possible port scan detected from 192.168.31.1 - 25 ports in 60s
+2024-12-13 15:16:48,860 - WARNING - Possible port scan detected from 192.168.31.1 - 25 ports in 60s
+2024-12-13 15:16:48,868 - INFO - DNS Query: rr2---sn-5buxax3vo51-btqe.googlevideo.com
+2024-12-13 15:16:48,869 - WARNING - Possible port scan detected from 192.168.31.1 - 25 ports in 60s
+2024-12-13 15:16:48,875 - INFO - DNS Query: rr2---sn-5buxax3vo51-btqe.googlevideo.com
+2024-12-13 15:16:48,876 - WARNING - Possible port scan detected from 192.168.31.1 - 25 ports in 60s
+2024-12-13 15:16:48,878 - WARNING - Possible port scan detected from 192.168.31.1 - 25 ports in 60s
+2024-12-13 15:16:48,889 - WARNING - Possible port scan detected from 192.168.31.1 - 25 ports in 60s
+2024-12-13 15:16:55,305 - WARNING - Possible port scan detected from 192.168.31.1 - 26 ports in 60s
+2024-12-13 15:16:55,310 - WARNING - Possible port scan detected from 192.168.31.1 - 27 ports in 60s
+2024-12-13 15:16:55,330 - WARNING - Possible port scan detected from 192.168.31.1 - 27 ports in 60s
+2024-12-13 15:16:55,335 - WARNING - Possible port scan detected from 192.168.31.1 - 27 ports in 60s
+2024-12-13 15:16:55,340 - WARNING - Possible port scan detected from 192.168.31.1 - 27 ports in 60s
+2024-12-13 15:16:55,346 - WARNING - Possible port scan detected from 192.168.31.1 - 27 ports in 60s
+2024-12-13 15:16:55,356 - INFO - DNS Query: accounts.youtube.com
+2024-12-13 15:16:55,358 - WARNING - Possible port scan detected from 192.168.31.1 - 27 ports in 60s
+2024-12-13 15:16:55,375 - INFO - DNS Query: accounts.youtube.com
+2024-12-13 15:16:55,378 - WARNING - Possible port scan detected from 192.168.31.1 - 27 ports in 60s
+2024-12-13 15:16:55,396 - WARNING - Possible port scan detected from 192.168.31.1 - 27 ports in 60s
+2024-12-13 15:16:55,399 - WARNING - Possible port scan detected from 192.168.31.1 - 27 ports in 60s
+2024-12-13 15:16:56,937 - INFO - DNS Query: alkalimakersuite-pa.clients6.google.com
+2024-12-13 15:16:57,038 - INFO - DNS Query: alkalimakersuite-pa.clients6.google.com
+2024-12-13 15:16:57,870 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:16:57,885 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:16:57,901 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:16:58,053 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:17:43,422 - INFO - DNS Query: github.com
+2024-12-13 15:17:43,427 - INFO - DNS Query: github.com
+2024-12-13 15:17:45,012 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 15:17:45,014 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 15:17:51,706 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:17:51,713 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:17:58,738 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:17:58,742 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:17:58,772 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:17:58,975 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:18:34,598 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:18:34,606 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:18:34,608 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:18:35,017 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:18:35,758 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:18:35,928 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:18:35,933 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:18:37,395 - INFO - DNS Query: cdn.jsdelivr.net
+2024-12-13 15:18:37,401 - INFO - DNS Query: cdn.jsdelivr.net
+2024-12-13 15:18:45,746 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:18:45,754 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:18:45,761 - INFO - DNS Query: bifrost.vivaldi.com
+2024-12-13 15:18:45,766 - INFO - DNS Query: bifrost.vivaldi.com
+2024-12-13 15:18:45,991 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:18:46,743 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:18:46,799 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:18:46,997 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:18:48,752 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:18:48,994 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:18:48,995 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:18:52,744 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:18:52,995 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:18:52,996 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:18:56,691 - INFO - DNS Query: settings-win.data.microsoft.com
+2024-12-13 15:18:56,700 - INFO - DNS Query: settings-win.data.microsoft.com
+2024-12-13 15:18:59,190 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:18:59,195 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:18:59,207 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:18:59,450 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:19:01,191 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:19:01,193 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:19:01,194 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:19:11,708 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:19:11,719 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:19:47,086 - INFO - DNS Query: chat.codeium.com
+2024-12-13 15:19:47,088 - INFO - DNS Query: chat.codeium.com
+2024-12-13 15:19:51,711 - INFO - DNS Query: o.pki.goog
+2024-12-13 15:19:51,776 - INFO - DNS Query: o.pki.goog
+2024-12-13 15:20:01,258 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:20:01,264 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:20:01,308 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:20:01,491 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:20:31,706 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:20:31,714 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:20:45,022 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 15:20:45,027 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 15:20:46,775 - INFO - DNS Query: github.com
+2024-12-13 15:20:47,003 - INFO - DNS Query: github.com
+2024-12-13 15:20:52,753 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:20:52,759 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:20:52,762 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:20:53,183 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:20:54,251 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:20:54,540 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:20:54,545 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:20:57,525 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:20:57,532 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:20:57,546 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:20:57,638 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:20:57,800 - INFO - DNS Query: cdn.jsdelivr.net
+2024-12-13 15:20:57,803 - INFO - DNS Query: cdn.jsdelivr.net
+2024-12-13 15:21:03,880 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:21:03,882 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:21:03,894 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:21:03,945 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:21:03,948 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:21:04,110 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:21:04,196 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:21:04,943 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:21:04,946 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:21:05,195 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:21:06,949 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:21:06,978 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:21:07,358 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:21:10,943 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:21:11,198 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:21:11,327 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:21:18,947 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:21:18,961 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:21:19,202 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:21:24,430 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 15:21:24,440 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 15:21:46,354 - INFO - DNS Query: yt3.ggpht.com
+2024-12-13 15:21:46,364 - INFO - DNS Query: yt3.ggpht.com
+2024-12-13 15:21:46,793 - INFO - DNS Query: i.ytimg.com
+2024-12-13 15:21:46,805 - INFO - DNS Query: i.ytimg.com
+2024-12-13 15:21:47,823 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:21:47,834 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:22:04,970 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:22:04,972 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:22:04,987 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:22:05,057 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:22:05,724 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:22:05,729 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:22:17,501 - INFO - DNS Query: v10.events.data.microsoft.com
+2024-12-13 15:22:17,509 - INFO - DNS Query: v10.events.data.microsoft.com
+2024-12-13 15:22:18,546 - INFO - DNS Query: v20.events.data.microsoft.com
+2024-12-13 15:22:18,553 - INFO - DNS Query: v20.events.data.microsoft.com
+2024-12-13 15:22:22,958 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:22:22,965 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:22:26,302 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:22:26,310 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:22:34,482 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:22:34,513 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:22:39,280 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:22:39,287 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:22:39,290 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:22:39,699 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:22:40,729 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:22:48,008 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:22:48,017 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:23:05,850 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:23:05,855 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:23:05,881 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:23:06,080 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:23:26,630 - INFO - DNS Query: cdn.jsdelivr.net
+2024-12-13 15:23:26,634 - INFO - DNS Query: cdn.jsdelivr.net
+2024-12-13 15:23:44,993 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 15:23:45,105 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 15:23:48,050 - INFO - DNS Query: alkalimakersuite-pa.clients6.google.com
+2024-12-13 15:23:48,057 - INFO - DNS Query: alkalimakersuite-pa.clients6.google.com
+2024-12-13 15:23:49,845 - INFO - DNS Query: rr2---sn-5buxax3vo51-btqe.googlevideo.com
+2024-12-13 15:23:49,852 - INFO - DNS Query: rr2---sn-5buxax3vo51-btqe.googlevideo.com
+2024-12-13 15:23:49,956 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:23:49,964 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:23:51,145 - INFO - DNS Query: rr3---sn-5buxax3vo51-btqe.googlevideo.com
+2024-12-13 15:23:51,153 - INFO - DNS Query: rr3---sn-5buxax3vo51-btqe.googlevideo.com
+2024-12-13 15:23:51,630 - INFO - DNS Query: i.ytimg.com
+2024-12-13 15:23:51,821 - INFO - DNS Query: yt3.ggpht.com
+2024-12-13 15:23:51,841 - INFO - DNS Query: yt3.ggpht.com
+2024-12-13 15:23:51,852 - INFO - DNS Query: i.ytimg.com
+2024-12-13 15:24:01,333 - INFO - DNS Query: github.com
+2024-12-13 15:24:01,345 - INFO - DNS Query: github.com
+2024-12-13 15:24:03,201 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:24:03,216 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:24:07,178 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:24:07,180 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:24:07,192 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:24:07,195 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:24:30,370 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:24:30,386 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:24:47,063 - INFO - DNS Query: chat.codeium.com
+2024-12-13 15:24:47,070 - INFO - DNS Query: chat.codeium.com
+2024-12-13 15:24:51,015 - INFO - DNS Query: www.google.com
+2024-12-13 15:24:51,022 - INFO - DNS Query: www.google.com
+2024-12-13 15:24:51,417 - INFO - DNS Query: scone-pa.clients6.google.com
+2024-12-13 15:24:51,422 - INFO - DNS Query: scone-pa.clients6.google.com
+2024-12-13 15:24:56,888 - INFO - DNS Query: cdn.jsdelivr.net
+2024-12-13 15:24:56,895 - INFO - DNS Query: cdn.jsdelivr.net
+2024-12-13 15:24:56,981 - INFO - DNS Query: fonts.googleapis.com
+2024-12-13 15:24:56,986 - INFO - DNS Query: fonts.googleapis.com
+2024-12-13 15:24:57,125 - INFO - DNS Query: aider.chat
+2024-12-13 15:24:57,150 - INFO - DNS Query: aider.chat
+2024-12-13 15:24:57,154 - INFO - DNS Query: aider.chat
+2024-12-13 15:24:57,158 - INFO - DNS Query: aider.chat
+2024-12-13 15:24:57,242 - INFO - DNS Query: www.reddit.com
+2024-12-13 15:24:57,249 - INFO - DNS Query: www.reddit.com
+2024-12-13 15:24:57,326 - WARNING - Possible port scan detected from 192.168.31.1 - 20 ports in 60s
+2024-12-13 15:24:57,331 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 15:24:57,357 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 15:24:57,360 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 15:24:57,362 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 15:24:57,364 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 15:24:57,373 - INFO - DNS Query: matrix.redditspace.com
+2024-12-13 15:24:57,374 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 15:24:57,381 - INFO - DNS Query: matrix.redditspace.com
+2024-12-13 15:24:57,382 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 15:24:57,391 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 15:24:57,394 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 15:24:57,412 - WARNING - Possible port scan detected from 192.168.31.1 - 22 ports in 60s
+2024-12-13 15:24:57,414 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 15:24:57,424 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 15:24:57,426 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 15:24:57,427 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 15:24:57,429 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 15:24:57,436 - INFO - DNS Query: ocsp.digicert.com
+2024-12-13 15:24:57,438 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 15:24:57,442 - INFO - DNS Query: ocsp.digicert.com
+2024-12-13 15:24:57,443 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 15:24:57,450 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 15:24:57,452 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 15:25:01,213 - WARNING - Possible port scan detected from 192.168.31.1 - 24 ports in 60s
+2024-12-13 15:25:01,219 - WARNING - Possible port scan detected from 192.168.31.1 - 25 ports in 60s
+2024-12-13 15:25:01,228 - WARNING - Possible port scan detected from 192.168.31.1 - 25 ports in 60s
+2024-12-13 15:25:01,241 - WARNING - Possible port scan detected from 192.168.31.1 - 25 ports in 60s
+2024-12-13 15:25:01,244 - WARNING - Possible port scan detected from 192.168.31.1 - 25 ports in 60s
+2024-12-13 15:25:01,246 - WARNING - Possible port scan detected from 192.168.31.1 - 25 ports in 60s
+2024-12-13 15:25:01,251 - INFO - DNS Query: preview.redd.it
+2024-12-13 15:25:01,251 - WARNING - Possible port scan detected from 192.168.31.1 - 25 ports in 60s
+2024-12-13 15:25:01,257 - INFO - DNS Query: preview.redd.it
+2024-12-13 15:25:01,259 - WARNING - Possible port scan detected from 192.168.31.1 - 25 ports in 60s
+2024-12-13 15:25:01,482 - WARNING - Possible port scan detected from 192.168.31.1 - 25 ports in 60s
+2024-12-13 15:25:01,485 - WARNING - Possible port scan detected from 192.168.31.1 - 25 ports in 60s
+2024-12-13 15:25:03,518 - WARNING - Possible port scan detected from 192.168.31.1 - 26 ports in 60s
+2024-12-13 15:25:03,520 - WARNING - Possible port scan detected from 192.168.31.1 - 27 ports in 60s
+2024-12-13 15:25:03,529 - WARNING - Possible port scan detected from 192.168.31.1 - 27 ports in 60s
+2024-12-13 15:25:03,530 - WARNING - Possible port scan detected from 192.168.31.1 - 27 ports in 60s
+2024-12-13 15:25:03,532 - WARNING - Possible port scan detected from 192.168.31.1 - 27 ports in 60s
+2024-12-13 15:25:03,533 - WARNING - Possible port scan detected from 192.168.31.1 - 27 ports in 60s
+2024-12-13 15:25:03,537 - INFO - DNS Query: www.google.com
+2024-12-13 15:25:03,539 - WARNING - Possible port scan detected from 192.168.31.1 - 27 ports in 60s
+2024-12-13 15:25:03,545 - INFO - DNS Query: www.google.com
+2024-12-13 15:25:03,546 - WARNING - Possible port scan detected from 192.168.31.1 - 27 ports in 60s
+2024-12-13 15:25:03,548 - WARNING - Possible port scan detected from 192.168.31.1 - 27 ports in 60s
+2024-12-13 15:25:03,555 - WARNING - Possible port scan detected from 192.168.31.1 - 27 ports in 60s
+2024-12-13 15:25:03,565 - WARNING - Possible port scan detected from 192.168.31.1 - 28 ports in 60s
+2024-12-13 15:25:03,568 - WARNING - Possible port scan detected from 192.168.31.1 - 29 ports in 60s
+2024-12-13 15:25:03,626 - WARNING - Possible port scan detected from 192.168.31.1 - 29 ports in 60s
+2024-12-13 15:25:03,628 - WARNING - Possible port scan detected from 192.168.31.1 - 29 ports in 60s
+2024-12-13 15:25:03,630 - WARNING - Possible port scan detected from 192.168.31.1 - 29 ports in 60s
+2024-12-13 15:25:03,632 - WARNING - Possible port scan detected from 192.168.31.1 - 29 ports in 60s
+2024-12-13 15:25:03,635 - INFO - DNS Query: w3-reporting-nel.reddit.com
+2024-12-13 15:25:03,636 - WARNING - Possible port scan detected from 192.168.31.1 - 29 ports in 60s
+2024-12-13 15:25:03,639 - WARNING - Possible port scan detected from 192.168.31.1 - 29 ports in 60s
+2024-12-13 15:25:03,654 - WARNING - Possible port scan detected from 192.168.31.1 - 29 ports in 60s
+2024-12-13 15:25:03,658 - INFO - DNS Query: w3-reporting-nel.reddit.com
+2024-12-13 15:25:03,660 - WARNING - Possible port scan detected from 192.168.31.1 - 29 ports in 60s
+2024-12-13 15:25:03,663 - WARNING - Possible port scan detected from 192.168.31.1 - 29 ports in 60s
+2024-12-13 15:25:04,009 - WARNING - Possible port scan detected from 192.168.31.1 - 30 ports in 60s
+2024-12-13 15:25:04,011 - WARNING - Possible port scan detected from 192.168.31.1 - 31 ports in 60s
+2024-12-13 15:25:04,021 - WARNING - Possible port scan detected from 192.168.31.1 - 31 ports in 60s
+2024-12-13 15:25:04,022 - WARNING - Possible port scan detected from 192.168.31.1 - 31 ports in 60s
+2024-12-13 15:25:04,024 - WARNING - Possible port scan detected from 192.168.31.1 - 31 ports in 60s
+2024-12-13 15:25:04,026 - WARNING - Possible port scan detected from 192.168.31.1 - 31 ports in 60s
+2024-12-13 15:25:04,029 - INFO - DNS Query: external-preview.redd.it
+2024-12-13 15:25:04,030 - WARNING - Possible port scan detected from 192.168.31.1 - 31 ports in 60s
+2024-12-13 15:25:04,034 - INFO - DNS Query: external-preview.redd.it
+2024-12-13 15:25:04,035 - WARNING - Possible port scan detected from 192.168.31.1 - 31 ports in 60s
+2024-12-13 15:25:04,040 - WARNING - Possible port scan detected from 192.168.31.1 - 31 ports in 60s
+2024-12-13 15:25:04,043 - WARNING - Possible port scan detected from 192.168.31.1 - 31 ports in 60s
+2024-12-13 15:25:04,146 - WARNING - Possible port scan detected from 192.168.31.1 - 32 ports in 60s
+2024-12-13 15:25:04,148 - WARNING - Possible port scan detected from 192.168.31.1 - 33 ports in 60s
+2024-12-13 15:25:04,155 - WARNING - Possible port scan detected from 192.168.31.1 - 33 ports in 60s
+2024-12-13 15:25:04,156 - WARNING - Possible port scan detected from 192.168.31.1 - 33 ports in 60s
+2024-12-13 15:25:04,158 - WARNING - Possible port scan detected from 192.168.31.1 - 33 ports in 60s
+2024-12-13 15:25:04,159 - WARNING - Possible port scan detected from 192.168.31.1 - 33 ports in 60s
+2024-12-13 15:25:04,161 - INFO - DNS Query: styles.redditmedia.com
+2024-12-13 15:25:04,162 - WARNING - Possible port scan detected from 192.168.31.1 - 33 ports in 60s
+2024-12-13 15:25:04,166 - INFO - DNS Query: styles.redditmedia.com
+2024-12-13 15:25:04,166 - WARNING - Possible port scan detected from 192.168.31.1 - 33 ports in 60s
+2024-12-13 15:25:04,169 - WARNING - Possible port scan detected from 192.168.31.1 - 33 ports in 60s
+2024-12-13 15:25:04,171 - WARNING - Possible port scan detected from 192.168.31.1 - 33 ports in 60s
+2024-12-13 15:25:04,179 - WARNING - Possible port scan detected from 192.168.31.1 - 34 ports in 60s
+2024-12-13 15:25:04,180 - WARNING - Possible port scan detected from 192.168.31.1 - 35 ports in 60s
+2024-12-13 15:25:04,186 - WARNING - Possible port scan detected from 192.168.31.1 - 35 ports in 60s
+2024-12-13 15:25:04,187 - WARNING - Possible port scan detected from 192.168.31.1 - 35 ports in 60s
+2024-12-13 15:25:04,189 - WARNING - Possible port scan detected from 192.168.31.1 - 35 ports in 60s
+2024-12-13 15:25:04,191 - WARNING - Possible port scan detected from 192.168.31.1 - 35 ports in 60s
+2024-12-13 15:25:04,193 - INFO - DNS Query: v.redd.it
+2024-12-13 15:25:04,194 - WARNING - Possible port scan detected from 192.168.31.1 - 35 ports in 60s
+2024-12-13 15:25:04,200 - INFO - DNS Query: v.redd.it
+2024-12-13 15:25:04,201 - WARNING - Possible port scan detected from 192.168.31.1 - 35 ports in 60s
+2024-12-13 15:25:04,206 - WARNING - Possible port scan detected from 192.168.31.1 - 35 ports in 60s
+2024-12-13 15:25:04,209 - WARNING - Possible port scan detected from 192.168.31.1 - 35 ports in 60s
+2024-12-13 15:25:08,487 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:25:08,489 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:25:08,499 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:25:08,702 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:25:17,730 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:25:17,736 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:25:59,553 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:25:59,557 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:25:59,563 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:25:59,584 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:26:01,383 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:26:01,406 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:26:02,484 - INFO - DNS Query: w3-reporting-nel.reddit.com
+2024-12-13 15:26:02,488 - INFO - DNS Query: w3-reporting-nel.reddit.com
+2024-12-13 15:26:09,047 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:26:09,049 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:26:09,058 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:26:09,214 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:26:09,218 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:26:09,221 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:26:21,405 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:26:21,412 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:26:21,445 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:26:24,426 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 15:26:24,443 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 15:26:28,686 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:26:28,696 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:26:37,707 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:26:37,716 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:26:39,638 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:26:39,645 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:26:45,045 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 15:26:45,055 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 15:26:46,421 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:26:46,432 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:26:53,845 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:26:53,857 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:26:53,867 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:26:54,247 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:26:54,254 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:26:54,268 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:26:54,682 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:26:56,173 - INFO - DNS Query: accounts.youtube.com
+2024-12-13 15:26:56,181 - INFO - DNS Query: accounts.youtube.com
+2024-12-13 15:26:56,438 - INFO - DNS Query: cdn.jsdelivr.net
+2024-12-13 15:26:56,450 - INFO - DNS Query: cdn.jsdelivr.net
+2024-12-13 15:27:03,887 - INFO - Packet capture stopped by user
+2024-12-13 15:27:08,026 - INFO - Network Security Monitor started
+2024-12-13 15:27:08,027 - INFO - Monitoring interface: \Device\NPF_{6D6DFF1D-BC40-45F7-90DA-A25E1D70530A}
+2024-12-13 15:27:08,027 - INFO - Blacklisted IPs: 192.168.1.100, 10.0.0.100, 8.8.8.8
+2024-12-13 15:27:08,027 - INFO - Suspicious ports: 22, 23, 445, 1433, 3389, 4444, 5554
+2024-12-13 15:27:08,430 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:27:08,440 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:27:10,559 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:27:10,561 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:27:10,573 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:27:10,755 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:27:11,186 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:27:11,212 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:27:11,435 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:27:12,185 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:27:12,190 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:27:12,435 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:27:14,187 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:27:14,191 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:27:14,413 - INFO - DNS Query: rr4---sn-5buxax3vo51-btqs.googlevideo.com
+2024-12-13 15:27:14,419 - INFO - DNS Query: rr4---sn-5buxax3vo51-btqs.googlevideo.com
+2024-12-13 15:27:14,512 - INFO - DNS Query: yt3.ggpht.com
+2024-12-13 15:27:14,595 - INFO - DNS Query: yt3.ggpht.com
+2024-12-13 15:27:14,618 - INFO - DNS Query: i.ytimg.com
+2024-12-13 15:27:14,637 - INFO - DNS Query: i.ytimg.com
+2024-12-13 15:27:14,669 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:27:17,745 - INFO - DNS Query: rr3---sn-nv47zne7.googlevideo.com
+2024-12-13 15:27:17,749 - INFO - DNS Query: rr3---sn-nv47zne7.googlevideo.com
+2024-12-13 15:27:18,196 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:27:18,279 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:27:18,438 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:27:26,556 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:27:26,558 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:27:26,559 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:27:31,053 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:27:31,172 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:27:42,253 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:27:42,256 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:27:48,026 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:27:48,031 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:28:10,859 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:28:10,865 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:28:10,888 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:28:11,062 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:28:17,378 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:28:17,387 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:28:20,630 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:28:20,644 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:28:29,836 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:28:29,844 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:28:38,447 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:28:38,454 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:28:38,456 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:28:38,868 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:28:39,279 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:28:40,159 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:28:40,165 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:28:40,783 - INFO - DNS Query: cdn.jsdelivr.net
+2024-12-13 15:28:40,790 - INFO - DNS Query: cdn.jsdelivr.net
+2024-12-13 15:28:46,769 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:28:46,925 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:28:46,960 - INFO - DNS Query: bifrost.vivaldi.com
+2024-12-13 15:28:46,967 - INFO - DNS Query: bifrost.vivaldi.com
+2024-12-13 15:28:47,025 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:28:47,770 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:28:47,776 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:28:48,026 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:28:49,768 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:28:49,770 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:28:50,022 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:28:53,770 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:28:54,022 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:28:54,023 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:28:59,486 - INFO - DNS Query: rr2---sn-5buxax3vo51-btqs.googlevideo.com
+2024-12-13 15:28:59,496 - INFO - DNS Query: rr2---sn-5buxax3vo51-btqs.googlevideo.com
+2024-12-13 15:29:00,899 - INFO - DNS Query: i.ytimg.com
+2024-12-13 15:29:00,908 - INFO - DNS Query: i.ytimg.com
+2024-12-13 15:29:01,773 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:29:02,023 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:29:02,025 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:29:06,931 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:29:06,955 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:29:06,958 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:29:06,962 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:29:12,228 - INFO - DNS Query: oauth2.googleapis.com
+2024-12-13 15:29:12,230 - INFO - DNS Query: oauth2.googleapis.com
+2024-12-13 15:29:12,523 - INFO - DNS Query: imap.gmail.com
+2024-12-13 15:29:12,663 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:29:12,745 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:29:12,755 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:29:12,759 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:29:28,697 - INFO - DNS Query: safebrowsing.googleapis.com
+2024-12-13 15:29:28,699 - INFO - DNS Query: safebrowsing.googleapis.com
+2024-12-13 15:29:45,191 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 15:29:45,193 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 15:29:56,637 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:29:56,700 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:30:06,998 - INFO - DNS Query: github.com
+2024-12-13 15:30:07,060 - INFO - DNS Query: github.com
+2024-12-13 15:30:09,070 - INFO - DNS Query: www.gravatar.com
+2024-12-13 15:30:09,088 - INFO - DNS Query: www.gravatar.com
+2024-12-13 15:30:09,091 - INFO - DNS Query: www.gravatar.com
+2024-12-13 15:30:09,093 - INFO - DNS Query: www.gravatar.com
+2024-12-13 15:30:13,179 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:30:13,182 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:30:13,187 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:30:13,369 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:30:13,949 - INFO - DNS Query: assets.msn.com
+2024-12-13 15:30:13,962 - INFO - DNS Query: assets.msn.com
+2024-12-13 15:30:15,585 - INFO - DNS Query: config.teams.microsoft.com
+2024-12-13 15:30:15,589 - INFO - DNS Query: config.teams.microsoft.com
+2024-12-13 15:30:16,585 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:30:16,588 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:30:16,601 - INFO - DNS Query: default.exp-tas.com
+2024-12-13 15:30:16,609 - INFO - DNS Query: default.exp-tas.com
+2024-12-13 15:30:17,337 - INFO - DNS Query: login.live.com
+2024-12-13 15:30:17,348 - INFO - DNS Query: login.live.com
+2024-12-13 15:30:17,354 - INFO - DNS Query: login.live.com
+2024-12-13 15:30:17,367 - INFO - DNS Query: login.live.com
+2024-12-13 15:30:18,352 - INFO - DNS Query: dcg.microsoft.com
+2024-12-13 15:30:18,358 - INFO - DNS Query: dcg.microsoft.com
+2024-12-13 15:30:26,981 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:30:27,084 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:30:35,148 - INFO - DNS Query: www.google.com
+2024-12-13 15:30:35,153 - INFO - DNS Query: www.google.com
+2024-12-13 15:30:40,347 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:30:40,455 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:30:46,548 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:30:46,568 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:30:48,133 - INFO - DNS Query: cdn.jsdelivr.net
+2024-12-13 15:30:48,139 - INFO - DNS Query: cdn.jsdelivr.net
+2024-12-13 15:30:51,695 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:30:51,943 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:30:51,948 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:30:52,695 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:30:52,943 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:30:52,949 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:30:54,695 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:30:54,944 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:30:54,949 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:30:58,693 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:30:58,945 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:30:58,947 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:31:01,599 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:31:01,608 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:31:01,625 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:31:01,635 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:31:02,500 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:31:02,906 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:31:02,914 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:31:03,316 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:31:03,327 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:31:03,391 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:31:03,404 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:31:06,699 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:31:06,946 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:31:06,951 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:31:16,524 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:31:16,534 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:31:24,458 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 15:31:24,482 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 15:31:30,898 - INFO - DNS Query: ecs.office.com
+2024-12-13 15:31:30,909 - INFO - DNS Query: ecs.office.com
+2024-12-13 15:31:51,170 - INFO - DNS Query: alkalimakersuite-pa.clients6.google.com
+2024-12-13 15:31:51,227 - INFO - DNS Query: alkalimakersuite-pa.clients6.google.com
+2024-12-13 15:32:06,652 - INFO - DNS Query: rr1---sn-5buxax3vo51-btqs.googlevideo.com
+2024-12-13 15:32:06,658 - INFO - DNS Query: rr1---sn-5buxax3vo51-btqs.googlevideo.com
+2024-12-13 15:32:15,466 - INFO - DNS Query: scone-pa.clients6.google.com
+2024-12-13 15:32:15,468 - INFO - DNS Query: scone-pa.clients6.google.com
+2024-12-13 15:33:23,724 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:33:23,747 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:33:35,565 - INFO - DNS Query: i.ytimg.com
+2024-12-13 15:33:35,590 - INFO - DNS Query: i.ytimg.com
+2024-12-13 15:33:36,445 - INFO - DNS Query: yt3.ggpht.com
+2024-12-13 15:33:36,447 - INFO - DNS Query: yt3.ggpht.com
+2024-12-13 15:33:38,476 - INFO - DNS Query: rr6---sn-5buxax3vo51-btqe.googlevideo.com
+2024-12-13 15:33:38,512 - INFO - DNS Query: rr6---sn-5buxax3vo51-btqe.googlevideo.com
+2024-12-13 15:34:02,412 - INFO - DNS Query: github.com
+2024-12-13 15:34:02,416 - INFO - DNS Query: github.com
+2024-12-13 15:34:03,414 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:34:03,418 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:34:03,422 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:34:03,670 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:34:45,273 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 15:34:45,278 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 15:35:03,797 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:35:03,802 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:35:15,267 - INFO - DNS Query: api.codecks.io
+2024-12-13 15:35:15,318 - INFO - DNS Query: api.codecks.io
+2024-12-13 15:35:15,323 - INFO - DNS Query: api.codecks.io
+2024-12-13 15:35:15,350 - INFO - DNS Query: api.codecks.io
+2024-12-13 15:35:21,448 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:35:21,455 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:35:21,488 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:35:21,656 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:35:51,413 - INFO - DNS Query: cdn.jsdelivr.net
+2024-12-13 15:35:51,431 - INFO - DNS Query: cdn.jsdelivr.net
+2024-12-13 15:35:51,552 - INFO - DNS Query: ocsp.sectigo.com
+2024-12-13 15:35:51,557 - INFO - DNS Query: ocsp.sectigo.com
+2024-12-13 15:35:52,232 - INFO - DNS Query: a.nel.cloudflare.com
+2024-12-13 15:35:52,258 - INFO - DNS Query: a.nel.cloudflare.com
+2024-12-13 15:36:02,227 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:36:02,234 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:36:02,263 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:36:02,315 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:36:03,132 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:36:03,135 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:36:03,137 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:36:03,560 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:36:03,972 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:36:04,285 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:36:04,300 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:36:12,013 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:36:12,023 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:36:12,256 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:36:13,008 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:36:13,014 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:36:13,260 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:36:15,008 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:36:15,016 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:36:15,260 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:36:19,011 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:36:19,016 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:36:19,260 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:36:21,356 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:36:21,394 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:36:21,754 - INFO - DNS Query: rr6---sn-5buxax3vo51-btqe.googlevideo.com
+2024-12-13 15:36:21,760 - INFO - DNS Query: rr6---sn-5buxax3vo51-btqe.googlevideo.com
+2024-12-13 15:36:24,616 - INFO - DNS Query: i.ytimg.com
+2024-12-13 15:36:24,618 - INFO - DNS Query: i.ytimg.com
+2024-12-13 15:36:24,716 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 15:36:24,720 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 15:36:27,037 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:36:27,261 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:36:27,264 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:37:00,538 - INFO - DNS Query: accounts.youtube.com
+2024-12-13 15:37:00,540 - INFO - DNS Query: accounts.youtube.com
+2024-12-13 15:37:00,574 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:37:00,598 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:37:00,606 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:37:00,672 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:37:00,679 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:37:00,681 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:37:04,229 - INFO - DNS Query: github.com
+2024-12-13 15:37:04,232 - INFO - DNS Query: github.com
+2024-12-13 15:37:10,905 - INFO - DNS Query: cdn.oaistatic.com
+2024-12-13 15:37:10,910 - INFO - DNS Query: cdn.oaistatic.com
+2024-12-13 15:37:10,920 - INFO - DNS Query: chatgpt.com
+2024-12-13 15:37:10,932 - INFO - DNS Query: chatgpt.com
+2024-12-13 15:37:11,281 - INFO - DNS Query: e6.o.lencr.org
+2024-12-13 15:37:11,289 - INFO - DNS Query: e6.o.lencr.org
+2024-12-13 15:37:12,256 - INFO - DNS Query: ocsp.digicert.com
+2024-12-13 15:37:12,259 - INFO - DNS Query: ocsp.digicert.com
+2024-12-13 15:37:13,115 - INFO - DNS Query: ab.chatgpt.com
+2024-12-13 15:37:13,135 - INFO - DNS Query: ab.chatgpt.com
+2024-12-13 15:37:14,485 - INFO - DNS Query: o.pki.goog
+2024-12-13 15:37:14,501 - INFO - DNS Query: o.pki.goog
+2024-12-13 15:37:39,988 - WARNING - Possible port scan detected from 192.168.31.1 - 20 ports in 60s
+2024-12-13 15:37:39,990 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 15:37:39,999 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 15:37:40,001 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 15:37:40,003 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 15:37:40,004 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 15:37:40,013 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:37:40,014 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 15:37:40,019 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:37:40,020 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 15:37:40,026 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 15:37:40,027 - WARNING - Possible port scan detected from 192.168.31.1 - 21 ports in 60s
+2024-12-13 15:37:44,977 - WARNING - Possible port scan detected from 192.168.31.1 - 22 ports in 60s
+2024-12-13 15:37:44,981 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 15:37:44,987 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 15:37:44,993 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 15:37:44,995 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 15:37:44,996 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 15:37:44,998 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 15:37:44,998 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 15:37:45,004 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 15:37:45,005 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 15:37:45,014 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 15:37:45,057 - WARNING - Possible port scan detected from 192.168.31.1 - 23 ports in 60s
+2024-12-13 15:38:01,737 - INFO - DNS Query: v10.events.data.microsoft.com
+2024-12-13 15:38:01,739 - INFO - DNS Query: v10.events.data.microsoft.com
+2024-12-13 15:38:01,973 - INFO - DNS Query: v20.events.data.microsoft.com
+2024-12-13 15:38:01,983 - INFO - DNS Query: v20.events.data.microsoft.com
+2024-12-13 15:38:10,404 - INFO - DNS Query: a.nel.cloudflare.com
+2024-12-13 15:38:10,426 - INFO - DNS Query: a.nel.cloudflare.com
+2024-12-13 15:38:27,685 - INFO - DNS Query: chatgpt.com
+2024-12-13 15:38:27,688 - INFO - DNS Query: chatgpt.com
+2024-12-13 15:38:27,715 - INFO - DNS Query: cdn.oaistatic.com
+2024-12-13 15:38:27,721 - INFO - DNS Query: cdn.oaistatic.com
+2024-12-13 15:38:28,055 - INFO - DNS Query: ab.chatgpt.com
+2024-12-13 15:38:28,058 - INFO - DNS Query: ab.chatgpt.com
+2024-12-13 15:38:34,508 - INFO - DNS Query: rog-live-service.asus.com
+2024-12-13 15:38:34,515 - INFO - DNS Query: rog-live-service.asus.com
+2024-12-13 15:38:34,794 - INFO - DNS Query: substrate.office.com
+2024-12-13 15:38:34,800 - INFO - DNS Query: substrate.office.com
+2024-12-13 15:38:35,540 - INFO - DNS Query: server.events.data.microsoft.com
+2024-12-13 15:38:35,622 - INFO - DNS Query: server.events.data.microsoft.com
+2024-12-13 15:38:36,502 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:38:36,509 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:38:36,540 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:38:36,586 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:38:38,114 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:38:38,132 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:38:48,192 - INFO - DNS Query: bifrost.vivaldi.com
+2024-12-13 15:38:48,208 - INFO - DNS Query: bifrost.vivaldi.com
+2024-12-13 15:38:58,098 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:38:58,104 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:39:27,642 - INFO - DNS Query: apis.google.com
+2024-12-13 15:39:27,645 - INFO - DNS Query: apis.google.com
+2024-12-13 15:39:28,118 - INFO - DNS Query: content.googleapis.com
+2024-12-13 15:39:28,121 - INFO - DNS Query: content.googleapis.com
+2024-12-13 15:39:28,409 - INFO - DNS Query: apis.google.com
+2024-12-13 15:39:28,414 - INFO - DNS Query: apis.google.com
+2024-12-13 15:39:35,382 - INFO - DNS Query: oneocsp.microsoft.com
+2024-12-13 15:39:35,471 - INFO - DNS Query: oneocsp.microsoft.com
+2024-12-13 15:39:36,929 - INFO - DNS Query: chatgpt.com
+2024-12-13 15:39:36,932 - INFO - DNS Query: chatgpt.com
+2024-12-13 15:39:38,965 - INFO - DNS Query: cdn.oaistatic.com
+2024-12-13 15:39:38,971 - INFO - DNS Query: cdn.oaistatic.com
+2024-12-13 15:39:39,077 - INFO - DNS Query: files.oaiusercontent.com
+2024-12-13 15:39:39,080 - INFO - DNS Query: files.oaiusercontent.com
+2024-12-13 15:40:02,501 - INFO - DNS Query: ocws.officeapps.live.com
+2024-12-13 15:40:02,507 - INFO - DNS Query: ocws.officeapps.live.com
+2024-12-13 15:40:05,762 - INFO - DNS Query: fp-vs.azureedge.net
+2024-12-13 15:40:05,782 - INFO - DNS Query: fp-vs.azureedge.net
+2024-12-13 15:40:06,501 - INFO - DNS Query: t-ring.msedge.net
+2024-12-13 15:40:06,512 - INFO - DNS Query: t-ring.msedge.net
+2024-12-13 15:40:17,782 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:40:17,789 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:40:31,129 - INFO - DNS Query: ab.chatgpt.com
+2024-12-13 15:40:31,132 - INFO - DNS Query: ab.chatgpt.com
+2024-12-13 15:40:45,018 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 15:40:45,055 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 15:40:52,593 - INFO - DNS Query: github.com
+2024-12-13 15:40:52,603 - INFO - DNS Query: github.com
+2024-12-13 15:40:56,304 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:40:56,305 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:40:56,319 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:41:00,695 - INFO - DNS Query: chatgpt.com
+2024-12-13 15:41:00,699 - INFO - DNS Query: chatgpt.com
+2024-12-13 15:41:02,958 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:41:02,961 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:41:02,968 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:41:02,973 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:41:05,998 - INFO - DNS Query: x1.c.lencr.org
+2024-12-13 15:41:06,010 - INFO - DNS Query: x1.c.lencr.org
+2024-12-13 15:41:06,158 - INFO - DNS Query: x2.c.lencr.org
+2024-12-13 15:41:06,181 - INFO - DNS Query: x2.c.lencr.org
+2024-12-13 15:41:06,302 - INFO - DNS Query: c.pki.goog
+2024-12-13 15:41:06,315 - INFO - DNS Query: c.pki.goog
+2024-12-13 15:41:06,568 - INFO - DNS Query: crl3.digicert.com
+2024-12-13 15:41:06,576 - INFO - DNS Query: crl3.digicert.com
+2024-12-13 15:41:24,444 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 15:41:24,459 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 15:41:37,905 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:41:37,921 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:41:39,271 - INFO - DNS Query: ab.chatgpt.com
+2024-12-13 15:41:39,279 - INFO - DNS Query: ab.chatgpt.com
+2024-12-13 15:41:50,393 - INFO - DNS Query: rr3---sn-5buxax3vo51-btqs.googlevideo.com
+2024-12-13 15:41:50,402 - INFO - DNS Query: rr3---sn-5buxax3vo51-btqs.googlevideo.com
+2024-12-13 15:41:50,482 - INFO - DNS Query: i.ytimg.com
+2024-12-13 15:41:50,511 - INFO - DNS Query: i.ytimg.com
+2024-12-13 15:41:52,181 - INFO - DNS Query: settings-win.data.microsoft.com
+2024-12-13 15:41:52,212 - INFO - DNS Query: settings-win.data.microsoft.com
+2024-12-13 15:41:56,431 - INFO - DNS Query: rr5---sn-nv47znel.googlevideo.com
+2024-12-13 15:41:56,436 - INFO - DNS Query: rr5---sn-nv47znel.googlevideo.com
+2024-12-13 15:41:59,966 - INFO - DNS Query: g.live.com
+2024-12-13 15:41:59,975 - INFO - DNS Query: g.live.com
+2024-12-13 15:42:00,506 - INFO - DNS Query: oneclient.sfx.ms
+2024-12-13 15:42:00,523 - INFO - DNS Query: oneclient.sfx.ms
+2024-12-13 15:42:01,705 - INFO - DNS Query: ecs.office.com
+2024-12-13 15:42:01,713 - INFO - DNS Query: ecs.office.com
+2024-12-13 15:42:04,143 - INFO - DNS Query: self.events.data.microsoft.com
+2024-12-13 15:42:04,152 - INFO - DNS Query: self.events.data.microsoft.com
+2024-12-13 15:42:05,598 - INFO - DNS Query: login.live.com
+2024-12-13 15:42:05,609 - INFO - DNS Query: login.live.com
+2024-12-13 15:42:05,617 - INFO - DNS Query: login.live.com
+2024-12-13 15:42:05,628 - INFO - DNS Query: login.live.com
+2024-12-13 15:42:09,129 - INFO - DNS Query: chatgpt.com
+2024-12-13 15:42:09,226 - INFO - DNS Query: chatgpt.com
+2024-12-13 15:42:28,294 - INFO - DNS Query: rr6---sn-5buxax3vo51-btqe.googlevideo.com
+2024-12-13 15:42:28,298 - INFO - DNS Query: rr6---sn-5buxax3vo51-btqe.googlevideo.com
+2024-12-13 15:42:37,852 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:42:37,854 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:42:37,862 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:42:37,864 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:42:43,961 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:42:44,331 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:42:44,332 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:42:44,333 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:42:44,744 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:42:45,275 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:42:45,282 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:42:51,592 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:42:51,593 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:42:51,594 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:42:51,594 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:42:51,595 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:42:51,596 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:42:51,622 - INFO - DNS Query: cdn.jsdelivr.net
+2024-12-13 15:42:51,626 - INFO - DNS Query: cdn.jsdelivr.net
+2024-12-13 15:42:52,574 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:42:52,576 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:42:52,842 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:42:57,688 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:42:57,692 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:42:57,696 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:43:06,315 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:43:06,316 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:43:06,317 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:43:19,700 - INFO - DNS Query: ab.chatgpt.com
+2024-12-13 15:43:19,721 - INFO - DNS Query: ab.chatgpt.com
+2024-12-13 15:43:23,659 - INFO - DNS Query: chatgpt.com
+2024-12-13 15:43:23,661 - INFO - DNS Query: chatgpt.com
+2024-12-13 15:43:51,243 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 15:43:51,244 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 15:43:51,976 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:43:51,979 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:44:23,129 - INFO - DNS Query: chatgpt.com
+2024-12-13 15:44:23,134 - INFO - DNS Query: chatgpt.com
+2024-12-13 15:44:23,227 - INFO - DNS Query: ab.chatgpt.com
+2024-12-13 15:44:23,232 - INFO - DNS Query: ab.chatgpt.com
+2024-12-13 15:44:33,186 - INFO - DNS Query: yt3.ggpht.com
+2024-12-13 15:44:33,201 - INFO - DNS Query: yt3.ggpht.com
+2024-12-13 15:44:44,265 - INFO - DNS Query: i.ytimg.com
+2024-12-13 15:44:44,289 - INFO - DNS Query: i.ytimg.com
+2024-12-13 15:44:45,800 - INFO - DNS Query: lh3.googleusercontent.com
+2024-12-13 15:44:45,804 - INFO - DNS Query: lh3.googleusercontent.com
+2024-12-13 15:44:49,450 - INFO - DNS Query: www.gstatic.com
+2024-12-13 15:44:49,471 - INFO - DNS Query: www.gstatic.com
+2024-12-13 15:45:21,074 - INFO - DNS Query: github.com
+2024-12-13 15:45:21,081 - INFO - DNS Query: github.com
+2024-12-13 15:45:24,799 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:45:24,800 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:45:24,803 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:45:24,806 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:45:27,587 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:45:27,588 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:45:27,590 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:45:27,591 - INFO - DNS Query: default.exp-tas.com
+2024-12-13 15:45:27,593 - INFO - DNS Query: default.exp-tas.com
+2024-12-13 15:45:27,744 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:45:28,861 - INFO - DNS Query: 1.0.d.a.b.3.3.2.f.0.d.6.3.9.8.4.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa
+2024-12-13 15:45:28,869 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:45:29,062 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:45:29,334 - INFO - DNS Query: cdn.jsdelivr.net
+2024-12-13 15:45:29,340 - INFO - DNS Query: cdn.jsdelivr.net
+2024-12-13 15:45:30,396 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:45:30,403 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:45:30,416 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:45:30,426 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:45:36,474 - INFO - DNS Query: mtalk.google.com
+2024-12-13 15:45:45,853 - INFO - DNS Query: update.code.visualstudio.com
+2024-12-13 15:45:45,860 - INFO - DNS Query: update.code.visualstudio.com
+2024-12-13 15:45:45,863 - INFO - DNS Query: update.code.visualstudio.com
+2024-12-13 15:45:45,867 - INFO - DNS Query: update.code.visualstudio.com
+2024-12-13 15:45:54,117 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:45:54,121 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:45:54,171 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:45:54,332 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:45:54,337 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:45:55,082 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:45:55,089 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:45:55,332 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:45:57,082 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:45:57,088 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:45:57,335 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:46:01,084 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:46:01,088 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:46:01,332 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:46:03,658 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:46:03,659 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:46:03,669 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:46:03,672 - INFO - DNS Query: main.vscode-cdn.net
+2024-12-13 15:46:09,085 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:46:09,090 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:46:09,335 - WARNING - Detected traffic from/to blacklisted IP - Src: 192.168.31.50, Dst: 192.168.1.100
+2024-12-13 15:46:24,435 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 15:46:24,449 - INFO - DNS Query: catalog.gamepass.com
+2024-12-13 15:46:45,085 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 15:46:45,101 - INFO - DNS Query: de5282c3ca0c.b30f6691.me-south-1.token.awswaf.com
+2024-12-13 15:46:58,339 - INFO - DNS Query: accounts.youtube.com
+2024-12-13 15:46:58,399 - INFO - DNS Query: accounts.youtube.com
+2024-12-13 15:47:11,685 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:47:11,694 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:47:30,230 - INFO - DNS Query: cdn.jsdelivr.net
+2024-12-13 15:47:30,244 - INFO - DNS Query: cdn.jsdelivr.net
+2024-12-13 15:47:57,637 - INFO - DNS Query: rr3---sn-5buxax3vo51-btqs.googlevideo.com
+2024-12-13 15:47:57,641 - INFO - DNS Query: rr3---sn-5buxax3vo51-btqs.googlevideo.com
+2024-12-13 15:48:03,512 - INFO - DNS Query: rr3---sn-nv47lns6.googlevideo.com
+2024-12-13 15:48:03,568 - INFO - DNS Query: rr3---sn-nv47lns6.googlevideo.com
+2024-12-13 15:48:04,549 - INFO - DNS Query: ab.chatgpt.com
+2024-12-13 15:48:04,567 - INFO - DNS Query: ab.chatgpt.com
+2024-12-13 15:48:19,580 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:48:19,582 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:48:19,586 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:48:19,588 - INFO - DNS Query: mobile.events.data.microsoft.com
+2024-12-13 15:48:19,685 - INFO - DNS Query: www.gravatar.com
+2024-12-13 15:48:19,687 - INFO - DNS Query: www.gravatar.com
+2024-12-13 15:48:19,704 - INFO - DNS Query: www.gravatar.com
+2024-12-13 15:48:19,706 - INFO - DNS Query: www.gravatar.com
+2024-12-13 15:48:24,729 - INFO - DNS Query: chatgpt.com
+2024-12-13 15:48:24,730 - INFO - DNS Query: chatgpt.com
+2024-12-13 15:48:48,576 - INFO - DNS Query: bifrost.vivaldi.com
+2024-12-13 15:48:48,589 - INFO - DNS Query: bifrost.vivaldi.com
+2024-12-13 15:49:16,653 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:49:16,658 - INFO - DNS Query: www.youtube.com
+2024-12-13 15:49:23,763 - INFO - DNS Query: github.com
+2024-12-13 15:49:23,779 - INFO - DNS Query: github.com
+2024-12-13 15:49:25,763 - INFO - Packet capture stopped by user

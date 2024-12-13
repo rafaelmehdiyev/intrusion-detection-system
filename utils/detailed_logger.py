@@ -1,5 +1,6 @@
 import os
 from datetime import datetime
+import re
 from typing import Dict, Any, Optional
 import threading
 
@@ -109,3 +110,30 @@ class DetailedLogger:
             data["flags"] = ','.join(flag for flag, value in flags.items() if value)
             
         self.log_event("NETWORK_TRAFFIC", data, "sensor")
+
+    def get_log_entry_by_timestamp(self, timestamp: str) -> Optional[str]:
+        """
+        Get a specific log entry by its timestamp.
+
+        Args:
+            timestamp (str): The timestamp of the log entry.
+
+        Returns:
+            Optional[str]: The log entry if found, None otherwise.
+        """
+        date_str = timestamp.split(" ")[0]
+        log_file = os.path.join(self.log_dir, f"{date_str}.log")
+        if not os.path.exists(log_file):
+            return None
+
+        try:
+            with open(log_file, 'r', encoding='utf-8') as f:
+                for line in f:
+                    # Use a regular expression for flexible matching
+                    pattern = re.escape(timestamp).replace(r"\\ ", r"[\s]*")  # Allow 0 or more spaces
+                    if re.search(pattern, line):
+                        return line.strip()
+            return None  # Timestamp not found in the log file
+        except Exception as e:
+            print(f"Error reading log file: {str(e)}")
+            return None

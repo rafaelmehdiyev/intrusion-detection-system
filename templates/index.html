@@ -147,6 +147,47 @@
             color: white !important;
             font-weight: bold;
         }
+
+        /* Modal Styling */
+        #logDetailsModal .modal-body {
+            font-family: monospace;
+        }
+
+        #logDetailsModal .table {
+            width: 100%;
+            margin-bottom: 0;
+        }
+
+        #logDetailsModal .table th {
+            background-color: #f2f2f2;
+            font-weight: 600;
+        }
+
+        #logDetailsModal .table td {
+            word-break: break-word;
+        }
+
+        /* Event Type Highlighting */
+        #logDetailsModal .event-type-CRITICAL {
+            color: #dc3545; /* Red */
+        }
+
+        #logDetailsModal .event-type-WARNING {
+            color: #ffc107; /* Yellow */
+        }
+
+        #logDetailsModal .event-type-SECURITY {
+            color: #fd7e14; /* Orange */
+        }
+
+        #logDetailsModal .event-type-NETWORK_TRAFFIC {
+            color: #0d6efd; /* Blue */
+        }
+        /* Severity Highlighting */
+        #logDetailsModal .severity-HIGH {
+            color: #dc3545;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -250,10 +291,10 @@
         <div class="row mb-4">
             <div class="col-md-12">
                 <div class="card dashboard-card">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                        <h5 class="card-title mb-0">Event Monitor</h5>
+                    <div class="card-header justify-content-between align-items-center">
+                        <h5 class="card-title mb-2">Event Monitor</h5>
                         <div class="event-controls">
-                            <div class="filter-tags mb-2">
+                            <div class="filter-tags mb-2 d-flex">
                                 <span class="filter-tag active" data-filter="all">All</span>
                                 <span class="filter-tag" data-filter="critical">Critical</span>
                                 <span class="filter-tag" data-filter="security">Security</span>
@@ -282,6 +323,27 @@
                         </div>
                         <div id="events-container"></div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="logDetailsModal" tabindex="-1" aria-labelledby="logDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logDetailsModalLabel">Detailed Log Information</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-striped table-bordered">
+                        <tbody id="detailed-log-content">
+                            <!-- Log details will be inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -385,6 +447,107 @@
             return 'INFO';
         }
 
+        function formatLogDetails(logEntry) {
+    const parts = logEntry.split(" - ");
+    const timestamp = parts[0];
+    const eventType = parts[1];
+    const details = {};
+
+    // Parse the key-value pairs
+    const detailsString = parts.slice(2).join(" - ");
+    const keyValuePairs = detailsString.split(" - ");
+    for (const pair of keyValuePairs) {
+        const keyValue = pair.split("=");
+        if (keyValue.length === 2) {
+            details[keyValue[0]] = keyValue[1];
+        }
+    }
+
+    // Start generating the HTML table
+    let html = '';
+
+    // Convert timestamp to a more readable format
+    const readableTimestamp = new Date(timestamp.replace(',', '.')).toLocaleString('en-GB', {
+        day: '2-digit',
+        month: 'short',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false
+    });
+    html += `<tr>
+                <th><i class="bi bi-clock"></i> Timestamp</th>
+                <td><code>${readableTimestamp}</code></td>
+             </tr>`;
+
+    // Event Type with Badge
+    html += `<tr>
+                <th><i class="bi bi-shield-fill"></i> Event Type</th>
+                <td><span class="badge bg-${getEventTypeColor(eventType)}">${eventType}</span></td>
+             </tr>`;
+
+    // Severity with Badge
+    if (details['severity']) {
+        html += `<tr>
+                    <th><i class="bi bi-bar-chart"></i> Severity</th>
+                    <td><span class="badge bg-${getSeverityColor(details['severity'])}">${details['severity']}</span></td>
+                 </tr>`;
+        delete details['severity']; // Remove after processing
+    }
+
+    // Description
+    if (details['description']) {
+        html += `<tr>
+                    <th><i class="bi bi-info-circle"></i> Description</th>
+                    <td>${details['description']}</td>
+                 </tr>`;
+        delete details['description']; // Remove after processing
+    }
+
+    // Source and Destination as Flow
+    if (details['source_ip'] && details['destination_ip']) {
+        html += `<tr>
+                    <th><i class="bi bi-arrow-left-right"></i> Connection</th>
+                    <td>
+                        <strong>${details['source_ip']}</strong>
+                        <span class="text-muted"> ---→ </span>
+                        <strong>${details['destination_ip']}</strong>
+                    </td>
+                 </tr>`;
+        delete details['source_ip']; // Remove after processing
+        delete details['destination_ip']; // Remove after processing
+    }
+
+    // Process remaining fields
+    for (const key in details) {
+        html += `<tr>
+                    <th>${key.replace('_', ' ')}</th>
+                    <td>${details[key]}</td>
+                 </tr>`;
+    }
+
+    return html;
+}
+
+// Helper Functions for Colors
+function getEventTypeColor(eventType) {
+    switch (eventType) {
+        case 'SECURITY_ALERT': return 'danger'; // Red
+        case 'WARNING': return 'warning'; // Yellow
+        case 'INFO': return 'info'; // Blue
+        default: return 'secondary'; // Gray
+    }
+}
+
+function getSeverityColor(severity) {
+    switch (severity.toUpperCase()) {
+        case 'HIGH': return 'danger'; // Red
+        case 'MEDIUM': return 'warning'; // Yellow
+        case 'LOW': return 'success'; // Green
+        default: return 'secondary'; // Gray
+    }
+}
         function addEvent(data) {
             if (isPaused) {
                 pendingEvents.push(data);
@@ -429,18 +592,21 @@
             
             // Create card content with event type badge
             card.innerHTML = `
-                <div class="card-body p-2">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div>
-                            <span class="badge bg-${level === 'ERROR' ? 'danger' : level === 'WARNING' ? 'warning' : 'info'}">${level}</span>
-                            <span class="badge bg-secondary ms-1">${eventType}</span>
+                    <div class="card-body p-2">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="badge bg-${level === 'ERROR' ? 'danger' : level === 'WARNING' ? 'warning' : 'info'}">${level}</span>
+                                <span class="badge bg-secondary ms-1">${eventType}</span>
+                            </div>
+                            <small class="text-muted">${localTime}</small>
+                            <button class="btn btn-sm btn-outline-secondary ms-2 view-details" data-timestamp="${timestamp}">
+                                <i class="bi bi-info-circle"></i>
+                            </button>
                         </div>
-                        <small class="text-muted">${localTime}</small>
+                        <div class="mt-2">${content}</div>
+                        ${ipDetails}
                     </div>
-                    <div class="mt-2">${content}</div>
-                    ${ipDetails}
-                </div>
-            `;
+                `;
             
             // Add to container
             eventsContainer.insertBefore(card, eventsContainer.firstChild);
@@ -451,7 +617,28 @@
             if (eventsContainer.children.length > maxEvents) {
                 eventsContainer.removeChild(eventsContainer.lastChild);
             }
-        }
+            // Add event listener to the "View Details" button
+            card.querySelector('.view-details').addEventListener('click', function() {
+        const timestamp = this.getAttribute('data-timestamp');
+        fetch(`/api/detailed_log?timestamp=${timestamp}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    console.error('Error fetching detailed log:', data.error);
+                } else {
+                    // Format the log details
+                    const formattedLogDetails = formatLogDetails(data.log);
+
+                    // Update the modal content with the formatted HTML
+                    document.getElementById('detailed-log-content').innerHTML = formattedLogDetails;
+
+                    const logDetailsModal = new bootstrap.Modal(document.getElementById('logDetailsModal'));
+                    logDetailsModal.show();
+                }
+            })
+            .catch(error => console.error('Error:', error));
+    });
+            }
 
         function updateStats(message) {
             // Parse the message

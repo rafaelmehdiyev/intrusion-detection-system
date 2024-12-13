@@ -3,24 +3,26 @@
 ## Project Structure
 
 ```
-Project ver 4/
+IDS/
 ├── .git/                      # Git repository
 ├── __pycache__/              # Python cache directory
 ├── logs/                     # Log files directory
 ├── templates/                # HTML templates
+│   ├── config.html          # Configuration page
+│   ├── index.html           # Main dashboard
+│   └── logs.html            # Log viewer page
 ├── utils/                    # Utility functions and helpers
+│   └── detailed_logger.py   # Detailed logging implementation
 ├── config.json              # Configuration file
-├── json_logger.py           # JSON logging implementation
 ├── requirements.txt         # Python dependencies
-├── sensor.py               # Network sensor implementation
-├── server.py              # Main server application
-└── README.md             # This file
+├── sensor.py               # Network sensor implementation  
+└── server.py             # Main server application
 ```
 
 ## Key Components
 
 1. **server.py**: Main application server that handles:
-   - Web interface
+   - Web interface and routing
    - Event streaming
    - Log management
    - Real-time monitoring
@@ -31,22 +33,28 @@ Project ver 4/
    - Detects suspicious activities
    - Generates events
 
-3. **json_logger.py**: JSON-based logging system for:
+3. **utils/detailed_logger.py**: Logging system for:
    - Structured event logging
    - System events
    - Network traffic events
 
 4. **templates/**: Web interface files
-   - HTML templates
-   - JavaScript
-   - CSS styles
+   - Main dashboard (index.html)
+   - Configuration interface (config.html)
+   - Log viewer (logs.html)
 
-5. **utils/**: Helper modules and utilities
+5. **docs/**: Project documentation
+   - Installation and setup guides
+   - Configuration documentation
+   - API documentation
+   - Web interface guide
+   - Sensor functionality details
+   - Project report
 
 6. **logs/**: Directory containing:
-   - JSON event logs
    - System logs
    - Network traffic logs
+   - Event logs
 
 7. **config.json**: Configuration settings for:
    - Network interfaces
@@ -83,7 +91,7 @@ See `requirements.txt` for a complete list of Python dependencies.
 
 - Real-time network traffic monitoring
 - Suspicious activity detection
-- JSON-based structured logging
+- Structured logging
 - Web-based user interface
 - Event filtering and search
 - Export capabilities

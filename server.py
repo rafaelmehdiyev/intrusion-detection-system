@@ -1,3 +1,4 @@
+from urllib.parse import unquote
 from flask import Flask, render_template, jsonify, request, Response, redirect, url_for, session, send_file
 import os
 from datetime import datetime
@@ -5,6 +6,8 @@ import json
 from werkzeug.security import check_password_hash, generate_password_hash
 from functools import wraps
 import time
+
+from utils.detailed_logger import DetailedLogger
 
 app = Flask(__name__)
 app.secret_key = 'your-secret-key-here'  # Change this to a secure secret key
@@ -83,44 +86,9 @@ class LogReader:
         except Exception as e:
             print(f"Error writing log: {e}")
 
-class JsonLogReader:
-    def __init__(self, json_log_dir):
-        self.log_dir = json_log_dir
-        self.current_date = None
-        self.current_position = 0
-        self._ensure_log_file()
-
-    def _ensure_log_file(self):
-        today = datetime.now().date()
-        if self.current_date != today:
-            self.current_date = today
-            self.current_position = 0
-            os.makedirs(self.log_dir, exist_ok=True)
-
-    def get_current_log_file(self):
-        return os.path.join(self.log_dir, f"{self.current_date}.json")
-
-    def read_new_logs(self):
-        self._ensure_log_file()
-        log_file = self.get_current_log_file()
-        
-        if not os.path.exists(log_file):
-            return []
-
-        try:
-            with open(log_file, 'r') as f:
-                data = json.load(f)
-                new_events = data[self.current_position:]
-                self.current_position = len(data)
-                return new_events
-        except Exception as e:
-            print(f"Error reading JSON logs: {e}")
-            return []
-
-
 # Initialize LogReader
 log_reader = LogReader("logs")
-json_log_reader = JsonLogReader("logs/json")
+detailed_logger = DetailedLogger("logs/detailed")
 
 # Configuration file path
 CONFIG_FILE = "config.json"
@@ -204,6 +172,23 @@ def index():
     """Render the main page"""
     return render_template('index.html')
 
+@app.route('/api/detailed_log', methods=['GET'])
+@requires_auth
+def get_detailed_log():
+    """API endpoint to get detailed information for a specific log entry."""
+    timestamp = request.args.get('timestamp')
+    if not timestamp:
+        return jsonify({'error': 'Timestamp is required'}), 400
+
+    # Decode the URL-encoded timestamp
+    decoded_timestamp = unquote(timestamp)
+
+    log_entry = detailed_logger.get_log_entry_by_timestamp(decoded_timestamp)
+    if log_entry:
+        return jsonify({'log': log_entry})
+    else:
+        return jsonify({'error': 'Log entry not found'}), 404
+
 @app.route('/events')
 @requires_auth
 def get_events():
@@ -214,10 +199,6 @@ def get_events():
         if os.path.exists(log_file):
             log_reader.last_position = os.path.getsize(log_file)
         
-        # Do the same for JSON log reader
-        json_file = json_log_reader.get_current_log_file()
-        if os.path.exists(json_file):
-            json_log_reader.current_position = os.path.getsize(json_file)
         
         # Send initial connection message
         yield f"data: {json.dumps({'type': 'system', 'message': 'Connected to event stream'})}\n\n"
@@ -226,20 +207,10 @@ def get_events():
             # Get regular logs
             new_logs = log_reader.read_new_logs()
             
-            # Get JSON logs
-            new_json_logs = json_log_reader.read_new_logs()
             
             # Send regular logs
             for log in new_logs:
                 yield f"data: {json.dumps({'type': 'log', 'message': log.strip()})}\n\n"
-            
-            # Send JSON logs with type identifier
-            for log in new_json_logs:
-                yield f"data: {json.dumps({'type': 'json', 'message': log})}\n\n"
-            
-            # Keep-alive
-            if not new_logs and not new_json_logs:
-                yield ": keep-alive\n\n"
             
             time.sleep(1)
 
